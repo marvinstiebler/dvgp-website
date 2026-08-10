@@ -91,18 +91,11 @@ a { color: inherit; text-decoration: none; }
  padding-top: 0.85rem; padding-bottom: 0.85rem;
 }
 
-/* Wortmarke: Flaggenbalken über dem Schriftzug.
-   Bewusst gestapelt statt nebeneinander -- so steht das "D" von DVGP exakt auf
-   derselben Linie wie jede Überschrift und jeder Absatz darunter. */
-.logo { display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem; }
-.logo .balken {
- width: 30px; height: 5px;
- background: var(--stripe-h);
- border-radius: 1px;
-}
-.logo-text { display: flex; flex-direction: column; line-height: 1.1; }
-.logo-text strong { font-weight: 900; font-size: 1.45rem; letter-spacing: -0.03em; color: var(--color-dark); }
-.logo-text small { font-size: 0.68rem; color: var(--color-text-muted); font-weight: 600; letter-spacing: 0.02em; }
+/* Das Logo selbst -- Flaggenbalken neben DVGP, so wie die Marke aussieht.
+   Verwendet die beschnittene Fassung: die Originaldatei ist 500x500 mit dem
+   Motiv in nur 312x174 Pixeln, deshalb wirkte das Logo im Header winzig. */
+.logo { display: flex; align-items: center; }
+.logo img { height: 32px; width: auto; }
 
 nav ul { list-style: none; display: flex; gap: 1.35rem; }
 nav a { font-size: 0.95rem; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
@@ -377,7 +370,11 @@ section.dark .section-kicker { color: var(--color-gold); }
 .content-page .meta { color: var(--color-text-muted); margin-bottom: 2.5rem; }
 .content-page h2 { font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 0.75rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
 .content-page p { margin-bottom: 1rem; color: var(--color-text-muted); text-align: justify; hyphens: auto; }
-.content-page a { color: var(--color-accent-text); font-weight: 600; }
+/* Fließtext-Links auf Inhaltsseiten. Buttons ausnehmen: sonst gewinnt diese
+   Regel gegen .cta-primary und der Knopf bekommt dunkelrote Schrift auf Rot. */
+.content-page a:not(.cta-primary):not(.cta-secondary):not(.back-link) {
+ color: var(--color-accent-text); font-weight: 600;
+}
 .back-link { display: table; margin-bottom: 2rem; font-size: 0.92rem; color: var(--color-text-muted); }
 .back-link::before { content: "← "; }
 /* Rubrik-Kicker gehört auf eine eigene Zeile, nicht neben den Zurück-Link. */

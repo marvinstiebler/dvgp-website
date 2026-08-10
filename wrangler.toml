@@ -10,21 +10,27 @@
 name = "dvgp-website"
 compatibility_date = "2026-08-10"
 
+# Solange die Zone dvgp.info noch nicht im Cloudflare-Konto liegt, läuft die Seite
+# unter der workers.dev-Adresse. Muss VOR [assets] stehen -- in TOML gehört alles
+# unterhalb einer Tabellenüberschrift zu dieser Tabelle.
+workers_dev = true
+
 [assets]
 directory = "./site"
 not_found_handling = "404-page"
+# html_handling bleibt auf dem Standard "auto-trailing-slash": Cloudflare liefert
+# /impressum aus site/impressum.html. Deshalb verlinkt die Seite intern ohne .html.
+# "none" wäre falsch -- dann liefert / keine Startseite mehr, sondern 404.
 
-# Eigene Domain. Cloudflare legt die nötigen DNS-Einträge beim Deploy selbst an --
-# es muss nichts von Hand in die DNS-Zone eingetragen werden.
+# Eigene Domain -- AKTIVIEREN, SOBALD DIE ZONE STEHT.
+# Cloudflare legt die DNS-Einträge dann beim Deploy selbst an; von Hand ist nichts
+# einzutragen. Vorher schlägt der Deploy mit einer Zone-Fehlermeldung fehl, deshalb
+# ist der Block auskommentiert. Ablauf: DEPLOYMENT.md.
 #
-# VORAUSSETZUNG: Die Zone dvgp.info muss zu diesem Zeitpunkt bereits im Cloudflare-
-# Konto liegen (Nameserver-Umstellung bei IONOS abgeschlossen). Ist sie es nicht,
-# bricht der Deploy mit einer Zone-Fehlermeldung ab -- dann erst die Zone anlegen
-# und den Deploy erneut auslösen. Siehe DEPLOYMENT.md.
-[[routes]]
-pattern = "dvgp.info"
-custom_domain = true
-
-[[routes]]
-pattern = "www.dvgp.info"
-custom_domain = true
+# [[routes]]
+# pattern = "dvgp.info"
+# custom_domain = true
+#
+# [[routes]]
+# pattern = "www.dvgp.info"
+# custom_domain = true

@@ -52,7 +52,7 @@ class Beitrag:
 
     @property
     def url(self) -> str:
-        return f"{BASIS_URL}/wissen/{self.slug}.html"
+        return f"{BASIS_URL}/wissen/{self.slug}"
 
     @property
     def datum_lesbar(self) -> str:
@@ -235,8 +235,8 @@ def kopf(titel: str, beschreibung: str, kanonisch: str, extra: str = "") -> str:
 <meta property="og:url" content="{kanonisch}">
 <meta property="og:title" content="{html.escape(titel)}">
 <meta property="og:description" content="{html.escape(beschreibung)}">
-<link rel="icon" type="image/png" href="../bilder/logo-dvgp.png">
-<link rel="stylesheet" href="../style.css">
+<link rel="icon" type="image/png" href="/bilder/logo-dvgp.png">
+<link rel="stylesheet" href="/style.css">
 {extra}</head>
 <body>
 
@@ -249,24 +249,20 @@ def kopf(titel: str, beschreibung: str, kanonisch: str, extra: str = "") -> str:
 
 <header class="header">
  <div class="container header-inner">
-  <a href="../index.html" class="logo" aria-label="DVGP — Startseite">
-   <span class="balken" aria-hidden="true"></span>
-   <span class="logo-text">
-    <strong>DVGP</strong>
-    <small>Gesundheitsförderung &amp; Prävention</small>
-   </span>
+  <a href="/" class="logo" aria-label="DVGP — Startseite">
+   <img src="/bilder/logo-dvgp-beschnitten.png" alt="DVGP — Deutscher Verband für Gesundheitsförderung und Prävention" width="312" height="174">
   </a>
   <nav id="nav">
    <ul>
-    <li><a href="../index.html#warum">Warum</a></li>
-    <li><a href="../index.html#verstaendnis">Gesundheit</a></li>
-    <li><a href="../index.html#auftrag">Auftrag</a></li>
-    <li><a href="../index.html#prinzip">STARK-Prinzip</a></li>
-    <li><a href="index.html">Wissen</a></li>
-    <li><a href="../index.html#kontakt">Kontakt</a></li>
+    <li><a href="/#warum">Warum</a></li>
+    <li><a href="/#verstaendnis">Gesundheit</a></li>
+    <li><a href="/#auftrag">Auftrag</a></li>
+    <li><a href="/#prinzip">STARK-Prinzip</a></li>
+    <li><a href="/wissen/">Wissen</a></li>
+    <li><a href="/#kontakt">Kontakt</a></li>
    </ul>
   </nav>
-  <a href="../index.html#kontakt" class="header-cta">Kontakt aufnehmen</a>
+  <a href="/#kontakt" class="header-cta">Kontakt aufnehmen</a>
   <button class="menu-toggle" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menü öffnen">☰</button>
  </div>
 </header>
@@ -277,7 +273,7 @@ FUSS = """
 <footer>
  <div class="container footer-grid">
   <div>
-   <img class="footer-logo" src="../bilder/logo-dvgp-voll.png" alt="Deutscher Verband für Gesundheitsförderung und Prävention">
+   <img class="footer-logo" src="/bilder/logo-dvgp-voll-beschnitten.png" alt="Deutscher Verband für Gesundheitsförderung und Prävention">
    <p class="footer-text">
     Wir denken Gesundheit als System — und geben Menschen die Werkzeuge, sie selbst
     zu gestalten.
@@ -288,25 +284,25 @@ FUSS = """
   <div>
    <h4>Inhalt</h4>
    <ul>
-    <li><a href="../index.html#warum">Wofür wir stehen</a></li>
-    <li><a href="../index.html#verstaendnis">Unser Gesundheitsbegriff</a></li>
-    <li><a href="../index.html#auftrag">Was wir tun</a></li>
-    <li><a href="../index.html#prinzip">Das STARK-Prinzip</a></li>
+    <li><a href="/#warum">Wofür wir stehen</a></li>
+    <li><a href="/#verstaendnis">Unser Gesundheitsbegriff</a></li>
+    <li><a href="/#auftrag">Was wir tun</a></li>
+    <li><a href="/#prinzip">Das STARK-Prinzip</a></li>
    </ul>
   </div>
   <div>
    <h4>Verband</h4>
    <ul>
-    <li><a href="index.html">Wissen</a></li>
-    <li><a href="../index.html#fuer-wen">Für wen wir da sind</a></li>
-    <li><a href="../index.html#kontakt">Kontakt</a></li>
-    <li><a href="../impressum.html">Impressum</a></li>
+    <li><a href="/wissen/">Wissen</a></li>
+    <li><a href="/#fuer-wen">Für wen wir da sind</a></li>
+    <li><a href="/#kontakt">Kontakt</a></li>
+    <li><a href="/impressum">Impressum</a></li>
    </ul>
   </div>
  </div>
  <div class="container">
   <div class="footer-bottom">
-   © 2026 DVGP — Deutscher Verband für Gesundheitsförderung und Prävention · <a href="../impressum.html">Impressum</a>
+   © 2026 DVGP — Deutscher Verband für Gesundheitsförderung und Prävention · <a href="/impressum">Impressum</a>
   </div>
  </div>
 </footer>
@@ -378,7 +374,7 @@ def baue_beitrag(b: Beitrag) -> str:
     seite = kopf(f"{b.titel} — DVGP", b.beschreibung, b.url)
     seite += f"""
 <main class="content-page">
- <a class="back-link" href="index.html">Zurück zur Übersicht</a>
+ <a class="back-link" href="/wissen/">Zurück zur Übersicht</a>
  <span class="section-kicker">{html.escape(b.cluster)}</span>
  <h1>{inline(b.titel)}</h1>
  <p class="meta">{b.datum_lesbar} · {b.lesezeit} Min. Lesezeit · Deutscher Verband für Gesundheitsförderung und Prävention</p>
@@ -390,7 +386,7 @@ def baue_beitrag(b: Beitrag) -> str:
  <div class="beitrag-cta">
   <h2>Fragen dazu?</h2>
   <p>Wir antworten persönlich — formlos per E-Mail oder Telefon.</p>
-  <a class="cta-primary" href="../index.html#kontakt">Kontakt aufnehmen</a>
+  <a class="cta-primary" href="/#kontakt">Kontakt aufnehmen</a>
  </div>
 </main>
 """
@@ -409,7 +405,7 @@ def baue_uebersicht(beitraege: list[Beitrag]) -> str:
     )
     if beitraege:
         karten = "\n".join(
-            f"""  <a class="wissen-karte" href="{b.slug}.html">
+            f"""  <a class="wissen-karte" href="/wissen/{b.slug}">
    <span class="wissen-cluster">{html.escape(b.cluster)}</span>
    <h2>{inline(b.titel)}</h2>
    <p>{inline(b.beschreibung)}</p>
@@ -457,7 +453,7 @@ def schreibe_sitemap(beitraege: list[Beitrag]) -> None:
             f"    <changefreq>yearly</changefreq>\n    <priority>0.6</priority>\n  </url>"
         )
     eintraege.append(
-        f"  <url>\n    <loc>{BASIS_URL}/impressum.html</loc>\n    <changefreq>yearly</changefreq>\n    <priority>0.3</priority>\n  </url>"
+        f"  <url>\n    <loc>{BASIS_URL}/impressum</loc>\n    <changefreq>yearly</changefreq>\n    <priority>0.3</priority>\n  </url>"
     )
     inhalt = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
