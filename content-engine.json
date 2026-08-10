@@ -1,0 +1,26 @@
+{
+  "projekt": "dvgp-website",
+  "nische": "gesundheitsfoerderung-praevention",
+  "stadt": {
+    "name": "Magdeburg",
+    "bundesland": "Sachsen-Anhalt",
+    "hinweis": "Sitz des Verbands. Der DVGP arbeitet bundesweit -- der Ortsbezug gehoert daher NICHT in jeden Artikel. Er kommt nur dort vor, wo er inhaltlich traegt (Veranstaltungen, Kooperationen, Kontakt)."
+  },
+  "themen": {
+    "quelle": "content/fragen-datenbank.md"
+  },
+  "pfade": {
+    "bilder_roh": "content/bilder-roh/",
+    "bilder_site": "content/bilder-fuer-site-webp/",
+    "artikel": "content/artikel/"
+  },
+  "takt": {
+    "intervall_tage": 7,
+    "jitter_tage": 1,
+    "zeitfenster": "08:00-18:00",
+    "versatz_quelle": "projekt"
+  },
+  "sprache": {
+    "regeln": "content/SCHREIBWEISE.md"
+  }
+}

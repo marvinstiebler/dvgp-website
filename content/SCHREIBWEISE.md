@@ -1,0 +1,60 @@
+# Schreibweise DVGP
+
+Verbindlich für alles, was unter dvgp.info veröffentlicht wird — Website wie Beiträge.
+
+> Die Ton-Regeln aus `webpage-landlord-blueprint/meta/PRINCIPLES.md` und dem AEO-Guide § 4
+> gelten hier **nicht**. Sie sind für das Rank-&-Rent-Modell geschrieben, in dem der
+> Seitenbetreiber die Leistung nicht selbst erbringt und deshalb im Passiv bleiben muss.
+> Der DVGP ist ein echter Verband, der für seine Aussagen einsteht. Er schreibt aktiv
+> und in der ersten Person Plural. Die **technischen** AEO-Regeln (§ 1–3) gelten dagegen
+> vollständig.
+
+## Verständlichkeit
+
+Alles muss ein Zehntklässler verstehen. Das ist die harte Grenze, nicht ein Richtwert.
+
+- Ein Gedanke pro Satz. Lieber zwei kurze Sätze als einer mit Komma-Kette.
+- Fachbegriffe nur, wenn sie im selben Satz erklärt werden — oder gar nicht.
+- Keine Anglizismen, wo es ein deutsches Wort gibt: *Framework* → *Prinzip*,
+  *Performance* → *Leistungsfähigkeit*, *Recovery* → *Erholung*.
+- Zahlen und Beispiele statt Abstraktion: „nach drei Tagen ohne Wasser" schlägt
+  „nach kurzer Zeit ohne Flüssigkeitszufuhr".
+
+## Haltung
+
+Verständlich heißt nicht anspruchslos. Der Ton ist der eines Fachmanns, der es ernst
+meint und keine Zeit für Show hat.
+
+- Klar und direkt. Behauptung zuerst, Begründung danach.
+- Keine Werbesprache, keine Ausrufezeichen, keine Superlative.
+- Keine Heilsversprechen. Wir erklären und befähigen, wir heilen nicht.
+- Kritik am System ja — Angriffe auf Ärzte nein. Die Kritik gilt den Annahmen,
+  nicht den Menschen, die darin arbeiten.
+
+## Verboten
+
+- KI-Floskeln: „In der heutigen Zeit…", „Es ist wichtig zu beachten…",
+  „Nicht zuletzt…", „Zusammenfassend lässt sich sagen…".
+- Diagnosen, Behandlungsempfehlungen, Dosierungsangaben.
+- Versprechen zu Heilung, Zeitspannen oder Ergebnissen.
+- Der Begriff *Ratgeber* für die Beitragsstrecke.
+
+## Fachwortschatz — wann er erlaubt ist
+
+Die eigenen Begriffe (Robustheit, Restitution, Erholungsfähigkeit, Tensegrity) sind
+für die Tiefe da, nicht für den Einstieg. Regel:
+
+- **Übersicht und Einstieg:** keine Fachbegriffe. „Wie gut dein Körper mit Belastung
+  umgeht und sich davon erholt."
+- **Im Artikel, nach der Erklärung:** Begriff einführen und benennen. „Diese Fähigkeit,
+  sich zu erholen, nennen wir Erholungsfähigkeit."
+- **STARK** wird immer ausgeschrieben, wenn es zum ersten Mal vorkommt.
+
+## Struktur (AEO)
+
+- Überschriften sind echte Nutzerfragen: „Warum werde ich beim Treppensteigen außer Atem?"
+- Die Antwort steht **im ersten Satz** darunter. Keine Hinführung.
+- Listen und Tabellen, wo es geht — die werden von KI-Antwortmaschinen bevorzugt übernommen.
+- Jeder Beitrag endet mit einem Absatz, der auf das STARK-Prinzip einordnet.
+- Pro Beitrag ein Hinweis, dass der DVGP keine Diagnosen stellt und die ärztliche
+  Versorgung nicht ersetzt.

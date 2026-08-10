@@ -4,13 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DVGP — Deutscher Verband für Gesundheitsförderung und Prävention</title>
-<meta name="description" content="Wir denken Gesundheit als System statt als Symptom. Der DVGP macht Gesundheit verstehbar und gibt Menschen die Kontrolle über die eigene Gesundheit zurück.">
+<meta name="description" content="Der DVGP denkt Gesundheit als System statt als Symptom. Wir erklären, wie der Körper funktioniert, und begleiten Menschen, Unternehmen und Institutionen dabei, Gesundheit selbst aufzubauen.">
 <meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://dvgp.info/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://dvgp.info/">
+<meta property="og:site_name" content="DVGP">
 <meta property="og:title" content="DVGP — Deutscher Verband für Gesundheitsförderung und Prävention">
 <meta property="og:description" content="Gesundheit ist kein Zustand, sondern eine Fähigkeit. Wir machen sie verstehbar — und geben Menschen die Kontrolle zurück.">
-<meta property="og:image" content="bilder/hero.jpg">
+<meta property="og:image" content="https://dvgp.info/bilder/hero.jpg">
 <link rel="icon" type="image/png" href="bilder/logo-dvgp.png">
 <link rel="preload" as="image" href="bilder/hero.jpg" fetchpriority="high">
 <link rel="stylesheet" href="style.css">
@@ -19,28 +22,34 @@
 
 <!-- TOP-BAR -->
 <div class="topbar">
- <span class="flag"><span class="b"></span><span class="r"></span><span class="y"></span></span>
- Deutscher Verband für Gesundheitsförderung und Prävention · <a href="mailto:kontakt@dvgp.info">kontakt@dvgp.info</a>
+ <div class="container">
+  <span class="flagge auf-dunkel" role="img" aria-label="Deutschland"></span>
+  <span>Deutscher Verband für Gesundheitsförderung und Prävention · <a href="mailto:kontakt@dvgp.info">kontakt@dvgp.info</a></span>
+ </div>
 </div>
 
 <!-- HEADER -->
 <header class="header">
  <div class="container header-inner">
-  <a href="index.html" class="logo">
-   <img src="bilder/logo-dvgp.png" alt="DVGP">
-   <span class="logo-text"><strong>DVGP</strong><small>Gesundheitsförderung &amp; Prävention</small></span>
+  <a href="index.html" class="logo" aria-label="DVGP — Startseite">
+   <span class="balken" aria-hidden="true"></span>
+   <span class="logo-text">
+    <strong>DVGP</strong>
+    <small>Gesundheitsförderung &amp; Prävention</small>
+   </span>
   </a>
   <nav id="nav">
    <ul>
     <li><a href="#warum">Warum</a></li>
-    <li><a href="#verstaendnis">Verständnis</a></li>
+    <li><a href="#verstaendnis">Gesundheit</a></li>
     <li><a href="#auftrag">Auftrag</a></li>
-    <li><a href="#framework">Framework</a></li>
+    <li><a href="#prinzip">STARK-Prinzip</a></li>
+    <li><a href="#fuer-wen">Für wen</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
    </ul>
   </nav>
   <a href="#kontakt" class="header-cta">Kontakt aufnehmen</a>
-  <button class="menu-toggle" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menü">☰</button>
+  <button class="menu-toggle" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menü öffnen">☰</button>
  </div>
 </header>
 
@@ -54,15 +63,14 @@
    <span class="hero-kicker">Deutscher Verband für Gesundheitsförderung und Prävention</span>
    <h1>Gesundheit ist kein Zufall.<br><span class="akzent">Sie ist eine Fähigkeit — und die kann jeder aufbauen.</span></h1>
    <p class="hero-subtitle">
-    Wir denken Gesundheit als System statt als Symptom. Wir machen sie verstehbar,
-    lehrbar und alltagstauglich — damit Menschen die Kontrolle über ihre eigene
-    Gesundheit zurückbekommen, statt sie abzugeben.
+    Wir denken Gesundheit als System statt als Symptom. Wir erklären, wie der Körper
+    wirklich funktioniert, und zeigen, was jeder selbst tun kann — verständlich,
+    alltagstauglich und ohne Verkaufsabsicht.
    </p>
    <div class="cta-row">
-    <a href="#warum" class="cta-primary">Warum es uns gibt</a>
+    <a href="#warum" class="cta-primary">Wofür wir stehen</a>
     <a href="#kontakt" class="cta-secondary">Kontakt aufnehmen</a>
    </div>
-   <p class="hero-note">Gemeinnützig orientiert · politisch und konfessionell neutral · Sitz in Magdeburg</p>
   </div>
  </div>
 </section>
@@ -70,47 +78,45 @@
 <!-- WARUM -->
 <section id="warum" class="about">
  <div class="container">
-  <span class="section-kicker">Warum es uns gibt</span>
-  <h2>Die Medizin behandelt Befunde. Sie versteht keine Menschen.</h2>
+  <span class="section-kicker">Wofür wir stehen</span>
+  <h2>Die Medizin behandelt Befunde. Sie erklärt keine Menschen.</h2>
   <p class="lead">
-   Wer heute krank wird, bekommt eine Diagnose, ein Medikament und einen Termin.
-   Was er selten bekommt: eine Erklärung, wie sein Körper eigentlich funktioniert —
-   und was er selbst tun kann, damit es besser wird.
+   Wer krank wird, bekommt eine Diagnose, ein Medikament und einen Termin. Was er
+   selten bekommt: eine Erklärung, wie sein Körper funktioniert — und was er selbst
+   tun kann, damit es besser wird.
   </p>
   <p>
-   Das liegt nicht an schlechten Ärzten. Es liegt an <span class="highlight">Prämissen, die nicht
-   stimmen</span>. Unsere Gesundheitsversorgung ist darauf gebaut, Krankheit zu bekämpfen —
-   nicht darauf, Gesundheit aufzubauen. Sie zerlegt den Körper in Fachgebiete, betrachtet
-   Organe getrennt voneinander und behandelt das, was messbar auffällt. Das dahinterliegende
-   System bleibt außen vor.
+   Das liegt nicht an schlechten Ärzten. Es liegt an <span class="highlight">Annahmen, die nicht
+   stimmen</span>. Unser Gesundheitswesen ist darauf gebaut, Krankheit zu bekämpfen — nicht
+   darauf, Gesundheit aufzubauen. Es teilt den Körper in Fachgebiete auf, betrachtet Organe
+   getrennt voneinander und behandelt das, was in Messwerten auffällt.
   </p>
   <p>
-   Und genau dieses System ist der Punkt: Der Mensch ist kein Baukasten aus austauschbaren
-   Teilen, sondern ein <span class="highlight">zusammenhängendes Netzwerk</span>, in dem alles
-   miteinander verbunden ist. Wer nur einzelne Teile repariert, wird nie verstehen, warum das
-   Problem wiederkommt.
+   Der Mensch ist aber kein Baukasten aus austauschbaren Teilen. Er ist ein
+   <span class="highlight">zusammenhängendes Netzwerk</span>, in dem alles miteinander verbunden
+   ist. Wer nur einzelne Teile repariert, wird nie verstehen, warum das Problem wiederkommt.
   </p>
 
   <div class="cases-grid">
    <div class="case-card">
-    <span class="case-meta">Prämisse 1</span>
+    <span class="case-meta">Annahme 1</span>
     <h3>Der Körper wird zerlegt, statt verstanden.</h3>
-    <p>Jede Fachrichtung schaut auf ihr Gebiet. Doch jede Zelle steht mit den anderen in Verbindung, jedes Organsystem beeinflusst die übrigen. Isolierte Betrachtung erklärt nicht, was wirklich passiert.</p>
+    <p>Jedes Fachgebiet schaut auf seinen Bereich. Doch jede Zelle steht mit den anderen in Verbindung, jedes Organ beeinflusst die übrigen. Wer nur einen Teil ansieht, sieht nicht, was wirklich passiert.</p>
    </div>
    <div class="case-card">
-    <span class="case-meta">Prämisse 2</span>
+    <span class="case-meta">Annahme 2</span>
     <h3>Symptome werden unterdrückt, nicht verstanden.</h3>
-    <p>Ein Befund, ein Gegenmittel. Doch der Körper zeigt Symptome aus einem Grund. Wer nur das Symptom wegdrückt, verschiebt das Problem — und verliert die Chance, die Ursache zu bearbeiten.</p>
+    <p>Ein Befund, ein Gegenmittel. Doch der Körper zeigt Beschwerden aus einem Grund. Wer nur das Symptom wegdrückt, verschiebt das Problem — und verpasst die Ursache.</p>
    </div>
    <div class="case-card">
-    <span class="case-meta">Prämisse 3</span>
+    <span class="case-meta">Annahme 3</span>
     <h3>Schonung wird mit Heilung verwechselt.</h3>
-    <p>„Ruhen Sie sich aus" ist oft das Gegenteil dessen, was ein System braucht. Was nicht gefordert wird, baut ab. Wer sich dauerhaft schont, verliert genau die Fähigkeit, die ihn gesund gemacht hätte.</p>
+    <p>„Ruhen Sie sich aus" ist oft das Gegenteil von dem, was der Körper braucht. Was nicht gefordert wird, baut ab. Wer sich dauerhaft schont, verliert genau die Fähigkeit, die ihn gesund gemacht hätte.</p>
    </div>
    <div class="case-card">
-    <span class="case-meta">Prämisse 4</span>
+    <span class="case-meta">Annahme 4</span>
     <h3>Verantwortung wird abgegeben, statt übernommen.</h3>
-    <p>Gesundheit gilt als etwas, das einem zustößt — oder das andere für einen herstellen. Dabei entscheidet der Alltag: Bewegung, Schlaf, Ernährung, Belastung, Erholung. Nur weiß das kaum jemand konkret.</p>
+    <p>Gesundheit gilt als etwas, das einem zustößt — oder das andere herstellen. Dabei entscheidet der Alltag: Bewegung, Schlaf, Ernährung, Belastung, Erholung. Nur weiß kaum jemand, was das konkret heißt.</p>
    </div>
   </div>
  </div>
@@ -119,11 +125,11 @@
 <!-- VERSTÄNDNIS -->
 <section id="verstaendnis" class="alt">
  <div class="container">
-  <span class="section-kicker">Wie wir Gesundheit verstehen</span>
+  <span class="section-kicker">So verstehen wir Gesundheit</span>
   <h2>Gesundheit ist kein Zustand. Sie ist eine Fähigkeit.</h2>
   <p class="lead">
-   „Gesund" und „krank" als zwei Schubladen zu denken, führt in die Irre. Entscheidend ist
-   etwas anderes: wie gut dein Körper mit dem umgeht, was das Leben an ihn heranträgt —
+   „Gesund" und „krank" als zwei Schubladen zu denken, führt in die Irre. Entscheidend
+   ist etwas anderes: wie gut dein Körper mit dem umgeht, was das Leben an ihn heranträgt —
    und wie gut er sich davon wieder erholt.
   </p>
 
@@ -137,7 +143,7 @@
    <div class="ja-box">
     <h3>Was Gesundheit ist</h3>
     <ul>
-     <li>Die Fähigkeit, Belastung zu verkraften und sich davon zu erholen</li>
+     <li>Die Fähigkeit, Belastung auszuhalten und sich davon zu erholen</li>
      <li>Etwas, das sich aufbauen und trainieren lässt — in jedem Alter</li>
      <li>Ein Zusammenspiel von Körper, Kopf, Gefühl und Umfeld</li>
      <li>Das Ergebnis vieler kleiner, alltäglicher Entscheidungen</li>
@@ -157,8 +163,7 @@
   </div>
 
   <p class="lead" style="margin-top:2.5rem;margin-bottom:0;">
-   Diese Fähigkeit gibt es nicht nur in einer Variante. Sie wirkt in vier Dimensionen,
-   die sich nicht voneinander trennen lassen:
+   Diese Fähigkeit wirkt in vier Bereichen, die sich nicht voneinander trennen lassen:
   </p>
   <div class="dim-grid">
    <div class="dim-tag"><strong>Körperlich</strong><span>Belastbarkeit, Bewegung, Erholung</span></div>
@@ -175,29 +180,29 @@
   <span class="section-kicker">Was wir tun</span>
   <h2>Wir geben Menschen die Kontrolle über ihre Gesundheit zurück.</h2>
   <p class="lead">
-   Nicht durch Vorschriften, nicht durch Versprechen. Sondern indem wir erklären, befähigen
-   und begleiten — über alle Lebensphasen hinweg.
+   Nicht durch Vorschriften, nicht durch Versprechen. Sondern indem wir erklären,
+   befähigen und begleiten — über alle Lebensphasen hinweg.
   </p>
 
   <div class="services-grid">
    <div class="service-card">
-    <img src="bilder/wissen.jpg" alt="Wissen vermitteln">
+    <div class="service-bild"><img src="bilder/wissen.jpg" alt="Wissensvermittlung im DVGP" loading="lazy"></div>
     <div class="service-body">
-     <span class="service-num">01 — VERSTEHEN</span>
+     <span class="service-num">01 — ERKLÄREN</span>
      <h3>Wissen, das im Alltag trägt</h3>
-     <p>Wir erklären, wie der Körper als Ganzes funktioniert — verständlich, ohne Fachjargon und ohne Verkaufsabsicht. Damit jeder lernt, die Signale seines eigenen Systems zu lesen.</p>
+     <p>Wir erklären, wie der Körper als Ganzes arbeitet — verständlich und ohne Fachchinesisch. Damit jeder lernt, die Signale des eigenen Körpers zu lesen und einzuordnen.</p>
     </div>
    </div>
    <div class="service-card">
-    <img src="bilder/training.jpg" alt="Eigenverantwortung aufbauen">
+    <div class="service-bild"><img src="bilder/training.jpg" alt="Training und Belastungsaufbau" loading="lazy"></div>
     <div class="service-body">
      <span class="service-num">02 — BEFÄHIGEN</span>
      <h3>Eigenverantwortung statt Abhängigkeit</h3>
-     <p>Wir geben konkrete Werkzeuge an die Hand: Woran erkenne ich, ob mir etwas guttut? Wie belaste ich richtig? Wie erhole ich mich wirklich? Aus Wissen wird so gelebte Selbstbestimmung.</p>
+     <p>Wir geben konkrete Werkzeuge an die Hand: Woran erkenne ich, ob mir etwas guttut? Wie belaste ich richtig? Wie erhole ich mich wirklich? Aus Wissen wird gelebte Selbstbestimmung.</p>
     </div>
    </div>
    <div class="service-card">
-    <img src="bilder/gemeinschaft.jpg" alt="Gemeinschaft und Austausch">
+    <div class="service-bild"><img src="bilder/gemeinschaft.jpg" alt="Gemeinschaft und Austausch im Verband" loading="lazy"></div>
     <div class="service-body">
      <span class="service-num">03 — BEGLEITEN</span>
      <h3>Gemeinschaft, die trägt</h3>
@@ -208,22 +213,22 @@
  </div>
 </section>
 
-<!-- FRAMEWORK -->
-<section id="framework" class="dark">
+<!-- STARK-PRINZIP -->
+<section id="prinzip" class="dark">
  <div class="container">
-  <span class="section-kicker">Unsere Methodik</span>
-  <h2>Das S.T.A.R.K.-Framework</h2>
+  <span class="section-kicker">Unser Prinzip</span>
+  <h2>Das STARK-Prinzip</h2>
   <p class="lead">
-   Wenn man alles Gesagte auf eine Formel bringen müsste, wäre es diese. Fünf Säulen,
-   die zusammen den biologischen Bauplan von Gesundheit abbilden — vom Verstehen bis
-   zur Selbstführung. Jede Säule baut auf der vorherigen auf.
+   Alles, was wir tun, folgt derselben Reihenfolge. Fünf Stufen, die zusammen den Bauplan
+   von Gesundheit ergeben — vom Verstehen bis zur Selbstführung. Jede Stufe baut auf der
+   vorherigen auf. Wer eine überspringt, verliert die nächste.
   </p>
 
   <div class="ablauf-steps">
    <div class="ablauf-step">
     <div class="buchstabe">S</div>
     <h3>SYSTEM</h3>
-    <p>Den eigenen Körper als zusammenhängendes Netzwerk verstehen. Die Grundlage für alles, was folgt.</p>
+    <p>Den eigenen Körper als zusammenhängendes Ganzes verstehen. Die Grundlage für alles, was folgt.</p>
    </div>
    <div class="ablauf-step">
     <div class="buchstabe">T</div>
@@ -233,7 +238,7 @@
    <div class="ablauf-step">
     <div class="buchstabe">A</div>
     <h3>ANPASSUNG</h3>
-    <p>Aus Belastung wird Wachstum. Schritt für Schritt entsteht echte Widerstandsfähigkeit.</p>
+    <p>Aus Belastung wird Wachstum. Schritt für Schritt entsteht echte Widerstandskraft.</p>
    </div>
    <div class="ablauf-step">
     <div class="buchstabe">R</div>
@@ -248,8 +253,8 @@
   </div>
 
   <p class="formel">
-   <strong>Die Gesamtlogik:</strong> System → Toleranz → Anpassung → Regeneration → Kapazität.
-   Kein Programm, kein Trend — sondern die Reihenfolge, in der Gesundheit tatsächlich entsteht.
+   <strong>Die Reihenfolge:</strong> System → Toleranz → Anpassung → Regeneration → Kapazität.
+   Kein Programm und kein Trend — sondern der Weg, auf dem Gesundheit tatsächlich entsteht.
   </p>
  </div>
 </section>
@@ -261,39 +266,115 @@
   <h2>Für alle, die ihre Gesundheit selbst in die Hand nehmen wollen.</h2>
   <p class="lead">
    Unser Zweck ist die Förderung der körperlichen, mentalen, emotionalen und sozialen
-   Gesundheit von Menschen über alle Lebensphasen hinweg. Das schließt niemanden aus.
+   Gesundheit über alle Lebensphasen hinweg. Das schließt niemanden aus — vom Einzelnen
+   mit Beschwerden bis zum Unternehmen mit 500 Mitarbeitern.
   </p>
+
   <div class="fuerwen-grid">
    <div class="fuerwen-item">
     <h3>Menschen mit Beschwerden</h3>
-    <p>Die verstehen wollen, was in ihrem Körper passiert — und was sie selbst tun können.</p>
+    <p>Wer Schmerzen hat oder chronisch erkrankt ist, bekommt bei uns zuerst eine Erklärung — und dann einen Weg.</p>
+    <ul>
+     <li>Einordnung: Was passiert da eigentlich im Körper?</li>
+     <li>Was sich trotz Diagnose aufbauen lässt</li>
+     <li>Orientierung im Dickicht der Angebote</li>
+    </ul>
    </div>
    <div class="fuerwen-item">
     <h3>Menschen ohne Beschwerden</h3>
-    <p>Die es dabei belassen wollen und wissen, dass Vorbeugen weniger kostet als Reparieren.</p>
+    <p>Wer gesund ist, will es bleiben. Vorbeugen kostet weniger Kraft als reparieren — und wirkt länger.</p>
+    <ul>
+     <li>Belastbarkeit gezielt aufbauen</li>
+     <li>Schlaf, Ernährung und Erholung sortieren</li>
+     <li>Frühwarnzeichen erkennen, bevor es weh tut</li>
+    </ul>
    </div>
    <div class="fuerwen-item">
     <h3>Ältere Menschen</h3>
-    <p>Für die Selbstständigkeit, Beweglichkeit und Teilhabe konkret verhandelbar sind.</p>
+    <p>Selbstständigkeit ist kein Zufall des Alters. Sie ist trainierbar — auch mit 70 und mit 85.</p>
+    <ul>
+     <li>Kraft und Gleichgewicht erhalten</li>
+     <li>Beweglichkeit und Sturzsicherheit</li>
+     <li>Teilhabe und Gemeinschaft statt Rückzug</li>
+    </ul>
+   </div>
+   <div class="fuerwen-item">
+    <h3>Unternehmen &amp; Betriebe</h3>
+    <p>Gesunde Belegschaften fallen seltener aus und arbeiten besser. Wir unterstützen den Aufbau — vom ersten Schritt an.</p>
+    <ul>
+     <li>Betriebliches Gesundheitsmanagement (BGM)</li>
+     <li>Gesundheitstage, Vorträge und Workshops</li>
+     <li>Führungskräfte für das Thema befähigen</li>
+     <li>Bestehende Maßnahmen prüfen und schärfen</li>
+    </ul>
+   </div>
+   <div class="fuerwen-item">
+    <h3>Selbstständige &amp; Freiberufler</h3>
+    <p>Wer allein arbeitet, hat keinen Krankenstand. Arbeitsfähigkeit ist hier die Existenzgrundlage.</p>
+    <ul>
+     <li>Belastung und Erholung im Arbeitsalltag planen</li>
+     <li>Leistungsfähigkeit über Jahre halten</li>
+     <li>Ausfallrisiken früh entschärfen</li>
+    </ul>
    </div>
    <div class="fuerwen-item">
     <h3>Fachleute &amp; Institutionen</h3>
-    <p>Die mit uns an einem Gesundheitsverständnis arbeiten wollen, das dem System gerecht wird.</p>
+    <p>Trainer, Therapeuten, Ärzte, Vereine, Kassen und Kommunen — überall dort, wo Gesundheit gestaltet wird.</p>
+    <ul>
+     <li>Fachlicher Austausch und gemeinsame Projekte</li>
+     <li>Ein Gesundheitsverständnis, das dem System gerecht wird</li>
+     <li>Kooperationen und Verbandsmitgliedschaft</li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- FRAGEN & ANTWORTEN -->
+<section id="fragen">
+ <div class="container">
+  <span class="section-kicker">Häufige Fragen</span>
+  <h2>Kurz beantwortet</h2>
+
+  <div class="faq-liste">
+   <div class="faq-item">
+    <h3>Was ist der DVGP?</h3>
+    <p>Der DVGP ist der Deutsche Verband für Gesundheitsförderung und Prävention, ein eingetragener Verein mit Sitz in Magdeburg. Er fördert die körperliche, mentale, emotionale und soziale Gesundheit von Menschen über alle Lebensphasen hinweg.</p>
+   </div>
+   <div class="faq-item">
+    <h3>Was bedeutet Gesundheit für den DVGP?</h3>
+    <p>Gesundheit ist die Fähigkeit, mit Belastungen umzugehen und sich davon zu erholen — nicht die Abwesenheit eines Befundes. Sie lässt sich in jedem Alter aufbauen und trainieren.</p>
+   </div>
+   <div class="faq-item">
+    <h3>Wofür steht das STARK-Prinzip?</h3>
+    <p>STARK steht für System, Toleranz, Anpassung, Regeneration und Kapazität. Die fünf Stufen beschreiben in dieser Reihenfolge, wie Gesundheit im Körper tatsächlich entsteht.</p>
+   </div>
+   <div class="faq-item">
+    <h3>Unterstützt der DVGP auch Unternehmen?</h3>
+    <p>Ja. Der Verband unterstützt Unternehmen, Betriebe und Selbstständige beim betrieblichen Gesundheitsmanagement, bei Gesundheitstagen, Vorträgen und Workshops sowie bei der Prüfung bestehender Maßnahmen.</p>
+   </div>
+   <div class="faq-item">
+    <h3>Ersetzt der DVGP einen Arzt oder eine Therapie?</h3>
+    <p>Nein. Der Verband stellt keine Diagnosen und behandelt keine Krankheiten. Er vermittelt Wissen, Einordnung und Begleitung — als Ergänzung zur medizinischen Versorgung, nicht als Ersatz.</p>
+   </div>
+   <div class="faq-item">
+    <h3>Wie erreicht man den DVGP?</h3>
+    <p>Per E-Mail an kontakt@dvgp.info oder telefonisch unter +49 176 22649995. Ansprechpartner ist der Vorstand Marvin Stiebler.</p>
    </div>
   </div>
  </div>
 </section>
 
 <!-- KONTAKT -->
-<section id="kontakt">
+<section id="kontakt" class="alt">
  <div class="container">
   <span class="section-kicker">Kontakt</span>
   <h2>Sprechen wir miteinander.</h2>
   <div class="contact-grid">
    <div class="contact-info">
     <p>
-     Ob Privatperson, Fachbetrieb, Forschungseinrichtung, Institution oder Presse —
-     schreib uns formlos. Wir antworten persönlich und in der Regel innerhalb weniger Tage.
+     Ob Privatperson, Unternehmen, Verein, Forschungseinrichtung, Institution oder Presse —
+     schreiben Sie uns formlos. Wir antworten persönlich und in der Regel innerhalb weniger Tage.
     </p>
     <p>
      Der DVGP ist ein eingetragener Verein mit Sitz in Magdeburg. Er ist politisch und
@@ -317,40 +398,141 @@
 
 <!-- FOOTER -->
 <footer>
- <div class="container">
+ <div class="container footer-grid">
   <div>
-   <img class="footer-logo" src="bilder/logo-dvgp.png" alt="DVGP">
-   <p style="color:rgba(255,255,255,0.85);max-width:340px;">
-    Deutscher Verband für Gesundheitsförderung und Prävention. Wir denken Gesundheit als
-    System — und geben Menschen die Werkzeuge, sie selbst zu gestalten.
+   <img class="footer-logo" src="bilder/logo-dvgp-voll.png" alt="Deutscher Verband für Gesundheitsförderung und Prävention">
+   <p class="footer-text">
+    Wir denken Gesundheit als System — und geben Menschen die Werkzeuge, sie selbst
+    zu gestalten.
    </p>
-   <p style="margin-top:1rem;"><a href="mailto:kontakt@dvgp.info" style="color:var(--color-accent-2);font-weight:700;">kontakt@dvgp.info</a></p>
-   <p style="font-size:0.85rem;margin-top:0.5rem;color:rgba(255,255,255,0.6);">39130 Magdeburg</p>
+   <a class="footer-mail" href="mailto:kontakt@dvgp.info">kontakt@dvgp.info</a>
+   <p class="footer-ort">Vorstand: Marvin Stiebler · 39130 Magdeburg</p>
   </div>
   <div>
    <h4>Inhalt</h4>
    <ul>
-    <li><a href="#warum">Warum es uns gibt</a></li>
-    <li><a href="#verstaendnis">Unser Verständnis</a></li>
+    <li><a href="#warum">Wofür wir stehen</a></li>
+    <li><a href="#verstaendnis">Unser Gesundheitsbegriff</a></li>
     <li><a href="#auftrag">Was wir tun</a></li>
-    <li><a href="#framework">S.T.A.R.K.-Framework</a></li>
+    <li><a href="#prinzip">Das STARK-Prinzip</a></li>
    </ul>
   </div>
   <div>
    <h4>Verband</h4>
    <ul>
-    <li><a href="#fuer-wen">Für wen</a></li>
+    <li><a href="#fuer-wen">Für wen wir da sind</a></li>
+    <li><a href="#fragen">Häufige Fragen</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
     <li><a href="impressum.html">Impressum</a></li>
    </ul>
   </div>
  </div>
- <div class="container" style="display:block;">
+ <div class="container">
   <div class="footer-bottom">
    © 2026 DVGP — Deutscher Verband für Gesundheitsförderung und Prävention · <a href="impressum.html">Impressum</a>
   </div>
  </div>
 </footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "NGO",
+   "@id": "https://dvgp.info/#organisation",
+   "name": "Deutscher Verband für Gesundheitsförderung und Prävention",
+   "alternateName": "DVGP",
+   "url": "https://dvgp.info/",
+   "logo": "https://dvgp.info/bilder/logo-dvgp-voll.png",
+   "email": "kontakt@dvgp.info",
+   "telephone": "+4917622649995",
+   "foundingDate": "2026-01-01",
+   "address": {
+    "@type": "PostalAddress",
+    "postalCode": "39130",
+    "addressLocality": "Magdeburg",
+    "addressCountry": "DE"
+   },
+   "employee": {
+    "@type": "Person",
+    "name": "Marvin Stiebler",
+    "jobTitle": "Vorstand"
+   },
+   "description": "Der DVGP fördert die körperliche, mentale, emotionale und soziale Gesundheit von Menschen über alle Lebensphasen hinweg. Der Verband versteht Gesundheit als Fähigkeit, mit Belastungen umzugehen und sich davon zu erholen.",
+   "knowsAbout": [
+    "Gesundheitsförderung",
+    "Prävention",
+    "Betriebliches Gesundheitsmanagement",
+    "Belastbarkeit und Regeneration",
+    "Gesundheitsbildung"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://dvgp.info/#website",
+   "url": "https://dvgp.info/",
+   "name": "DVGP",
+   "inLanguage": "de-DE",
+   "publisher": { "@id": "https://dvgp.info/#organisation" }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://dvgp.info/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Was ist der DVGP?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Der DVGP ist der Deutsche Verband für Gesundheitsförderung und Prävention, ein eingetragener Verein mit Sitz in Magdeburg. Er fördert die körperliche, mentale, emotionale und soziale Gesundheit von Menschen über alle Lebensphasen hinweg."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Was bedeutet Gesundheit für den DVGP?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gesundheit ist die Fähigkeit, mit Belastungen umzugehen und sich davon zu erholen — nicht die Abwesenheit eines Befundes. Sie lässt sich in jedem Alter aufbauen und trainieren."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wofür steht das STARK-Prinzip?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "STARK steht für System, Toleranz, Anpassung, Regeneration und Kapazität. Die fünf Stufen beschreiben in dieser Reihenfolge, wie Gesundheit im Körper tatsächlich entsteht."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Unterstützt der DVGP auch Unternehmen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja. Der Verband unterstützt Unternehmen, Betriebe und Selbstständige beim betrieblichen Gesundheitsmanagement, bei Gesundheitstagen, Vorträgen und Workshops sowie bei der Prüfung bestehender Maßnahmen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ersetzt der DVGP einen Arzt oder eine Therapie?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nein. Der Verband stellt keine Diagnosen und behandelt keine Krankheiten. Er vermittelt Wissen, Einordnung und Begleitung — als Ergänzung zur medizinischen Versorgung, nicht als Ersatz."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wie erreicht man den DVGP?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Per E-Mail an kontakt@dvgp.info oder telefonisch unter +49 176 22649995. Ansprechpartner ist der Vorstand Marvin Stiebler."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 
 </body>
 </html>

@@ -12,27 +12,33 @@
 <body>
 
 <div class="topbar">
- <span class="flag"><span class="b"></span><span class="r"></span><span class="y"></span></span>
- Deutscher Verband für Gesundheitsförderung und Prävention · <a href="mailto:kontakt@dvgp.info">kontakt@dvgp.info</a>
+ <div class="container">
+  <span class="flagge auf-dunkel" role="img" aria-label="Deutschland"></span>
+  <span>Deutscher Verband für Gesundheitsförderung und Prävention · <a href="mailto:kontakt@dvgp.info">kontakt@dvgp.info</a></span>
+ </div>
 </div>
 
 <header class="header">
  <div class="container header-inner">
-  <a href="index.html" class="logo">
-   <img src="bilder/logo-dvgp.png" alt="DVGP">
-   <span class="logo-text"><strong>DVGP</strong><small>Gesundheitsförderung &amp; Prävention</small></span>
+  <a href="index.html" class="logo" aria-label="DVGP — Startseite">
+   <span class="balken" aria-hidden="true"></span>
+   <span class="logo-text">
+    <strong>DVGP</strong>
+    <small>Gesundheitsförderung &amp; Prävention</small>
+   </span>
   </a>
   <nav id="nav">
    <ul>
     <li><a href="index.html#warum">Warum</a></li>
-    <li><a href="index.html#verstaendnis">Verständnis</a></li>
+    <li><a href="index.html#verstaendnis">Gesundheit</a></li>
     <li><a href="index.html#auftrag">Auftrag</a></li>
-    <li><a href="index.html#framework">Framework</a></li>
+    <li><a href="index.html#prinzip">STARK-Prinzip</a></li>
+    <li><a href="index.html#fuer-wen">Für wen</a></li>
     <li><a href="index.html#kontakt">Kontakt</a></li>
    </ul>
   </nav>
   <a href="index.html#kontakt" class="header-cta">Kontakt aufnehmen</a>
-  <button class="menu-toggle" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menü">☰</button>
+  <button class="menu-toggle" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menü öffnen">☰</button>
  </div>
 </header>
 
@@ -107,35 +113,36 @@
 </main>
 
 <footer>
- <div class="container">
+ <div class="container footer-grid">
   <div>
-   <img class="footer-logo" src="bilder/logo-dvgp.png" alt="DVGP">
-   <p style="color:rgba(255,255,255,0.85);max-width:340px;">
-    Deutscher Verband für Gesundheitsförderung und Prävention. Wir denken Gesundheit als
-    System — und geben Menschen die Werkzeuge, sie selbst zu gestalten.
+   <img class="footer-logo" src="bilder/logo-dvgp-voll.png" alt="Deutscher Verband für Gesundheitsförderung und Prävention">
+   <p class="footer-text">
+    Wir denken Gesundheit als System — und geben Menschen die Werkzeuge, sie selbst
+    zu gestalten.
    </p>
-   <p style="margin-top:1rem;"><a href="mailto:kontakt@dvgp.info" style="color:var(--color-accent-2);font-weight:700;">kontakt@dvgp.info</a></p>
-   <p style="font-size:0.85rem;margin-top:0.5rem;color:rgba(255,255,255,0.6);">39130 Magdeburg</p>
+   <a class="footer-mail" href="mailto:kontakt@dvgp.info">kontakt@dvgp.info</a>
+   <p class="footer-ort">Vorstand: Marvin Stiebler · 39130 Magdeburg</p>
   </div>
   <div>
    <h4>Inhalt</h4>
    <ul>
-    <li><a href="index.html#warum">Warum es uns gibt</a></li>
-    <li><a href="index.html#verstaendnis">Unser Verständnis</a></li>
+    <li><a href="index.html#warum">Wofür wir stehen</a></li>
+    <li><a href="index.html#verstaendnis">Unser Gesundheitsbegriff</a></li>
     <li><a href="index.html#auftrag">Was wir tun</a></li>
-    <li><a href="index.html#framework">S.T.A.R.K.-Framework</a></li>
+    <li><a href="index.html#prinzip">Das STARK-Prinzip</a></li>
    </ul>
   </div>
   <div>
    <h4>Verband</h4>
    <ul>
-    <li><a href="index.html#fuer-wen">Für wen</a></li>
+    <li><a href="index.html#fuer-wen">Für wen wir da sind</a></li>
+    <li><a href="index.html#fragen">Häufige Fragen</a></li>
     <li><a href="index.html#kontakt">Kontakt</a></li>
     <li><a href="impressum.html">Impressum</a></li>
    </ul>
   </div>
  </div>
- <div class="container" style="display:block;">
+ <div class="container">
   <div class="footer-bottom">
    © 2026 DVGP — Deutscher Verband für Gesundheitsförderung und Prävention · <a href="impressum.html">Impressum</a>
   </div>
