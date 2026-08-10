@@ -32,6 +32,12 @@ Die Methodik des Verbands. Fünf Stufen in fester Reihenfolge:
 - [Startseite](https://dvgp.info/): Gesundheitsbegriff, Kritik an den Annahmen der heutigen Versorgung, Auftrag, STARK-Prinzip, Zielgruppen und Kontakt.
 - [Impressum](https://dvgp.info/impressum.html): Anbieterkennzeichnung nach § 5 TMG.
 
+## Beiträge (Wissen)
+
+- [Darf man bei Osteoporose schwer heben?](https://dvgp.info/wissen/osteoporose-schwer-heben.html): Ja — und zwar planvoll. Belastung ist der stärkste bekannte Reiz für den Knochenaufbau. Was dabei zählt und wo die Grenzen liegen.
+- [Ist Sport bei Bluthochdruck gefährlich?](https://dvgp.info/wissen/sport-bei-bluthochdruck-gefaehrlich.html): In aller Regel nicht — regelmäßige Belastung senkt den Blutdruck dauerhaft. Was vorher abgeklärt gehört und worauf es beim Krafttraining ankommt.
+- [Was ist Sarkopenie?](https://dvgp.info/wissen/was-ist-sarkopenie.html): Sarkopenie ist der fortschreitende Verlust von Muskelmasse und Muskelkraft im Alter. Sie beginnt früher als die meisten denken — und lässt sich aufhalten.
+
 ## Kontakt
 
 - E-Mail: kontakt@dvgp.info

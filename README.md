@@ -68,3 +68,19 @@ npx wrangler deploy
 ## Bildnachweise
 
 Fotos von Victor Freitas, John Arano und Centre for Ageing Better auf Unsplash.
+
+## Rubrik „Wissen"
+
+Beiträge liegen als Markdown in `content/artikel/` (Frontmatter: `titel`,
+`beschreibung`, `datum`, optional `cluster` und `slug`). Der Generator baut daraus
+die HTML-Seiten und zieht Sitemap und `llms.txt` nach:
+
+```bash
+python3 werkzeuge/baue_wissen.py
+```
+
+Erzeugte Dateien unter `site/wissen/` werden **mit eingecheckt** — Cloudflare Workers
+Builds führt nur `wrangler deploy` aus und baut nichts.
+
+Themen und Suchvolumen: `content/fragen-datenbank.md`.
+Tonalität: `content/SCHREIBWEISE.md`.
