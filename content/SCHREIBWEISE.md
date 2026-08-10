@@ -50,6 +50,19 @@ für die Tiefe da, nicht für den Einstieg. Regel:
   sich zu erholen, nennen wir Erholungsfähigkeit."
 - **STARK** wird immer ausgeschrieben, wenn es zum ersten Mal vorkommt.
 
+## Belege
+
+Jede fachliche Aussage, die über Alltagswissen hinausgeht, wird belegt. Recherche über
+PubMed, bevorzugt systematische Übersichtsarbeiten, Metaanalysen und Leitlinien.
+
+- Quellenliste am Ende des Beitrags unter `## Quellen`, mit Titel, Jahr und DOI-Link.
+- Zwei bis fünf Quellen reichen. Mehr wirkt wie Tarnung.
+- Die Aussage im Text muss das hergeben, was die Quelle wirklich zeigt. Eine Metaanalyse
+  mit niedriger Evidenzsicherheit trägt kein „ist erwiesen", sondern ein „deutet darauf hin".
+- **Eine erfundene Quelle ist schlimmer als keine Quelle.** Wer eine Angabe nicht belegen
+  kann, formuliert vorsichtiger oder lässt sie weg.
+- Keine Effektstärken oder Prozentzahlen ohne Quelle.
+
 ## Struktur (AEO)
 
 - Überschriften sind echte Nutzerfragen: „Warum werde ich beim Treppensteigen außer Atem?"

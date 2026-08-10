@@ -82,5 +82,5 @@ python3 werkzeuge/baue_wissen.py
 Erzeugte Dateien unter `site/wissen/` werden **mit eingecheckt** — Cloudflare Workers
 Builds führt nur `wrangler deploy` aus und baut nichts.
 
-Themen und Suchvolumen: `content/fragen-datenbank.md`.
+Themen und Suchvolumen: `content/themenplan.md`.
 Tonalität: `content/SCHREIBWEISE.md`.

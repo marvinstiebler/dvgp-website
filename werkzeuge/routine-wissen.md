@@ -27,7 +27,7 @@ hinzufügen. Danach lässt sich die Routine ohne weitere Änderung anlegen.
 | Konnektoren | keine |
 
 Ahrefs wird nicht gebraucht: Die Themen samt Suchvolumen stehen bereits in
-`content/fragen-datenbank.md`. Der Agent nimmt die oberste offene Frage aus der Liste
+`content/themenplan.md`. Der Agent nimmt die oberste offene Frage aus der Liste
 „Als Nächstes". Cloud-Routinen haben ohnehin keinen Zugriff auf die
 interaktiv angemeldeten Konnektoren.
 
@@ -39,12 +39,12 @@ interaktiv angemeldeten Konnektoren.
 >
 > **SCHRITT 1 — Kontext lesen (nicht überspringen):**
 > - `content/SCHREIBWEISE.md` — verbindliche Ton- und Sprachregeln
-> - `content/fragen-datenbank.md` — Themen mit Suchvolumen und die Reihenfolge am Dateiende
+> - `content/themenplan.md` — Themen mit Suchvolumen und die Reihenfolge am Dateiende
 > - `content/artikel/*.md` — die bereits erschienenen Beiträge als Vorbild für Aufbau und Ton
 >
 > **SCHRITT 2 — Thema wählen:**
 > Nimm die oberste Frage aus der Liste "Als Nächstes" am Ende von
-> `content/fragen-datenbank.md`, zu der es noch keine Datei in `content/artikel/` gibt.
+> `content/themenplan.md`, zu der es noch keine Datei in `content/artikel/` gibt.
 > Schwerpunkt des Projekts sind Krafttraining, Langhanteltraining und gesundes Altern.
 >
 > **SCHRITT 3 — Beitrag schreiben:**
@@ -79,7 +79,7 @@ interaktiv angemeldeten Konnektoren.
 > liegt, der Durchlauf fehlerfrei war und im JSON-LD nur Fragen mit Fragezeichen stehen.
 >
 > **SCHRITT 5 — Datenbank pflegen:**
-> Die Frage in `content/fragen-datenbank.md` von "Als Nächstes" nach "Erschienen"
+> Die Frage in `content/themenplan.md` von "Als Nächstes" nach "Erschienen"
 > verschieben, mit Datum.
 >
 > **SCHRITT 6 — Veröffentlichen:**

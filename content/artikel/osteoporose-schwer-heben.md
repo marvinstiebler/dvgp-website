@@ -63,3 +63,10 @@ Wer eine Osteoporose-Diagnose hat, klärt die Belastung vorher ärztlich ab — 
 Dieser Beitrag berührt drei Stufen: **Toleranz**, weil es um die richtige Dosis von Belastung geht. **Anpassung**, weil aus dieser Belastung neue Knochensubstanz entsteht. Und **Regeneration**, weil der Aufbau in den Pausen dazwischen passiert, nicht während des Trainings.
 
 Der Knochen ist ein gutes Beispiel für den Grundgedanken des Verbands: Er ist nicht kaputt und muss repariert werden. Er reagiert auf das, was von ihm verlangt wird — und man kann bestimmen, was das ist.
+
+## Quellen
+
+Recherchiert über PubMed.
+
+- Kemmler W. et al.: *Effects of Different Types of Exercise on Bone Mineral Density in Postmenopausal Women: A Systematic Review and Meta-analysis.* Calcified Tissue International, 2020. [10.1007/s00223-020-00744-w](https://doi.org/10.1007/s00223-020-00744-w) — findet günstige Effekte auf die Knochendichte an Lendenwirbelsäule, Schenkelhals und Hüfte, weitgehend unabhängig von der Trainingsart.
+- Sá K. M. M. et al.: *Resistance training for postmenopausal women: systematic review and meta-analysis.* Menopause, 2023. [10.1097/GME.0000000000002079](https://doi.org/10.1097/GME.0000000000002079) — berichtet Verbesserungen der Funktionsfähigkeit und keine schweren unerwünschten Ereignisse; die Evidenzsicherheit stuft die Arbeit selbst als niedrig bis sehr niedrig ein.
