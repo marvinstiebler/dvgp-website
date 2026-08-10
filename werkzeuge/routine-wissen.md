@@ -1,18 +1,24 @@
 # Routine: wöchentlicher Wissens-Beitrag
 
-Fertig konfiguriert, aber **noch nicht aktiv**. Beim Anlegen kam:
+Fertig konfiguriert, **noch nicht aktiv**. Beim Anlegen kommt weiterhin:
 
 ```
 HTTP 403 — You don't have access to a repository this routine uses.
 ```
 
-Grund: `marvinstiebler/dvgp-website` ist privat, und die Claude-GitHub-App hat dafür
-keine Freigabe. Das ist eine reine Berechtigungsfrage, kein Fehler in der Konfiguration.
+Zuletzt geprüft am 10.08.2026, auch nachdem der Zugriff bereits erteilt wurde. Es ist
+eine reine Berechtigungsfrage, an der Konfiguration liegt es nicht.
 
-## Was freizugeben ist
+## Was zu prüfen ist
 
-GitHub → Settings → Applications → Claude → **Repository access** → `dvgp-website`
-hinzufügen. Danach lässt sich die Routine ohne weitere Änderung anlegen.
+1. **github.com/settings/installations** → Eintrag *Claude* → *Repository access*.
+   Entweder „All repositories" oder `dvgp-website` in der Auswahlliste.
+2. Es gibt mehrere Claude-Integrationen. Die Routine läuft über **Claude Code**, nicht
+   über die claude.ai-Chat-Anbindung — die Freigabe muss bei der richtigen liegen.
+3. Freigaben brauchen manchmal ein paar Minuten. Danach erneut versuchen.
+
+Alternative, falls es dabei bleibt: das Repo auf öffentlich stellen. Die Seite ist
+ohnehin für die Öffentlichkeit bestimmt, im Repo stehen keine Zugangsdaten.
 
 ## Konfiguration
 
@@ -26,10 +32,9 @@ hinzufügen. Danach lässt sich die Routine ohne weitere Änderung anlegen.
 | Werkzeuge | Bash, Read, Write, Edit, Glob, Grep |
 | Konnektoren | keine |
 
-Ahrefs wird nicht gebraucht: Die Themen samt Suchvolumen stehen bereits in
-`content/themenplan.md`. Der Agent nimmt die oberste offene Frage aus der Liste
-„Als Nächstes". Cloud-Routinen haben ohnehin keinen Zugriff auf die
-interaktiv angemeldeten Konnektoren.
+Der Themenplan enthält bereits eine geprüfte Quellenbasis mit DOIs. Cloud-Routinen
+erreichen die interaktiv angemeldeten Konnektoren nicht — PubMed steht dort also nicht
+zur Verfügung, deshalb die harte Regel gegen erfundene Quellen im Auftragstext.
 
 ## Der Auftrag an den Agenten
 
@@ -37,56 +42,47 @@ interaktiv angemeldeten Konnektoren.
 > (Deutscher Verband für Gesundheitsförderung und Prävention, dvgp.info). Arbeite
 > selbstständig bis zum Push — es gibt keine Rückfragemöglichkeit.
 >
-> **SCHRITT 1 — Kontext lesen (nicht überspringen):**
+> **SCHRITT 1 — Kontext lesen, nicht überspringen:**
 > - `content/SCHREIBWEISE.md` — verbindliche Ton- und Sprachregeln
-> - `content/themenplan.md` — Themen mit Suchvolumen und die Reihenfolge am Dateiende
-> - `content/artikel/*.md` — die bereits erschienenen Beiträge als Vorbild für Aufbau und Ton
+> - `content/themenplan.md` — Themen und Reihenfolge
+> - `content/artikel/*.md` — die erschienenen Beiträge als Vorbild für Aufbau und Ton
 >
 > **SCHRITT 2 — Thema wählen:**
-> Nimm die oberste Frage aus der Liste "Als Nächstes" am Ende von
-> `content/themenplan.md`, zu der es noch keine Datei in `content/artikel/` gibt.
-> Schwerpunkt des Projekts sind Krafttraining, Langhanteltraining und gesundes Altern.
+> Nimm die oberste Frage aus "Als Nächstes" in `content/themenplan.md`, zu der es noch
+> keine Datei in `content/artikel/` gibt.
 >
 > **SCHRITT 3 — Beitrag schreiben:**
-> Lege `content/artikel/<slug>.md` an, mit diesem Frontmatter:
+> Lege `content/artikel/<slug>.md` an mit Frontmatter (`titel`, `beschreibung`, `datum`
+> per `date +%F`, `cluster`, `slug`).
 >
-> ```
-> ---
-> titel: <die Frage wörtlich, so wie Menschen sie suchen>
-> beschreibung: <ein bis zwei Sätze, beantworten die Frage bereits>
-> datum: <heutiges Datum als JJJJ-MM-TT, per `date +%F` ermitteln>
-> cluster: <Gesundes Altern | Krafttraining | Belastung und Erholung | Prävention | Arbeit und Betrieb>
-> slug: <kleingeschrieben, mit Bindestrichen, ohne Umlaute>
-> ---
-> ```
->
-> Harte Vorgaben für den Text:
-> - 700 bis 1100 Wörter.
-> - Der ERSTE Satz beantwortet die Titelfrage direkt und vollständig. Keine Hinführung.
-> - Zwischenüberschriften (`##`) sind selbst echte Fragen und werden im ersten Satz
->   darunter beantwortet. Nur Überschriften mit Fragezeichen landen im FAQ-Schema.
-> - Der Beitrag endet mit "## Einordnung im STARK-Prinzip" (ohne Fragezeichen).
+> Harte Vorgaben:
+> - 800 bis 1200 Wörter.
+> - Der ERSTE Satz beantwortet die Titelfrage direkt und vollständig.
+> - Zwischenüberschriften sind selbst echte Fragen, im ersten Satz beantwortet. Nur
+>   Überschriften mit Fragezeichen landen im FAQ-Schema.
+> - Ende: "## Einordnung im STARK-Prinzip", danach nur noch der Quellenteil.
 > - Mindestens eine Tabelle oder Liste.
-> - Sprache: ein Zehntklässler muss alles verstehen. Ein Gedanke pro Satz. Trotzdem
->   fachlich ernsthaft, kein Ratgeber-Ton, keine Werbesprache, keine Ausrufezeichen.
-> - VERBOTEN: Diagnosen, Behandlungsempfehlungen, Dosierungen, Präparate-Empfehlungen,
->   Heilungsversprechen, nicht belegbare Wirksamkeitszahlen, KI-Floskeln.
-> - Markdown-Umfang: `##`, `###`, Absätze, Listen, Zitate, Tabellen, fett, kursiv, Links.
->   Nichts anderes — der Generator unterstützt nur das.
+> - Ein Zehntklässler muss alles verstehen. Trotzdem fachlich ernsthaft.
+> - VERBOTEN: Diagnosen, Behandlungsempfehlungen, Dosierungen, Präparate,
+>   Heilungsversprechen, erfundene Zahlen, KI-Floskeln.
 >
-> **SCHRITT 4 — Bauen und prüfen:**
-> `python3 werkzeuge/baue_wissen.py`, dann prüfen, dass die Datei unter `site/wissen/`
-> liegt, der Durchlauf fehlerfrei war und im JSON-LD nur Fragen mit Fragezeichen stehen.
+> **SCHRITT 4 — Belege:**
+> Jede fachliche Aussage über Alltagswissen hinaus wird belegt, bevorzugt mit
+> systematischen Übersichtsarbeiten, Metaanalysen oder Leitlinien. Quellen am Ende unter
+> "## Quellen" mit Titel, Jahr und DOI-Link. Der Themenplan enthält eine geprüfte
+> Ausgangsbasis.
+> **Erfinde niemals eine Quelle oder eine DOI.** Was sich nicht belegen lässt, wird
+> vorsichtiger formuliert oder weggelassen. Die Aussage im Text muss das hergeben, was
+> die Quelle wirklich zeigt.
 >
-> **SCHRITT 5 — Datenbank pflegen:**
-> Die Frage in `content/themenplan.md` von "Als Nächstes" nach "Erschienen"
-> verschieben, mit Datum.
+> **SCHRITT 5 — Bauen und prüfen:** `python3 werkzeuge/baue_wissen.py`
 >
-> **SCHRITT 6 — Veröffentlichen:**
-> Alles committen und auf `main` pushen. Commit-Nachricht auf Deutsch. Der Push löst bei
-> Cloudflare Workers Builds das Deployment aus.
+> **SCHRITT 6 — Themenplan pflegen:** Frage von "Als Nächstes" nach "Erschienen".
 >
-> Wenn etwas nicht geht: nichts halb Fertiges pushen, sondern den Grund im
+> **SCHRITT 7 — Veröffentlichen:** committen, auf `main` pushen. Der Push löst das
+> Deployment aus.
+>
+> Wenn etwas nicht funktioniert: nichts halb Fertiges pushen, sondern den Grund im
 > Abschlussbericht nennen.
 
 ## Danach
