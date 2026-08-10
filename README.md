@@ -48,15 +48,16 @@ python3 -m http.server 8000 --directory site
 
 Cloudflare Workers Builds deployt automatisch bei jedem Push auf `main`.
 
-Einmalige Einrichtung (Dashboard → Workers & Pages → Create → Workers → Connect to Git):
+Einrichtung Schritt für Schritt inklusive DNS-Umzug: siehe **[DEPLOYMENT.md](DEPLOYMENT.md)**.
 
 - Repo: `marvinstiebler/dvgp-website`
 - Bereitstellungsbefehl: `npx wrangler deploy`
 - Stammverzeichnis: `/`
 - Produktions-Branch: `main`
 
-Danach Custom Domain setzen: Worker → Settings → Domains → Add Custom Domain → `dvgp.info`
-(die Domain muss vorher über Cloudflare-DNS laufen).
+Die Custom Domains `dvgp.info` und `www.dvgp.info` stehen als `custom_domain`-Routen in
+`wrangler.toml` — Cloudflare legt die DNS-Einträge beim Deploy selbst an. Voraussetzung ist,
+dass die Zone `dvgp.info` zu diesem Zeitpunkt bereits im Cloudflare-Konto aktiv ist.
 
 Manuelles Deployment:
 

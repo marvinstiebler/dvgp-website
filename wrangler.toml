@@ -13,3 +13,18 @@ compatibility_date = "2026-08-10"
 [assets]
 directory = "./site"
 not_found_handling = "404-page"
+
+# Eigene Domain. Cloudflare legt die nötigen DNS-Einträge beim Deploy selbst an --
+# es muss nichts von Hand in die DNS-Zone eingetragen werden.
+#
+# VORAUSSETZUNG: Die Zone dvgp.info muss zu diesem Zeitpunkt bereits im Cloudflare-
+# Konto liegen (Nameserver-Umstellung bei IONOS abgeschlossen). Ist sie es nicht,
+# bricht der Deploy mit einer Zone-Fehlermeldung ab -- dann erst die Zone anlegen
+# und den Deploy erneut auslösen. Siehe DEPLOYMENT.md.
+[[routes]]
+pattern = "dvgp.info"
+custom_domain = true
+
+[[routes]]
+pattern = "www.dvgp.info"
+custom_domain = true
