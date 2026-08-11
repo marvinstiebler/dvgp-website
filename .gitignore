@@ -1,1 +1,5 @@
 .DS_Store
+
+# Rohbilder aus der Stockfoto-Suche: mehrere MB je Datei, ausgeliefert wird nur
+# die beschnittene Fassung unter site/bilder/.
+content/bilder-roh/
