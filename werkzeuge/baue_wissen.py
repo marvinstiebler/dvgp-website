@@ -65,7 +65,7 @@ class Beitrag:
         return max(1, round(woerter / 200))
 
 
-def lies_frontmatter(text: str, pfad: Path) -> tuple[dict[str, str], str]:
+def lies_frontmatter(text: str, pfad: Path, pflicht: tuple[str, ...] = PFLICHTFELDER) -> tuple[dict[str, str], str]:
     if not text.startswith("---"):
         raise SystemExit(f"{pfad.name}: Frontmatter fehlt (Datei muss mit '---' beginnen).")
     _, kopf, rest = text.split("---", 2)
@@ -77,10 +77,10 @@ def lies_frontmatter(text: str, pfad: Path) -> tuple[dict[str, str], str]:
             raise SystemExit(f"{pfad.name}: Zeile ohne Doppelpunkt im Frontmatter: {zeile!r}")
         schluessel, wert = zeile.split(":", 1)
         daten[schluessel.strip()] = wert.strip().strip('"')
-    fehlend = [f for f in PFLICHTFELDER if f not in daten]
+    fehlend = [f for f in pflicht if f not in daten]
     if fehlend:
         raise SystemExit(f"{pfad.name}: Pflichtfelder fehlen: {', '.join(fehlend)}")
-    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", daten["datum"]):
+    if "datum" in daten and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", daten["datum"]):
         raise SystemExit(f"{pfad.name}: datum muss JJJJ-MM-TT sein, ist {daten['datum']!r}.")
     return daten, rest.lstrip("\n")
 
@@ -220,7 +220,7 @@ def markdown_zu_html(text: str) -> tuple[str, list[tuple[str, str]]]:
 # Seitenrahmen
 # --------------------------------------------------------------------------
 
-def kopf(titel: str, beschreibung: str, kanonisch: str, extra: str = "") -> str:
+def kopf_seite(titel: str, beschreibung: str, kanonisch: str, extra: str = "") -> str:
     return f"""<!DOCTYPE html>
 <html lang="de">
 <head>
@@ -262,6 +262,7 @@ def kopf(titel: str, beschreibung: str, kanonisch: str, extra: str = "") -> str:
     <li><a href="/#auftrag">Auftrag</a></li>
     <li><a href="/#prinzip">STARK-Prinzip</a></li>
     <li><a href="/wissen/">Wissen</a></li>
+    <li><a href="/publikationen/">Publikationen</a></li>
     <li><a href="/#kontakt">Kontakt</a></li>
    </ul>
   </nav>
@@ -297,6 +298,7 @@ FUSS = """
    <h4>Verband</h4>
    <ul>
     <li><a href="/wissen/">Wissen</a></li>
+    <li><a href="/publikationen/">Publikationen</a></li>
     <li><a href="/#fuer-wen">Für wen wir da sind</a></li>
     <li><a href="/#kontakt">Kontakt</a></li>
     <li><a href="/impressum">Impressum</a></li>
@@ -385,7 +387,7 @@ def json_ld_artikel(b: Beitrag, abschnitte: list[tuple[str, str]]) -> str:
 def baue_beitrag(b: Beitrag) -> str:
     inhalt, abschnitte = markdown_zu_html(b.koerper)
     b.abschnitte = abschnitte
-    seite = kopf(f"{b.titel} — DVGP", b.beschreibung, b.url)
+    seite = kopf_seite(f"{b.titel} — DVGP", b.beschreibung, b.url)
     seite += f"""
 <main class="content-page">
  <a class="back-link" href="/wissen/">Zurück zur Übersicht</a>
@@ -411,7 +413,7 @@ def baue_beitrag(b: Beitrag) -> str:
 
 def baue_uebersicht(beitraege: list[Beitrag]) -> str:
     url = f"{BASIS_URL}/wissen/"
-    seite = kopf(
+    seite = kopf_seite(
         "Wissen — DVGP",
         "Beiträge des DVGP zu Gesundheit, Prävention, Krafttraining und gesundem Altern. "
         "Verständlich erklärt, ohne Verkaufsabsicht.",
@@ -452,6 +454,176 @@ def baue_uebersicht(beitraege: list[Beitrag]) -> str:
 
 
 # --------------------------------------------------------------------------
+# Publikationsseite
+# --------------------------------------------------------------------------
+
+PUBLIKATIONEN_QUELLE = WURZEL / "content" / "publikationen.md"
+
+
+@dataclass
+class Publikation:
+    titel: str
+    autoren: str
+    quelle: str
+    doi: str
+    aussage: str
+
+    @property
+    def url(self) -> str:
+        return f"https://doi.org/{self.doi}" if self.doi else ""
+
+
+def lies_publikationen() -> tuple[dict[str, str], list[tuple[str, list[Publikation]]]]:
+    """Liest content/publikationen.md.
+
+    Zeilenformat je Eintrag:
+        - Titel | Autoren | Journal Jahr | doi:10.xxxx/yyy | Aussage
+    Die DOI darf leer bleiben. Titel und Aussage sind Pflicht -- eine Publikation
+    ohne Aussage sagt dem Leser nichts und fliegt mit Fehlermeldung raus.
+    """
+    if not PUBLIKATIONEN_QUELLE.exists():
+        return {}, []
+    kopf, koerper = lies_frontmatter(
+        PUBLIKATIONEN_QUELLE.read_text(encoding="utf-8"),
+        PUBLIKATIONEN_QUELLE,
+        pflicht=("titel", "beschreibung"),
+    )
+
+    themen: list[tuple[str, list[Publikation]]] = []
+    vorspann: list[str] = []
+    aktuelles_thema: str | None = None
+
+    im_kommentar = False
+    for zeile in koerper.splitlines():
+        strip = zeile.strip()
+        # HTML-Kommentare vollständig überspringen -- vorher rutschte der
+        # Formathinweis aus der Quelldatei in den Vorspann der Seite.
+        if strip.startswith("<!--"):
+            im_kommentar = "-->" not in strip
+            continue
+        if im_kommentar:
+            im_kommentar = "-->" not in strip
+            continue
+        if strip.startswith("## "):
+            aktuelles_thema = strip[3:].strip()
+            themen.append((aktuelles_thema, []))
+            continue
+        if strip.startswith("- ") and aktuelles_thema:
+            felder = [f.strip() for f in strip[2:].split("|")]
+            while len(felder) < 5:
+                felder.append("")
+            titel, autoren, quelle, doi_roh, aussage = felder[:5]
+            if not titel or not aussage:
+                raise SystemExit(
+                    f"publikationen.md: Eintrag ohne Titel oder Aussage: {strip[:70]!r}"
+                )
+            doi = doi_roh.removeprefix("doi:").strip()
+            themen[-1][1].append(Publikation(titel, autoren, quelle, doi, aussage))
+            continue
+        if strip and aktuelles_thema is None:
+            vorspann.append(strip)
+
+    kopf["_vorspann"] = " ".join(vorspann)
+    return kopf, themen
+
+
+def json_ld_publikationen(themen: list[tuple[str, list[Publikation]]], url: str) -> str:
+    import json
+
+    eintraege = []
+    position = 1
+    for _, liste in themen:
+        for p in liste:
+            werk = {
+                "@type": "ScholarlyArticle",
+                "name": p.titel,
+                "description": p.aussage,
+            }
+            if p.autoren:
+                werk["author"] = p.autoren
+            if p.quelle:
+                werk["publication"] = p.quelle
+            if p.doi:
+                werk["identifier"] = f"https://doi.org/{p.doi}"
+                werk["url"] = f"https://doi.org/{p.doi}"
+            eintraege.append({"@type": "ListItem", "position": position, "item": werk})
+            position += 1
+
+    daten = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": f"{url}#seite",
+                "name": "Publikationen",
+                "url": url,
+                "inLanguage": "de-DE",
+                "publisher": {"@id": f"{BASIS_URL}/#organisation"},
+            },
+            {
+                "@type": "ItemList",
+                "@id": f"{url}#liste",
+                "numberOfItems": len(eintraege),
+                "itemListElement": eintraege,
+            },
+        ],
+    }
+    return (
+        '<script type="application/ld+json">\n'
+        + json.dumps(daten, ensure_ascii=False, indent=1)
+        + "\n</script>\n"
+    )
+
+
+def baue_publikationen() -> int:
+    kopf, themen = lies_publikationen()
+    if not themen:
+        return 0
+    url = f"{BASIS_URL}/publikationen/"
+    seite = kopf_seite(f"{kopf['titel']} — DVGP", kopf["beschreibung"], url)
+
+    abschnitte = []
+    for thema, liste in themen:
+        zeilen = "\n".join(
+            f"""    <li class="publikation">
+     <span class="pub-titel">{inline(p.titel)}</span>
+     <span class="pub-quelle">{inline(p.autoren)}{' · ' if p.autoren and p.quelle else ''}{inline(p.quelle)}</span>
+     <span class="pub-aussage">{inline(p.aussage)}</span>
+     {f'<a class="pub-doi" href="{p.url}" target="_blank" rel="noopener">DOI: {p.doi}</a>' if p.doi else ''}
+    </li>"""
+            for p in liste
+        )
+        abschnitte.append(
+            f"""  <h2>{inline(thema)}</h2>
+   <ul class="pub-liste">
+{zeilen}
+   </ul>"""
+        )
+
+    anzahl = sum(len(l) for _, l in themen)
+    seite += f"""
+<main class="content-page">
+ <a class="back-link" href="/">Zurück zur Startseite</a>
+ <span class="section-kicker">Publikationen</span>
+ <h1>{inline(kopf['titel'])}</h1>
+ <p class="meta">{anzahl} Arbeiten in {len(themen)} Themenbereichen</p>
+
+ <p>{inline(kopf.get('_vorspann', ''))}</p>
+
+{chr(10).join(abschnitte)}
+</main>
+"""
+    seite += FUSS.rstrip() + "\n"
+    seite = seite.replace("</body>", json_ld_publikationen(themen, url) + "</body>")
+
+    ziel = SITE / "publikationen"
+    ziel.mkdir(parents=True, exist_ok=True)
+    (ziel / "index.html").write_text(seite, encoding="utf-8")
+    print(f"  geschrieben  publikationen/index.html   ({anzahl} Arbeiten, {len(themen)} Themen)")
+    return anzahl
+
+
+# --------------------------------------------------------------------------
 # Sitemap und llms.txt nachziehen
 # --------------------------------------------------------------------------
 
@@ -466,6 +638,10 @@ def schreibe_sitemap(beitraege: list[Beitrag]) -> None:
             f"  <url>\n    <loc>{b.url}</loc>\n    <lastmod>{b.datum}</lastmod>\n"
             f"    <changefreq>yearly</changefreq>\n    <priority>0.6</priority>\n  </url>"
         )
+    eintraege.append(
+        f"  <url>\n    <loc>{BASIS_URL}/publikationen/</loc>\n    <lastmod>{heute}</lastmod>\n"
+        f"    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>"
+    )
     eintraege.append(
         f"  <url>\n    <loc>{BASIS_URL}/impressum</loc>\n    <changefreq>yearly</changefreq>\n    <priority>0.3</priority>\n  </url>"
     )
@@ -530,6 +706,8 @@ def main() -> int:
     for datei in WISSEN.glob("*.html"):
         if datei.name not in bekannt:
             print(f"  HINWEIS      wissen/{datei.name} hat keine Markdown-Quelle mehr")
+
+    baue_publikationen()
 
     schreibe_sitemap(beitraege)
     print("  aktualisiert sitemap.xml")
