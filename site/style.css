@@ -210,6 +210,20 @@ section.dark .section-kicker { color: var(--color-gold); }
 .case-card p { color: var(--color-text-muted); font-size: 0.97rem; margin: 0.6rem 0 0; }
 .case-meta { font-size: 0.78rem; color: var(--color-accent-text); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
 
+/* Überleitung von der Befundlage zum Auftrag — der Leser soll nach der Kritik
+   sofort erfahren, was der Verband daraus macht. */
+.deshalb {
+ margin-top: 2.5rem;
+ padding: 2rem 2.25rem;
+ background: var(--color-dark);
+ color: #fff;
+ border-left: 5px solid var(--color-gold);
+}
+.deshalb h3 { color: #fff; font-size: 1.4rem; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+.deshalb p { color: rgba(255,255,255,0.88); max-width: 60rem; margin-bottom: 1.5rem; }
+.deshalb .cta-primary { font-size: 1rem; padding: 0.85rem 1.6rem; }
+@media (max-width: 700px) { .deshalb { padding: 1.5rem 1.4rem; } }
+
 /* AUFTRAG — Kacheln mit Bild */
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
 @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
