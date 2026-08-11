@@ -84,3 +84,29 @@ Builds führt nur `wrangler deploy` aus und baut nichts.
 
 Themen und Suchvolumen: `content/themenplan.md`.
 Tonalität: `content/SCHREIBWEISE.md`.
+
+## SEO und KI-Sichtbarkeit — Stand
+
+Geprüft gegen `webpage-landlord-blueprint/meta/KI-SICHTBARKEIT.md` und `tools/site-tests.md`.
+
+| Punkt | Stand |
+|---|---|
+| `sitemap.xml` | ✅ generiert, saubere URLs |
+| `llms.txt` | ✅ Betreiber, Gegenstand, alle Beiträge |
+| `robots.txt` mit Sitemap-Verweis | ✅ |
+| JSON-LD Startseite | ✅ `NGO`, `WebSite`, `FAQPage` |
+| JSON-LD Beiträge | ✅ `Article`, `BreadcrumbList`, `FAQPage` |
+| FAQ-Block und Schema aus einer Quelle | ✅ beide aus dem Markdown |
+| Überschriften als echte Nutzerfragen | ✅ Vorgabe in SCHREIBWEISE.md |
+| Antwort im ersten Satz | ✅ Vorgabe in SCHREIBWEISE.md |
+| Canonical je Seite | ✅ |
+| 404-Seite | ✅ `site/404.html` |
+| WebP mit JPG-Rückfall | ✅ `<picture>` und `image-set()` |
+| Bildmaße im HTML | ✅ gegen Layoutsprünge |
+| Externe Belege (DOI) in Beiträgen | ✅ über PubMed |
+| **Search Console + Bing** | ❌ erst nach dem Umzug auf dvgp.info |
+| **Google-Unternehmensprofil** | ❌ offen, siehe unten |
+| **Verzeichniseinträge, NAP-Konsistenz** | ❌ offen |
+
+Die drei offenen Punkte brauchen die eigene Domain und einen Menschen — Verifizierung
+und Verzeichniseinträge lassen sich nicht generieren.

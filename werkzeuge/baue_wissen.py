@@ -235,6 +235,9 @@ def kopf(titel: str, beschreibung: str, kanonisch: str, extra: str = "") -> str:
 <meta property="og:url" content="{kanonisch}">
 <meta property="og:title" content="{html.escape(titel)}">
 <meta property="og:description" content="{html.escape(beschreibung)}">
+<meta property="og:image" content="{BASIS_URL}/bilder/wissen.jpg">
+<meta property="og:site_name" content="DVGP">
+<meta name="theme-color" content="#0f1419">
 <link rel="icon" type="image/png" href="/bilder/logo-dvgp.png">
 <link rel="stylesheet" href="/style.css">
 {extra}</head>
@@ -345,6 +348,17 @@ def json_ld_artikel(b: Beitrag, abschnitte: list[tuple[str, str]]) -> str:
             "email": "kontakt@dvgp.info",
         },
     ]
+    graph.append(
+        {
+            "@type": "BreadcrumbList",
+            "@id": f"{b.url}#brotkrumen",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Startseite", "item": f"{BASIS_URL}/"},
+                {"@type": "ListItem", "position": 2, "name": "Wissen", "item": f"{BASIS_URL}/wissen/"},
+                {"@type": "ListItem", "position": 3, "name": b.titel, "item": b.url},
+            ],
+        }
+    )
     if abschnitte:
         graph.append(
             {

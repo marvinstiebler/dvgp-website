@@ -14,8 +14,9 @@
 <meta property="og:title" content="DVGP — Deutscher Verband für Gesundheitsförderung und Prävention">
 <meta property="og:description" content="Gesundheit ist kein Zustand, sondern eine Fähigkeit. Wir machen sie verstehbar — und geben Menschen die Kontrolle zurück.">
 <meta property="og:image" content="https://dvgp.info/bilder/hero.jpg">
+<meta name="theme-color" content="#0f1419">
 <link rel="icon" type="image/png" href="bilder/logo-dvgp.png">
-<link rel="preload" as="image" href="bilder/hero.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="bilder/hero.webp" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -182,7 +183,10 @@
 
   <div class="services-grid">
    <div class="service-card">
-    <div class="service-bild"><img src="bilder/wissen.jpg" alt="Wissensvermittlung im DVGP" loading="lazy"></div>
+    <picture>
+      <source srcset="bilder/wissen.webp" type="image/webp">
+      <img src="bilder/wissen.jpg" alt="Wissensvermittlung im DVGP" width="1200" height="800" loading="lazy" decoding="async">
+     </picture>
     <div class="service-body">
      <span class="service-num">01 — ERKLÄREN</span>
      <h3>Wissen, das im Alltag trägt</h3>
@@ -190,7 +194,10 @@
     </div>
    </div>
    <div class="service-card">
-    <div class="service-bild"><img src="bilder/training.jpg" alt="Training und Belastungsaufbau" loading="lazy"></div>
+    <picture>
+      <source srcset="bilder/training.webp" type="image/webp">
+      <img src="bilder/training.jpg" alt="Training und Belastungsaufbau" width="1200" height="800" loading="lazy" decoding="async">
+     </picture>
     <div class="service-body">
      <span class="service-num">02 — BEFÄHIGEN</span>
      <h3>Eigenverantwortung statt Abhängigkeit</h3>
@@ -198,7 +205,10 @@
     </div>
    </div>
    <div class="service-card">
-    <div class="service-bild"><img src="bilder/gemeinschaft.jpg" alt="Gemeinschaft und Austausch im Verband" loading="lazy"></div>
+    <picture>
+      <source srcset="bilder/gemeinschaft.webp" type="image/webp">
+      <img src="bilder/gemeinschaft.jpg" alt="Gemeinschaft und Austausch im Verband" width="1200" height="800" loading="lazy" decoding="async">
+     </picture>
     <div class="service-body">
      <span class="service-num">03 — BEGLEITEN</span>
      <h3>Gemeinschaft, die trägt</h3>

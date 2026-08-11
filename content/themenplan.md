@@ -72,48 +72,55 @@ mit niedriger Evidenzsicherheit trägt kein „ist erwiesen", sondern ein „deu
 Von oben nach unten. Die Reihenfolge mischt die Kategorien bewusst, damit die Rubrik
 nicht monothematisch wirkt.
 
+Reihenfolge aus dem [Katalog](katalog.md), Stufe A zuerst, Kategorien bewusst gemischt.
+
 | # | Beitrag | Vol | KD | Kategorie |
 |---|---|---|---|---|
-| 1 | Was hilft wirklich gegen Rückenschmerzen? | **1600** | 12 | Rücken |
-| 2 | Warum ist Krafttraining nach der Menopause so wichtig? | – | – | Frauengesundheit |
-| 3 | Wie lange dauert ein Hexenschuss — und was hilft? | **2300** | 0 | Rücken |
-| 4 | Darf man während einer Chemotherapie trainieren? | – | – | Krebstherapie |
-| 5 | Was tun bei Rückenschmerzen — schonen oder bewegen? | **2100** | 12 | Rücken |
-| 6 | Wie oft Krafttraining pro Woche ab 50? | 70 | – | Gesundes Altern |
-| 7 | Werden Frauen durch Krafttraining muskulös? | 150 | 3 | Frauengesundheit |
-| 8 | Senkt Krafttraining den Blutdruck? | – | – | Stoffwechsel |
-| 9 | Wie viele Kniebeugen sollte man mit 60 schaffen? | 80 | – | Gesundes Altern |
-| 10 | Was kann man gegen Rückenschmerzen machen, wenn nichts hilft? | **1200** | 7 | Rücken |
-| 11 | Wie hält man während einer Krebstherapie Muskelmasse? | – | – | Krebstherapie |
-| 12 | Welches Training hält die Knochen nach den Wechseljahren stark? | – | – | Frauengesundheit |
-| 13 | Was bringt Krafttraining bei Typ-2-Diabetes? | – | – | Stoffwechsel |
-| 14 | Ist Langhanteltraining im Alter gefährlich? | – | – | Gesundes Altern |
-| 15 | Was ist Sturzprophylaxe — und was hilft wirklich? | 150 | 1 | Gesundes Altern |
-| 16 | Darf man mit Bluthochdruck schwere Gewichte heben? | – | – | Stoffwechsel |
-| 17 | Womit fängt man mit 60 an, wenn man nie trainiert hat? | – | – | Gesundes Altern |
-| 18 | Was hilft gegen Nervenschmerzen nach der Chemo? | – | – | Krebstherapie |
-| 19 | Krafttraining bei Arthrose — schadet das den Gelenken? | – | – | Stoffwechsel |
-| 20 | Was ist betriebliches Gesundheitsmanagement? | 100 | 0 | Betrieb |
-| 21 | Warum reicht ein Obstkorb nicht als Gesundheitsförderung? | – | – | Betrieb |
-| 22 | Was bringt BGM einem kleinen Betrieb? | – | – | Betrieb |
-| 23 | Warum macht Schonung auf Dauer schwächer? | – | – | Prävention |
-| 24 | Was bedeutet Prävention? | **1000** | 13 | Prävention |
+| 1 | Was hilft wirklich gegen Muskelkater? | **7.800** | 0 | Training/Regeneration |
+| 2 | Wie viel Protein braucht man am Tag für Muskelaufbau? | **5.900** | 3 | Training/Ernährung |
+| 3 | Was hilft wirklich gegen Rückenschmerzen? | **1.600** | 12 | Rücken |
+| 4 | Warum ist Krafttraining nach der Menopause so wichtig? | – | – | Frauengesundheit |
+| 5 | Knieschmerzen — was tun? | **1.800** | 0 | Gelenke |
+| 6 | Wie lange dauert ein Hexenschuss — und was hilft? | **2.300** | 0 | Rücken |
+| 7 | Darf man während einer Chemotherapie trainieren? | – | – | Krebstherapie |
+| 8 | Protein-Shake vor oder nach dem Training? | 1.500 | 0 | Training/Ernährung |
+| 9 | Hilft Magnesium gegen Muskelkater? | 1.500 | 4 | Training/Irrtümer |
+| 10 | Was tun bei Rückenschmerzen — schonen oder bewegen? | **2.100** | 12 | Rücken |
+| 11 | Ist Arthrose heilbar? | 900 | 7 | Gelenke |
+| 12 | Schulterschmerzen — was tun? | 1.000 | 6 | Gelenke |
+| 13 | Werden Frauen durch Krafttraining muskulös? | 150 | 3 | Frauengesundheit |
+| 14 | Wie oft Krafttraining pro Woche ab 50? | 70 | – | Gesundes Altern |
+| 15 | Senkt Krafttraining den Blutdruck? | – | – | Stoffwechsel |
+| 16 | Wie kann man Arthrose vorbeugen? | 300 | 0 | Gelenke |
+| 17 | Wie viele Kniebeugen sollte man mit 60 schaffen? | 80 | – | Gesundes Altern |
+| 18 | Wie hält man während einer Krebstherapie Muskelmasse? | – | – | Krebstherapie |
+| 19 | Was ist Insulinresistenz — und was hat Muskel damit zu tun? | 450 | 9 | Stoffwechsel |
+| 20 | Welches Training hält die Knochen nach den Wechseljahren stark? | – | – | Frauengesundheit |
+| 21 | Was hilft in den Wechseljahren gegen Hitzewallungen? | 200 | 0 | Frauengesundheit |
+| 22 | Ist Langhanteltraining im Alter gefährlich? | – | – | Gesundes Altern |
+| 23 | Was ist Sturzprophylaxe — und was hilft wirklich? | 150 | 1 | Gesundes Altern |
+| 24 | Darf man mit Bluthochdruck schwere Gewichte heben? | – | – | Stoffwechsel |
+| 25 | Womit fängt man mit 60 an, wenn man nie trainiert hat? | – | – | Gesundes Altern |
+| 26 | Was hilft gegen Nervenschmerzen nach der Chemo? | – | – | Krebstherapie |
+| 27 | Was ist betriebliches Gesundheitsmanagement? | 100 | 0 | Betrieb |
+| 28 | Warum reicht ein Obstkorb nicht als Gesundheitsförderung? | – | – | Betrieb |
+| 29 | Warum macht Schonung auf Dauer schwächer? | – | – | Prävention |
+| 30 | Was bedeutet Prävention? | **1.000** | 13 | Prävention |
 
-### Anmerkungen zur Auswahl
+### Anmerkungen
 
-**Rücken ist die größte Chance.** „Hexenschuss wie lange" hat 2.300 Suchen bei
-Schwierigkeit 0. Die übliche Antwort im Netz ist Schonung und Wärme — die aktuelle
-Leitlinienlage sagt etwas anderes. Genau diese Differenz ist unser Thema. Vorsicht ist
-trotzdem geboten: Bei akuten Rückenschmerzen gehören Warnzeichen benannt, die ärztlich
-abgeklärt werden müssen.
+**Muskelkater ist der beste Einstieg überhaupt.** 7.800 Suchen im Monat bei
+Schwierigkeit 0. Das Netz empfiehlt Magnesium, Dehnen und Wärme — die Studienlage trägt
+davon fast nichts. Wer diese Frage sauber beantwortet, wird gefunden.
 
-**BGM hat kaum Suchvolumen** (100 Suchen für „Was ist BGM"), aber Klickpreise von
-45 bis 90 €. Das ist ein Geschäfts-, kein Reichweitenthema. Wir schreiben es für die
-Glaubwürdigkeit gegenüber Unternehmen, nicht für Besucherzahlen.
+**Wo Schonung der Standardrat ist, ist die Konkurrenz schwach.** Rücken, Knie, Arthrose,
+Osteoporose: überall Schwierigkeit 0 bis 12 bei vierstelligen Volumen. Die vorhandenen
+Antworten sind dünn, weil sie alle dasselbe sagen.
 
-**Nicht schreiben:** Fragen mit reiner Behandlungsabsicht („Welcher Arzt bei
-Rückenschmerzen" — 1.200 Suchen, aber nicht unsere Rolle), Matratzen- und
-Produktfragen, Dosierungen, alles ohne Beleg.
+**Bei Beschwerdethemen gehören Warnzeichen benannt**, bei denen vor dem Training
+ärztlich abgeklärt werden muss. Das gilt besonders für Rücken, Knie und alles Akute.
+
+**Nicht schreiben:** siehe [katalog.md](katalog.md), Abschnitt „Aussortiert".
 
 ---
 
