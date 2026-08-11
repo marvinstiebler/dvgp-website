@@ -73,3 +73,4 @@ Die DOI darf fehlen (dann Feld leer lassen), Titel und Aussage nie.
 
 - The human cell count and size distribution | Hatton I. A. et al. | PNAS 2023 | doi:10.1073/pnas.2303077120 | Aktuelle Zählung der Zellen im menschlichen Körper — Größenordnung 30 Billionen.
 - Revised Estimates for the Number of Human and Bacteria Cells in the Body | Sender R., Fuchs S., Milo R. | PLOS Biology 2016 | | Die bekannte Neuberechnung von Zell- und Bakterienzahl.
+- The distribution of cellular turnover in the human body | Sender R., Milo R. | Nature Medicine 2021 | doi:10.1038/s41591-020-01182-9 | Rund 330 Milliarden Zellen werden täglich ersetzt, knapp 90 Prozent davon Blutzellen; der Massenumsatz liegt bei etwa 80 Gramm pro Tag.

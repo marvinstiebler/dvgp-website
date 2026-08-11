@@ -160,8 +160,15 @@ Erklärung — aber bislang eine Hypothese, kein Befund.
 | Angabe | Richtig | Häufiger Fehler |
 |---|---|---|
 | Zellen im Körper | **rund 30 Billionen** (3 × 10¹³) | „30 Milliarden" |
+| Täglich ersetzte Zellen | **rund 330 Milliarden**, davon ~90 % Blutzellen | „300 Millionen" |
 | Ohne Nahrung | ~30 Tage | „300 Tage" |
 | Ohne Schlaf | ~300 Stunden | — |
+
+Zum Zellumsatz: Sender & Milo, Nature Medicine 2021 —
+[10.1038/s41591-020-01182-9](https://doi.org/10.1038/s41591-020-01182-9). Der Satz „99 %
+aller Zellen werden im Jahr erneuert" ist daraus **nicht** ableitbar; der Umsatz wird von
+Blut und Darmschleimhaut beherrscht, während Nervenzellen ein Leben lang halten.
+Einzelheiten in [korrektur-stark-dokument.md](korrektur-stark-dokument.md).
 
 **Zur Zellzahl:** Die Verwirrung kommt aus der Sprache. Englisch *trillion* heißt auf
 Deutsch **Billion** (10¹²), nicht Trillion und nicht Milliarde. „30 trillion cells" sind
