@@ -64,13 +64,36 @@ for p in "" wissen/ publikationen/ impressum sitemap.xml llms.txt robots.txt; do
 done
 ```
 
+## Weiterleitungen
+
+Beide aktiv und geprüft (11.08.2026):
+
+- **HTTPS erzwungen** über *SSL/TLS → Edge Certificates → Always Use HTTPS*.
+- **`www` auf die Hauptdomain** über *Regeln → Weiterleitungsregeln*:
+
+  | | |
+  |---|---|
+  | Bedingung | `http.host eq "www.dvgp.info"` |
+  | Typ | Dynamisch |
+  | Ausdruck | `concat("https://dvgp.info", http.request.uri.path)` |
+  | Status | 301 |
+  | Abfragezeichenfolge | beibehalten |
+
+  Dynamisch statt statisch ist entscheidend — sonst landet jeder `www`-Aufruf auf der
+  Startseite statt auf der angeforderten Unterseite.
+
+Jede Kombination löst in genau einem Sprung auf: `http://`, `www.`, beides zusammen,
+mit und ohne Abfragezeichenfolge.
+
+## Suchmaschinen
+
+- **Google Search Console:** Domain-Property über TXT-Eintrag bestätigt, Sitemap
+  `https://dvgp.info/sitemap.xml` eingereicht.
+- **Bing Webmaster Tools:** noch offen. Lässt sich per Import aus der Search Console
+  anlegen.
+
 ## Offen
 
-- **HTTP leitet nicht auf HTTPS um.** `http://dvgp.info/` liefert direkt 200 statt einer
-  Weiterleitung. In Cloudflare unter *SSL/TLS → Edge Certificates* die Einstellung
-  **„Always Use HTTPS"** einschalten.
-- **`www` leitet nicht auf die Hauptdomain um.** Beide Adressen liefern dieselbe Seite.
-  Unkritisch, weil die Canonical-Angaben auf `https://dvgp.info/` zeigen — sauberer wäre
-  eine Weiterleitungsregel.
-- **Google Search Console und Bing** sind noch nicht angemeldet. Beides braucht einen
-  TXT-Eintrag in der Cloudflare-Zone und eine Bestätigung im jeweiligen Konto.
+- Bing Webmaster Tools anmelden.
+- Verzeichniseinträge und ein Google-Unternehmensprofil — beides zahlt auf die
+  Erkennbarkeit als Entität ein, siehe `webpage-landlord-blueprint/meta/KI-SICHTBARKEIT.md`.
