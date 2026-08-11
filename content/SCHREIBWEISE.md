@@ -69,6 +69,23 @@ meint und keine Zeit für Show hat.
 - Kritik am System ja — Angriffe auf Ärzte nein. Die Kritik gilt den Annahmen,
   nicht den Menschen, die darin arbeiten.
 
+### Es ist ein Feldzug — aber ein sachlicher
+
+Der Verband hat eine Position und vertritt sie deutlich. Zurückhaltung ist nicht das
+Ziel. Aber die Schärfe entsteht aus der Sache, nicht aus der Lautstärke.
+
+- **Scharf:** „Wenn das Beheben des Schadens nicht hilft, war der Schaden nicht die
+  Ursache." Eine harte Aussage, die aus den Daten folgt und die man nachprüfen kann.
+- **Laut, aber schwach:** „Die Medizin versagt auf ganzer Linie." Nicht belegbar,
+  angreifbar, und Antwortmaschinen übernehmen so etwas nicht.
+
+Die Regel dahinter: **Jede scharfe Aussage braucht einen Beleg oder einen logischen
+Schritt, den der Leser selbst nachvollziehen kann.** Ist beides nicht da, bleibt sie
+draußen — nicht aus Höflichkeit, sondern weil sie sonst nichts trägt.
+
+Was nie vorkommt: Pauschalurteile über Berufsgruppen, unterstellte Absichten
+(„aus wirtschaftlichem Interesse"), Empörungsvokabular.
+
 ## Verboten
 
 - KI-Floskeln: „In der heutigen Zeit…", „Es ist wichtig zu beachten…",

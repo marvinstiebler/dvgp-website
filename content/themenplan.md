@@ -103,15 +103,26 @@ Themen. Belege in [evidenz.md](evidenz.md).
 | 23 | Warum macht Schonung auf Dauer schwächer? | – | – | Prävention | These 1 (Bortz) |
 | 24 | Was bedeutet Prävention? | **1.000** | 13 | Prävention | These 1, 9 |
 
-### Warum Muskelkater und Protein nicht mehr oben stehen
+### Muskelkater, Protein und Co. — eingebaut statt eigenständig
 
-Sie hatten die größten Zahlen im Katalog — 7.800 und 5.900 Suchen. Sie fallen trotzdem
-durch das Auswahlraster: Muskelkater wiegt nicht schwer, ist nicht chronisch, und die
-gängigen Lösungen helfen zwar nicht, aber das Problem verschwindet ohnehin nach drei
-Tagen. Wer darüber schreibt, sammelt Klicks von Leuten mit einem Wehwehchen.
+Sie hatten die größten Zahlen im Katalog (7.800 und 5.900 Suchen), fallen aber durch das
+Auswahlraster: kein schweres, kein chronisches Problem. Für sich genommen fehlt ihnen
+die Verbindung zu einer echten Beeinträchtigung.
 
-Sie bleiben im Katalog als möglicher Einstieg, wenn die schweren Themen abgearbeitet
-sind — dann aber im Zuschnitt „Regeneration", nicht als Ratgeber.
+**Deshalb erscheinen sie nicht als eigener Beitrag, sondern als Abschnitt in einem.**
+Dort tragen sie sogar mehr, weil sie an einer konkreten Lage hängen:
+
+| Thema | Gehört hinein in |
+|---|---|
+| Muskelkater, Abgrenzung zu Schmerz | Rückenbeiträge, „Womit fängt man mit 60 an?" |
+| Protein pro Tag | Sarkopenie, Krebstherapie, Menopause |
+| Protein-Timing | Sarkopenie, Muskelaufbau im Alter |
+| Magnesium und andere Mittel | überall dort, wo der Irrtum aufkommt |
+| Regeneration und Schlaf | Krebstherapie, chronische Beschwerden |
+
+Als Zwischenstück ist ein eigener Beitrag trotzdem möglich, wenn die Rubrik Abwechslung
+braucht — dann aber im Zuschnitt „Was Regeneration wirklich braucht", nicht als Ratgeber
+gegen Muskelkater.
 
 ### Anmerkungen
 

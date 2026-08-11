@@ -52,13 +52,21 @@ Der Teil, den du meinst, wenn du sagst: *sie operieren trotzdem*.
 | *Radiculopathy and the Herniated Lumbar Disc*, AAOS Instructional Course Lectures 2007 | Die Leitlinien-Fundstelle der amerikanischen Orthopäden. |
 | Tasoglu et al.: *RCT comparing surgical and nonsurgical treatment for cervical radiculopathy* | Studienprotokoll, kein Ergebnis — nur als Kontext verwendbar. |
 
-**Achtung beim Formulieren.** Diese Arbeiten zeigen: *bei bestimmten degenerativen
-Indikationen* ist der Zusatznutzen gegenüber Schein-Eingriff klein bis nicht nachweisbar.
-Sie zeigen **nicht**, dass Operationen generell nutzlos sind. Wer das verkürzt, liefert
-eine Angriffsfläche und schadet Menschen, die eine Operation brauchen.
+**Der Schluss, den wir daraus ziehen** — und der schärfer ist als „OPs helfen nicht":
 
-**Verwendbar für:** Startseite (Annahme 2 „Symptome werden unterdrückt"), Knie- und
-Rückenbeiträge.
+> Wird der sichtbare Schaden behoben und die Beschwerden bleiben, dann war der Schaden
+> nicht die Ursache. Es muss eine weitere Größe geben, die Schaden **und** Schmerz
+> hervorbringt.
+
+Das ist ein logischer Schritt, den jeder Leser nachvollziehen kann, und er ist stärker
+als eine Pauschalkritik. Er führt direkt zur Kernfrage des Verbands: *Welche Größe ist das?*
+
+**Die Grenze bleibt trotzdem stehen:** Diese Arbeiten betreffen **degenerative**
+Indikationen — Verschleiß, nicht Trauma. Bei einem Riss nach Unfall, bei angeborenen
+Fehlstellungen und in der Notfallversorgung gilt die Aussage nicht. Wer das nicht
+mitschreibt, wird angreifbar und schadet Menschen, die eine Operation brauchen.
+
+**Verwendbar für:** Startseite, Knie- und Rückenbeiträge, „Ist Arthrose heilbar?".
 
 ## These 4 — Belastung heilt Gewebe, Schonung baut es ab
 
@@ -125,6 +133,32 @@ kontrovers sind. Als Beleg für Aussagen auf der Website nur eingeschränkt taug
 
 **Regel für diesen Block:** Er taugt zum Denken, nicht zum Zitieren. Wer daraus etwas
 verwendet, kennzeichnet es als Hypothese oder lässt es weg.
+
+## These 10 — Heilung läuft in Phasen, und Entzündung ist die erste
+
+Die zentrale These des Verbands zur Entzündung. **Noch dünn belegt — hier ist Recherche
+nötig, bevor daraus Beiträge werden.**
+
+Der Gedanke: Heilung folgt einer festen Abfolge — Entzündung, Neuaufbau, Umbau. Die
+Phasen bauen aufeinander auf; ohne die erste kommen die anderen nicht in Gang.
+Entzündung ist damit kein Fehler, sondern der Startschuss. Was wir „chronische
+Entzündung" nennen, wäre dann ein System, das in der ersten Phase feststeckt, weil der
+auslösende Reiz nicht aufhört.
+
+| Arbeit | Was sie trägt |
+|---|---|
+| **Peake et al.: *Muscle damage and inflammation during recovery from exercise*, J Appl Physiol 2017** — [10.1152/japplphysiol.00971.2016](https://doi.org/10.1152/japplphysiol.00971.2016) | Sagt es ausdrücklich: Entzündung galt historisch als schädlich, gilt heute — sofern reguliert — als **integraler Bestandteil** von Reparatur und Regeneration. Der beste bisher gefundene Beleg für den ersten Teil der These. |
+| Duchman et al.: *The Effect of NSAIDs on Tendon-to-Bone Healing*, Iowa Orthop J 2019 | Wichtig für die Redlichkeit: Die Übersicht findet **keine ausreichende Evidenz** für oder gegen NSAR bei dieser Heilung. Taugt also **nicht** als Beleg dafür, dass Entzündungshemmer die Heilung stören. |
+| Furman et al., Nat Med 2019 (siehe These 6) | Chronische Entzündung als Krankheitstreiber — beschreibt das Phänomen, nicht den Mechanismus des Steckenbleibens. |
+
+**Ehrlicher Stand:** Dass Entzündung für Heilung gebraucht wird, ist belegbar. Dass
+chronische Entzündung ein *Steckenbleiben in Phase eins durch fortbestehenden Reiz* ist,
+ist bislang **eine plausible Hypothese, kein Befund**. Sie darf so benannt werden — als
+Erklärungsansatz des Verbands, nicht als gesicherte Erkenntnis.
+
+**Offene Recherche:** Belege zur Phasenabfolge selbst (Entzündung → Proliferation →
+Remodeling) und zu Modellen, in denen ein anhaltender Reiz die Auflösung der Entzündung
+verhindert. Über PubMed gezielt suchen, bevor ein Beitrag daraus entsteht.
 
 ## These 9 — Das Problem in Zahlen
 
