@@ -1,7 +1,12 @@
 # dvgp-website
 
 Website des **DVGP — Deutscher Verband für Gesundheitsförderung und Prävention**.
-Statische Site, ausgeliefert als **Cloudflare Worker mit Static Assets**.
+Statische Site, ausgeliefert als **Cloudflare Worker mit Static Assets**. Live unter
+**https://dvgp.info**
+
+> **Wer hier neu einsteigt — auch als KI — liest zuerst [HANDOFF.md](HANDOFF.md).**
+> Dort steht der aktuelle Stand, die getroffenen Entscheidungen samt Begründung und die
+> Fallstricke. Die Änderungshistorie führt [WORKLOG.md](WORKLOG.md).
 
 ## Aufbau
 
