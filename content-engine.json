@@ -15,10 +15,11 @@
     "artikel": "content/artikel/"
   },
   "takt": {
-    "intervall_tage": 7,
+    "intervall_tage": 3,
     "jitter_tage": 1,
     "zeitfenster": "08:00-18:00",
-    "versatz_quelle": "projekt"
+    "versatz_quelle": "projekt",
+    "hinweis": "Zwei Beitraege pro Woche (Montag und Donnerstag). Jeder Beitrag ist eine Kombination 'Krafttraining und <Kontext>', nie eine Uebung fuer sich -- siehe content/themenplan.md."
   },
   "sprache": {
     "regeln": "content/SCHREIBWEISE.md"

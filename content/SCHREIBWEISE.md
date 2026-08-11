@@ -9,6 +9,18 @@ Verbindlich für alles, was unter dvgp.info veröffentlicht wird — Website wie
 > und in der ersten Person Plural. Die **technischen** AEO-Regeln (§ 1–3) gelten dagegen
 > vollständig.
 
+## Der Zuschnitt jedes Beitrags
+
+**Kein Beitrag erklärt eine Übung für sich.** Jeder ist eine Kombination:
+*Krafttraining und <Kontext>*. Das Thema ist immer das Problem, das jemand hat —
+die Übung ist das Werkzeug, das im Beitrag erklärt wird.
+
+- Falsch: „Was ist Kreuzheben?"
+- Richtig: „Was hilft wirklich gegen Rückenschmerzen?" — und darin steht, warum
+  Kreuzheben dabei hilft und wie es geht.
+
+Die Kategorien stehen in [themenplan.md](themenplan.md).
+
 ## Verständlichkeit
 
 Alles muss ein Zehntklässler verstehen. Das ist die harte Grenze, nicht ein Richtwert.

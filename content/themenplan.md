@@ -2,110 +2,123 @@
 
 Was in der Rubrik „Wissen" erscheint und in welcher Reihenfolge.
 
-**Auswahl folgt der Fachkompetenz, nicht dem Suchvolumen.** Es geht nicht darum, zu
-ranken. Es geht darum, dass zu diesen Fragen etwas Richtiges im Netz steht — geschrieben
-von jemandem, der die Sache kennt. Wenn eine Frage nebenbei auch gesucht wird: gut.
-Wenn nicht: schreiben wir sie trotzdem.
+## Die eine Regel
 
----
+**Kein Beitrag erklärt eine Übung für sich.** Jeder Beitrag ist eine Kombination:
+*Krafttraining und <Kontext>*. Die Übung ist nie das Thema, sondern das Werkzeug —
+das Thema ist immer das Problem, das jemand hat.
 
-## Der rote Faden
+Also nicht „Was ist Kreuzheben?", sondern „Welches Training hilft bei Rückenschmerzen?"
+— und darin wird das Kreuzheben erklärt. Technikwissen kommt so dort an, wo Menschen
+tatsächlich suchen.
 
-**Krafttraining, speziell mit der Langhantel, als Werkzeug der Prävention — für die
-Gruppen, denen man es traditionell ausredet.**
+## Die Kategorien
 
-Genau dort ist die Lücke: Wer zu diesen Themen sucht, findet fast überall den Rat zu
-schonen. Die Studienlage sagt seit Jahren etwas anderes. Diese Differenz ist unser Thema.
+| # | Kategorie | Warum |
+|---|---|---|
+| 1 | Krafttraining und **Rücken** | größtes Publikum, und der Standardrat lautet Schonung |
+| 2 | Krafttraining und **gesundes Altern** | Kernthema des Verbands |
+| 3 | Krafttraining und **Frauengesundheit** | Menopause, Knochen, hartnäckige Irrtümer |
+| 4 | Krafttraining und **Krebstherapie** | dort wird am meisten falsch geraten |
+| 5 | Krafttraining und **Stoffwechsel/Herz-Kreislauf** | Bluthochdruck, Typ-2-Diabetes, Übergewicht |
+| 6 | Krafttraining im **Betrieb** | BGM, Arbeitsfähigkeit, Führungskräfte |
+| 7 | Krafttraining und **Prävention** | die Grundlagen, ohne die der Rest nicht trägt |
 
-Vier Stränge, die sich überschneiden dürfen:
+## Warum wir das schreiben
 
-1. **Gesundes Altern** — 50+, 60+, 70+. Muskel, Knochen, Gleichgewicht, Selbstständigkeit.
-2. **Frauengesundheit** — vor allem nach der Menopause: Knochendichte, Körperzusammensetzung, Beschwerden.
-3. **Krebs und Therapie** — Training während und nach Chemotherapie, Erhalt von Muskelmasse und Alltagsfähigkeit.
-4. **Chronische Erkrankungen (NCDs)** — Bluthochdruck, Typ-2-Diabetes, Herz-Kreislauf, COPD, Adipositas, Arthrose.
+Die Auswahl folgt der Fachkompetenz, nicht dem Suchvolumen. Es geht nicht ums Ranken.
+Es geht darum, dass zu diesen Fragen etwas Richtiges im Netz steht.
+
+Die Zahlen stehen trotzdem dabei — sie zeigen, wie viele Menschen die Frage tatsächlich
+stellen, und das ist eine brauchbare Reihenfolge. **Vol** = Suchen pro Monat in
+Deutschland, **KD** = Schwierigkeit von 0 bis 100. Quelle: Ahrefs, Stand 10.08.2026.
 
 ---
 
 ## Belege
 
 Jede fachliche Aussage wird belegt. Recherche über PubMed, bevorzugt systematische
-Übersichtsarbeiten, Metaanalysen und Leitlinien. Quellenangabe am Ende des Beitrags unter
+Übersichtsarbeiten, Metaanalysen und Leitlinien. Quellen am Beitragsende unter
 „## Quellen" mit Titel, Jahr und DOI-Link.
 
-**Eine erfundene Quelle ist schlimmer als keine Quelle.** Wer eine Angabe nicht belegen
-kann, formuliert vorsichtiger oder lässt sie weg.
+**Eine erfundene Quelle ist schlimmer als keine Quelle.** Was sich nicht belegen lässt,
+wird vorsichtiger formuliert oder weggelassen.
 
-Ausgangsbasis für die vier Stränge (recherchiert über PubMed, Stand 10.08.2026):
+Geprüfte Ausgangsbasis (recherchiert über PubMed, Stand 10.08.2026):
 
 | Thema | Arbeit | DOI |
 |---|---|---|
-| Krafttraining nach der Menopause | Sá et al., *Resistance training for postmenopausal women: systematic review and meta-analysis*, Menopause 2023 | [10.1097/GME.0000000000002079](https://doi.org/10.1097/GME.0000000000002079) |
-| Knochendichte, Trainingsart | Kemmler et al., *Effects of Different Types of Exercise on Bone Mineral Density in Postmenopausal Women*, Calcif Tissue Int 2020 | [10.1007/s00223-020-00744-w](https://doi.org/10.1007/s00223-020-00744-w) |
-| Fitness nach der Menopause | González-Gálvez et al., *Resistance training effects on healthy postmenopausal women*, Climacteric 2024 | [10.1080/13697137.2024.2310521](https://doi.org/10.1080/13697137.2024.2310521) |
-| Training während Chemo- und Strahlentherapie | McGovern et al., *Efficacy of resistance training during adjuvant chemotherapy and radiation therapy*, Support Care Cancer 2022 | [10.1007/s00520-021-06708-6](https://doi.org/10.1007/s00520-021-06708-6) |
-| Chemo-induzierte Neuropathie | Wang et al., *Comparison of the effects of 19 exercise interventions on CIPN*, Int J Nurs Stud 2025 | [10.1016/j.ijnurstu.2025.105014](https://doi.org/10.1016/j.ijnurstu.2025.105014) |
+| Krafttraining nach der Menopause | Sá et al., Menopause 2023 | [10.1097/GME.0000000000002079](https://doi.org/10.1097/GME.0000000000002079) |
+| Knochendichte, Trainingsart | Kemmler et al., Calcif Tissue Int 2020 | [10.1007/s00223-020-00744-w](https://doi.org/10.1007/s00223-020-00744-w) |
+| Fitness nach der Menopause | González-Gálvez et al., Climacteric 2024 | [10.1080/13697137.2024.2310521](https://doi.org/10.1080/13697137.2024.2310521) |
+| Training während Chemo- und Strahlentherapie | McGovern et al., Support Care Cancer 2022 | [10.1007/s00520-021-06708-6](https://doi.org/10.1007/s00520-021-06708-6) |
+| Chemo-induzierte Neuropathie | Wang et al., Int J Nurs Stud 2025 | [10.1016/j.ijnurstu.2025.105014](https://doi.org/10.1016/j.ijnurstu.2025.105014) |
 
-Quellen jeweils aus PubMed. Vor jeder Verwendung prüfen, ob die Arbeit die Aussage
-wirklich trägt — Metaanalysen mit niedriger Evidenzsicherheit (etwa die Menopause-Arbeit
-von 2023, GRADE „very low to low") rechtfertigen keine starken Behauptungen.
+Vor jeder Verwendung prüfen, ob die Arbeit die Aussage wirklich trägt. Eine Metaanalyse
+mit niedriger Evidenzsicherheit trägt kein „ist erwiesen", sondern ein „deutet darauf hin".
 
 ---
 
 ## Erschienen
 
-| Datum | Beitrag |
-|---|---|
-| 10.08.2026 | Darf man bei Osteoporose schwer heben? |
-| 10.08.2026 | Ist Sport bei Bluthochdruck gefährlich? |
-| 10.08.2026 | Was ist Sarkopenie? |
+| Datum | Beitrag | Kategorie |
+|---|---|---|
+| 10.08.2026 | Darf man bei Osteoporose schwer heben? | Frauengesundheit / Altern |
+| 10.08.2026 | Ist Sport bei Bluthochdruck gefährlich? | Stoffwechsel/Herz-Kreislauf |
+| 10.08.2026 | Was ist Sarkopenie? | Gesundes Altern |
 
 ## Als Nächstes
 
-Ein Beitrag pro Woche, von oben nach unten.
+Von oben nach unten. Die Reihenfolge mischt die Kategorien bewusst, damit die Rubrik
+nicht monothematisch wirkt.
 
-### Frauengesundheit
+| # | Beitrag | Vol | KD | Kategorie |
+|---|---|---|---|---|
+| 1 | Was hilft wirklich gegen Rückenschmerzen? | **1600** | 12 | Rücken |
+| 2 | Warum ist Krafttraining nach der Menopause so wichtig? | – | – | Frauengesundheit |
+| 3 | Wie lange dauert ein Hexenschuss — und was hilft? | **2300** | 0 | Rücken |
+| 4 | Darf man während einer Chemotherapie trainieren? | – | – | Krebstherapie |
+| 5 | Was tun bei Rückenschmerzen — schonen oder bewegen? | **2100** | 12 | Rücken |
+| 6 | Wie oft Krafttraining pro Woche ab 50? | 70 | – | Gesundes Altern |
+| 7 | Werden Frauen durch Krafttraining muskulös? | 150 | 3 | Frauengesundheit |
+| 8 | Senkt Krafttraining den Blutdruck? | – | – | Stoffwechsel |
+| 9 | Wie viele Kniebeugen sollte man mit 60 schaffen? | 80 | – | Gesundes Altern |
+| 10 | Was kann man gegen Rückenschmerzen machen, wenn nichts hilft? | **1200** | 7 | Rücken |
+| 11 | Wie hält man während einer Krebstherapie Muskelmasse? | – | – | Krebstherapie |
+| 12 | Welches Training hält die Knochen nach den Wechseljahren stark? | – | – | Frauengesundheit |
+| 13 | Was bringt Krafttraining bei Typ-2-Diabetes? | – | – | Stoffwechsel |
+| 14 | Ist Langhanteltraining im Alter gefährlich? | – | – | Gesundes Altern |
+| 15 | Was ist Sturzprophylaxe — und was hilft wirklich? | 150 | 1 | Gesundes Altern |
+| 16 | Darf man mit Bluthochdruck schwere Gewichte heben? | – | – | Stoffwechsel |
+| 17 | Womit fängt man mit 60 an, wenn man nie trainiert hat? | – | – | Gesundes Altern |
+| 18 | Was hilft gegen Nervenschmerzen nach der Chemo? | – | – | Krebstherapie |
+| 19 | Krafttraining bei Arthrose — schadet das den Gelenken? | – | – | Stoffwechsel |
+| 20 | Was ist betriebliches Gesundheitsmanagement? | 100 | 0 | Betrieb |
+| 21 | Warum reicht ein Obstkorb nicht als Gesundheitsförderung? | – | – | Betrieb |
+| 22 | Was bringt BGM einem kleinen Betrieb? | – | – | Betrieb |
+| 23 | Warum macht Schonung auf Dauer schwächer? | – | – | Prävention |
+| 24 | Was bedeutet Prävention? | **1000** | 13 | Prävention |
 
-1. **Warum ist Krafttraining nach der Menopause so wichtig?** — der Kernbeitrag des Strangs
-2. **Welches Training hält die Knochen nach den Wechseljahren stark?** — Kemmler-Daten, Vergleich der Trainingsarten
-3. **Werden Frauen durch Krafttraining muskulös?** — der hartnäckigste Irrtum
-4. **Was ändert sich beim Training ab der Perimenopause?**
+### Anmerkungen zur Auswahl
 
-### Krebs und Therapie
+**Rücken ist die größte Chance.** „Hexenschuss wie lange" hat 2.300 Suchen bei
+Schwierigkeit 0. Die übliche Antwort im Netz ist Schonung und Wärme — die aktuelle
+Leitlinienlage sagt etwas anderes. Genau diese Differenz ist unser Thema. Vorsicht ist
+trotzdem geboten: Bei akuten Rückenschmerzen gehören Warnzeichen benannt, die ärztlich
+abgeklärt werden müssen.
 
-5. **Darf man während einer Chemotherapie trainieren?** — die Frage, die am meisten falsch beantwortet wird
-6. **Wie hält man während einer Krebstherapie Muskelmasse?**
-7. **Was hilft gegen Nervenschmerzen nach der Chemo (CIPN)?**
-8. **Wie kommt man nach einer Krebsbehandlung wieder in Form?**
+**BGM hat kaum Suchvolumen** (100 Suchen für „Was ist BGM"), aber Klickpreise von
+45 bis 90 €. Das ist ein Geschäfts-, kein Reichweitenthema. Wir schreiben es für die
+Glaubwürdigkeit gegenüber Unternehmen, nicht für Besucherzahlen.
 
-### Gesundes Altern
-
-9. **Wie viele Kniebeugen sollte man mit 60 schaffen?**
-10. **Wie oft Krafttraining pro Woche ab 50?**
-11. **Ist Langhanteltraining im Alter gefährlich?**
-12. **Womit fängt man mit 60 an, wenn man nie trainiert hat?**
-13. **Wie bleibt man im Alter selbstständig?**
-14. **Was ist Sturzprophylaxe — und was hilft wirklich?**
-
-### Chronische Erkrankungen
-
-15. **Senkt Krafttraining den Blutdruck?**
-16. **Darf man mit Bluthochdruck schwere Gewichte heben?** — Pressatmung erklären
-17. **Was bringt Krafttraining bei Typ-2-Diabetes?**
-18. **Krafttraining bei Arthrose — schadet das den Gelenken?**
-19. **Was kann man bei COPD trainieren?**
-
-### Grundlagen
-
-20. **Was ist Kreuzheben?**
-21. **Wie macht man Kniebeugen richtig?**
-22. **Warum macht Schonung auf Dauer schwächer?**
-23. **Was bedeutet Prävention?**
+**Nicht schreiben:** Fragen mit reiner Behandlungsabsicht („Welcher Arzt bei
+Rückenschmerzen" — 1.200 Suchen, aber nicht unsere Rolle), Matratzen- und
+Produktfragen, Dosierungen, alles ohne Beleg.
 
 ---
 
-## Was nicht geschrieben wird
+## Takt
 
-- Alles, was eine Diagnose voraussetzt oder eine Therapie empfiehlt.
-- Dosierungen, Präparate, Nahrungsergänzung.
-- Fragen mit reiner Behandlungsabsicht („Welcher Arzt bei …", „Welches Medikament …").
-- Alles, wofür sich kein Beleg finden lässt.
+Zwei Beiträge pro Woche, Montag und Donnerstag. Bei einem pro Woche würde die Liste
+gut ein halbes Jahr tragen — mit zwei ist sie in drei Monaten durch, und bis dahin
+steht die Rubrik auf eigenen Beinen.

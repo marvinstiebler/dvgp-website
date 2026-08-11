@@ -25,7 +25,7 @@ ohnehin für die Öffentlichkeit bestimmt, im Repo stehen keine Zugangsdaten.
 | | |
 |---|---|
 | Name | DVGP Wissen — wöchentlicher Beitrag |
-| Takt | `0 6 * * 1` — jeden Montag 06:00 UTC = **08:00 Berlin** |
+| Takt | `0 6 * * 1,4` — Montag und Donnerstag 06:00 UTC = **08:00 Berlin** |
 | Modell | `claude-opus-5` |
 | Umgebung | Default (`env_011fpeEsxWpkqwY6cMbqGp2Y`) |
 | Repo | `https://github.com/marvinstiebler/dvgp-website` |
