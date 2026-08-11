@@ -72,53 +72,59 @@ mit niedriger Evidenzsicherheit trägt kein „ist erwiesen", sondern ein „deu
 Von oben nach unten. Die Reihenfolge mischt die Kategorien bewusst, damit die Rubrik
 nicht monothematisch wirkt.
 
-Reihenfolge aus dem [Katalog](katalog.md), Stufe A zuerst, Kategorien bewusst gemischt.
+Sortiert nach **Schwere des Problems**, nicht nach Suchvolumen. Die Zahlen aus dem
+[Katalog](katalog.md) stehen dabei, sie entscheiden aber nur innerhalb gleich schwerer
+Themen. Belege in [evidenz.md](evidenz.md).
 
-| # | Beitrag | Vol | KD | Kategorie |
-|---|---|---|---|---|
-| 1 | Was hilft wirklich gegen Muskelkater? | **7.800** | 0 | Training/Regeneration |
-| 2 | Wie viel Protein braucht man am Tag für Muskelaufbau? | **5.900** | 3 | Training/Ernährung |
-| 3 | Was hilft wirklich gegen Rückenschmerzen? | **1.600** | 12 | Rücken |
-| 4 | Warum ist Krafttraining nach der Menopause so wichtig? | – | – | Frauengesundheit |
-| 5 | Knieschmerzen — was tun? | **1.800** | 0 | Gelenke |
-| 6 | Wie lange dauert ein Hexenschuss — und was hilft? | **2.300** | 0 | Rücken |
-| 7 | Darf man während einer Chemotherapie trainieren? | – | – | Krebstherapie |
-| 8 | Protein-Shake vor oder nach dem Training? | 1.500 | 0 | Training/Ernährung |
-| 9 | Hilft Magnesium gegen Muskelkater? | 1.500 | 4 | Training/Irrtümer |
-| 10 | Was tun bei Rückenschmerzen — schonen oder bewegen? | **2.100** | 12 | Rücken |
-| 11 | Ist Arthrose heilbar? | 900 | 7 | Gelenke |
-| 12 | Schulterschmerzen — was tun? | 1.000 | 6 | Gelenke |
-| 13 | Werden Frauen durch Krafttraining muskulös? | 150 | 3 | Frauengesundheit |
-| 14 | Wie oft Krafttraining pro Woche ab 50? | 70 | – | Gesundes Altern |
-| 15 | Senkt Krafttraining den Blutdruck? | – | – | Stoffwechsel |
-| 16 | Wie kann man Arthrose vorbeugen? | 300 | 0 | Gelenke |
-| 17 | Wie viele Kniebeugen sollte man mit 60 schaffen? | 80 | – | Gesundes Altern |
-| 18 | Wie hält man während einer Krebstherapie Muskelmasse? | – | – | Krebstherapie |
-| 19 | Was ist Insulinresistenz — und was hat Muskel damit zu tun? | 450 | 9 | Stoffwechsel |
-| 20 | Welches Training hält die Knochen nach den Wechseljahren stark? | – | – | Frauengesundheit |
-| 21 | Was hilft in den Wechseljahren gegen Hitzewallungen? | 200 | 0 | Frauengesundheit |
-| 22 | Ist Langhanteltraining im Alter gefährlich? | – | – | Gesundes Altern |
-| 23 | Was ist Sturzprophylaxe — und was hilft wirklich? | 150 | 1 | Gesundes Altern |
-| 24 | Darf man mit Bluthochdruck schwere Gewichte heben? | – | – | Stoffwechsel |
-| 25 | Womit fängt man mit 60 an, wenn man nie trainiert hat? | – | – | Gesundes Altern |
-| 26 | Was hilft gegen Nervenschmerzen nach der Chemo? | – | – | Krebstherapie |
-| 27 | Was ist betriebliches Gesundheitsmanagement? | 100 | 0 | Betrieb |
-| 28 | Warum reicht ein Obstkorb nicht als Gesundheitsförderung? | – | – | Betrieb |
-| 29 | Warum macht Schonung auf Dauer schwächer? | – | – | Prävention |
-| 30 | Was bedeutet Prävention? | **1.000** | 13 | Prävention |
+| # | Beitrag | Vol | KD | Kategorie | Belegt durch |
+|---|---|---|---|---|---|
+| 1 | Was tun bei Rückenschmerzen — schonen oder bewegen? | **2.100** | 12 | Rücken | These 2, 4 |
+| 2 | Was hilft wirklich gegen chronische Rückenschmerzen? | **1.600** | 12 | Rücken | These 2, 4, 9 |
+| 3 | Warum ist Krafttraining nach der Menopause so wichtig? | – | – | Frauengesundheit | Sá, Kemmler, Sundh |
+| 4 | Darf man während einer Chemotherapie trainieren? | – | – | Krebstherapie | McGovern |
+| 5 | Ist Arthrose heilbar — und was hilft wirklich? | 900 | 7 | Gelenke | These 3, 4 |
+| 6 | Knieschmerzen: warum Schonung selten die Lösung ist | **1.800** | 0 | Gelenke | These 2, 3 |
+| 7 | Wie lange dauert ein Hexenschuss — und was hilft? | **2.300** | 0 | Rücken | These 2, 4 |
+| 8 | Senkt Krafttraining den Blutdruck? | – | – | Stoffwechsel | These 1 |
+| 9 | Was ist Insulinresistenz — und was hat Muskel damit zu tun? | 450 | 9 | Stoffwechsel | These 8 (vorsichtig) |
+| 10 | Wie hält man während einer Krebstherapie Muskelmasse? | – | – | Krebstherapie | McGovern |
+| 11 | Schulterschmerzen: was hinter dem Dauerzustand steckt | 1.000 | 6 | Gelenke | These 2, 3 |
+| 12 | Wie oft Krafttraining pro Woche ab 50? | 70 | – | Gesundes Altern | These 1, 5 |
+| 13 | Welches Training hält die Knochen nach den Wechseljahren stark? | – | – | Frauengesundheit | Kemmler, Sundh |
+| 14 | Ist Langhanteltraining im Alter gefährlich? | – | – | Gesundes Altern | These 4, 5 |
+| 15 | Was ist Sturzprophylaxe — und was hilft wirklich? | 150 | 1 | Gesundes Altern | These 1 |
+| 16 | Werden Frauen durch Krafttraining muskulös? | 150 | 3 | Frauengesundheit | Sá, González-Gálvez |
+| 17 | Darf man mit Bluthochdruck schwere Gewichte heben? | – | – | Stoffwechsel | These 5 |
+| 18 | Wie kann man Arthrose vorbeugen? | 300 | 0 | Gelenke | These 4 |
+| 19 | Was hilft gegen Nervenschmerzen nach der Chemo? | – | – | Krebstherapie | Wang |
+| 20 | Womit fängt man mit 60 an, wenn man nie trainiert hat? | – | – | Gesundes Altern | These 1, 5 |
+| 21 | Wie viele Kniebeugen sollte man mit 60 schaffen? | 80 | – | Gesundes Altern | These 5 |
+| 22 | Was hilft in den Wechseljahren gegen Hitzewallungen? | 200 | 0 | Frauengesundheit | Sá |
+| 23 | Warum macht Schonung auf Dauer schwächer? | – | – | Prävention | These 1 (Bortz) |
+| 24 | Was bedeutet Prävention? | **1.000** | 13 | Prävention | These 1, 9 |
+
+### Warum Muskelkater und Protein nicht mehr oben stehen
+
+Sie hatten die größten Zahlen im Katalog — 7.800 und 5.900 Suchen. Sie fallen trotzdem
+durch das Auswahlraster: Muskelkater wiegt nicht schwer, ist nicht chronisch, und die
+gängigen Lösungen helfen zwar nicht, aber das Problem verschwindet ohnehin nach drei
+Tagen. Wer darüber schreibt, sammelt Klicks von Leuten mit einem Wehwehchen.
+
+Sie bleiben im Katalog als möglicher Einstieg, wenn die schweren Themen abgearbeitet
+sind — dann aber im Zuschnitt „Regeneration", nicht als Ratgeber.
 
 ### Anmerkungen
 
-**Muskelkater ist der beste Einstieg überhaupt.** 7.800 Suchen im Monat bei
-Schwierigkeit 0. Das Netz empfiehlt Magnesium, Dehnen und Wärme — die Studienlage trägt
-davon fast nichts. Wer diese Frage sauber beantwortet, wird gefunden.
-
 **Wo Schonung der Standardrat ist, ist die Konkurrenz schwach.** Rücken, Knie, Arthrose,
 Osteoporose: überall Schwierigkeit 0 bis 12 bei vierstelligen Volumen. Die vorhandenen
-Antworten sind dünn, weil sie alle dasselbe sagen.
+Antworten sind dünn, weil sie alle dasselbe sagen — und die eigene Sammlung
+([evidenz.md](evidenz.md)) trägt genau die Gegenposition.
 
 **Bei Beschwerdethemen gehören Warnzeichen benannt**, bei denen vor dem Training
-ärztlich abgeklärt werden muss. Das gilt besonders für Rücken, Knie und alles Akute.
+ärztlich abgeklärt werden muss. Besonders bei Rücken, Knie und allem Akuten.
+
+**Vorsicht bei These 3** (Sham-Chirurgie): Die Arbeiten zeigen fehlenden Zusatznutzen
+*bei bestimmten degenerativen Indikationen* — nicht, dass Operationen nutzlos sind.
 
 **Nicht schreiben:** siehe [katalog.md](katalog.md), Abschnitt „Aussortiert".
 

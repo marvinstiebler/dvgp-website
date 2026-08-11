@@ -12,14 +12,40 @@ Verbindlich für alles, was unter dvgp.info veröffentlicht wird — Website wie
 ## Der Zuschnitt jedes Beitrags
 
 **Kein Beitrag erklärt eine Übung für sich.** Jeder ist eine Kombination:
-*Krafttraining und <Kontext>*. Das Thema ist immer das Problem, das jemand hat —
-die Übung ist das Werkzeug, das im Beitrag erklärt wird.
+*Krafttraining und <Problem>*. Das Problem ist das Thema, die Übung nur das Werkzeug
+darin.
 
 - Falsch: „Was ist Kreuzheben?"
 - Richtig: „Was hilft wirklich gegen Rückenschmerzen?" — und darin steht, warum
   Kreuzheben dabei hilft und wie es geht.
 
-Die Kategorien stehen in [themenplan.md](themenplan.md).
+### Welches Problem taugt als Thema
+
+Drei Bedingungen, alle drei müssen erfüllt sein:
+
+1. **Es wiegt schwer.** Es schränkt das Leben ein, kostet Arbeitsfähigkeit oder
+   Selbstständigkeit. Muskelkater erfüllt das nicht. Rückenschmerz, Arthrose,
+   Osteoporose, Sarkopenie, chronische Erkrankungen erfüllen es.
+2. **Es ist chronisch oder wiederkehrend.** Kein einmaliges Ärgernis, sondern etwas,
+   das bleibt oder wiederkommt.
+3. **Die gängigen kurzfristigen Lösungen tragen nicht.** Schonung, Salbe, Spritze,
+   Wärme, das nächste Präparat — sie verschaffen Stunden, keine Veränderung.
+
+Erst wenn alle drei zutreffen, ist Krafttraining die Antwort, die tatsächlich etwas
+verschiebt. Genau diese Lücke ist der Platz des Verbands.
+
+### Pflichtabschnitt: Arbeitsalltag
+
+Jeder Beitrag hat vor dem Schluss den Abschnitt
+**„Wie lässt sich das in den Arbeitsalltag einbauen?"** — konkret für Berufstätige,
+plus ein Absatz, was Unternehmen und Selbstständige daraus machen können.
+
+Kein Werbeblock. Keine Erwähnung von Angeboten. Eine praktische Einordnung, die zeigt,
+dass wir den Alltag mitdenken. Wer als Unternehmer liest, erkennt von selbst, dass das
+in ein betriebliches Gesundheitsprogramm gehört — man muss es ihm nicht sagen.
+
+Die Kategorien stehen in [themenplan.md](themenplan.md), die Belege in
+[evidenz.md](evidenz.md).
 
 ## Verständlichkeit
 
