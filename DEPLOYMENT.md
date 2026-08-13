@@ -13,9 +13,16 @@
 | Registrar | IONOS (nur noch Registrierung, DNS liegt bei Cloudflare) |
 | Mail | weiterhin IONOS: `mx00.ionos.de`, `mx01.ionos.de` |
 
-Deployment über `npx wrangler deploy` oder automatisch über Cloudflare Workers Builds
-bei Push auf `main`. Die Custom Domains stehen in `wrangler.toml` — Cloudflare legt die
-DNS-Einträge dafür selbst an.
+Deployment über `npx wrangler deploy` von diesem Rechner. Die Custom Domains stehen in
+`wrangler.toml` — Cloudflare legt die DNS-Einträge dafür selbst an.
+
+> **Ein Push auf `main` deployt nicht.** Cloudflare Workers Builds ist für dieses Repo
+> nicht verbunden — nachgeprüft am 13.08.2026: `wrangler deployments list` zeigt
+> ausschließlich manuelle Deployments, das letzte davor am 12.08. um 05:10, also *vor*
+> dem letzten Push. Nach jedem Push ist deshalb einmal `npx wrangler deploy` nötig.
+> Wer das loswerden will, verbindet das Repo im Dashboard unter
+> *Workers & Pages → dvgp-website → Settings → Build* mit GitHub.
+> Das betrifft auch die Routine, siehe [werkzeuge/routine-wissen.md](werkzeuge/routine-wissen.md).
 
 ## Was beim Umzug schiefging — zum Nachlesen
 
