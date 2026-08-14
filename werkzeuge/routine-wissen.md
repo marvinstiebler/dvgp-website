@@ -11,20 +11,22 @@
 | Werkzeuge | Bash, Read, Write, Edit, Glob, Grep, ToolSearch, SendUserFile |
 | Verwalten | https://claude.ai/code/routines |
 
-Der Auftragstext steht in der Routine selbst. Er wird über die RemoteTrigger-API
-gepflegt, nicht aus dieser Datei gelesen — diese Datei dokumentiert nur.
+Der Auftragstext steht in der Routine selbst und wird über die RemoteTrigger-API
+gepflegt. Diese Datei dokumentiert nur.
 
-## Was die Routine kann und was nicht
+## Stand: läuft (14.08.2026)
 
-**Sie schreibt zuverlässig.** Der Lauf vom 13.08.2026 hat einen vollständigen,
-regelkonformen Beitrag erzeugt, gebaut, den Themenplan gepflegt und committet.
+Push und Deployment funktionieren. Nachgewiesen im Lauf
+`cse_01JuzPTuCJDwwGgEreu1YBkD`: Push auf einen Testzweig kam auf GitHub an.
 
-**Sie kann nicht pushen.** Und selbst wenn sie es könnte, würde der Push nichts
-veröffentlichen. Zwei getrennte Ursachen, beide am 13.08.2026 nachgewiesen.
+## Was zwei Tage lang kaputt war — und warum
 
-### Ursache 1 — die Sitzung hat kein Schreib-Token
+Zwei getrennte Fehler, die sich gegenseitig verdeckt haben. Der zweite fiel erst auf,
+als der erste behoben war.
 
-Nachgewiesen im Diagnoselauf `cse_01BKLeXQd5o1LmqTo4xWPxgq`:
+### Fehler 1 — die Cloud-Sitzung hatte kein Schreib-Token
+
+Der Diagnoselauf `cse_01BKLeXQd5o1LmqTo4xWPxgq` vom 13.08. hat es auseinandergenommen:
 
 | Prüfung | Ergebnis |
 |---|---|
@@ -32,66 +34,53 @@ Nachgewiesen im Diagnoselauf `cse_01BKLeXQd5o1LmqTo4xWPxgq`:
 | Anmeldung | wird von einem Git-Proxy zur Laufzeit eingespritzt |
 | `api.github.com` durch den Proxy | **403, auch ohne Auth-Header** — der Kanal ist gesperrt |
 | `git clone` | funktioniert |
-| `git push` auf einen Testzweig | `403` |
-| `add_repo` mit `access: "push"` **vor** jedem Lesezugriff | ändert nichts |
-| `list_repos` | meldet `visibility: public, can_push: true` |
+| `git push` | `403` |
+| `add_repo` mit `access: "push"` vor jedem Lesezugriff | ändert nichts |
+| `list_repos` | meldet `can_push: true` |
 
-`can_push: true` bezieht sich auf Marvins GitHub-Konto, nicht auf das Token, das
-der Proxy einspritzt. Der Proxy hat für dieses Repo nur Leserechte.
+`can_push: true` bezieht sich auf Marvins GitHub-Konto, nicht auf das Token, das der
+Proxy einspritzt. Der Proxy hatte für dieses Repo nur Leserechte.
 
-Die 403-Meldungen der GitHub-API (`Resource not accessible by integration`) sind
-eine Sackgasse und **kein** Hinweis auf fehlende App-Rechte — dieser Kanal ist
-für alle Sitzungen gesperrt, mit und ohne Token. Nicht noch einmal untersuchen.
+**Behoben durch** `/web-setup` in einer interaktiven Terminal-Sitzung. Der Befehl hängt
+den lokalen `gh`-Token (Scopes `gist, read:org, repo`) ans Claude-Konto. Laut Anthropic-
+Doku ist das einer von genau zwei Wegen; der andere ist die Claude-GitHub-App.
 
-**Die Lösung** steht in der Anthropic-Doku unter *GitHub authentication options*:
-Cloud-Sitzungen bekommen Repo-Zugriff auf genau zwei Wegen — über die Claude-
-GitHub-App oder über `/web-setup`, das den lokalen `gh`-Token mit dem Claude-Konto
-abgleicht. Marvins lokaler `gh` hat die Scopes `gist, read:org, repo`; `repo`
-schließt Schreibrechte ein.
+Zwei Sackgassen, die nicht noch einmal untersucht werden müssen:
 
-```
-claude          # im Terminal
-/web-setup
-```
+- Die 403 der GitHub-API (`Resource not accessible by integration`) sind **kein** Hinweis
+  auf fehlende App-Rechte. Der Kanal ist für alle Sitzungen gesperrt, mit und ohne Token.
+- `github.com/settings/installations` ist die falsche Stelle. Die App-Installation steuert
+  laut Doku ausdrücklich nicht den Sitzungszugriff, sondern nur die PR-Webhooks für
+  Auto-fix.
 
-Danach hat jede neue Cloud-Sitzung dieselben Rechte wie der lokale `gh`.
-Der frühere Hinweis auf `github.com/settings/installations` war falsch — die
-App-Installation steuert laut Doku ausdrücklich **nicht** den Sitzungszugriff,
-sondern nur die PR-Webhooks für Auto-fix.
+### Fehler 2 — Workers Builds war nie verbunden
 
-### Ursache 2 — Workers Builds ist nicht verbunden
+Ein Push auf `main` hat die Seite **nie** deployt. `wrangler deployments list` zeigte bis
+zum 13.08. ausschließlich manuelle Deployments; das letzte davor lag am 12.08. um 05:10
+und damit *vor* dem letzten Push.
 
-Ein Push auf `main` hat diese Seite **noch nie** deployt. `wrangler deployments
-list` zeigt ausschließlich manuelle Deployments von Marvins Rechner; das letzte
-vor dem 13.08. stammt vom 12.08. um 05:10 und lag damit *vor* dem letzten Push.
+**Behoben am 14.08.** über *Workers & Pages → dvgp-website → Einstellungen → Erstellen →
+Git-Repository verbinden*. Einstellungen siehe [DEPLOYMENT.md](../DEPLOYMENT.md).
 
-Solange das so ist, gilt: nach jedem Push muss einmal
+Beim Verbinden schlägt Cloudflare ein vorhandenes API-Token aus einem anderen Projekt
+vor. Das ist falsch und meldet fehlende Rechte — hier gehört ein eigenes Token hin,
+Vorlage *Cloudflare Workers bearbeiten*, Zonenressource `dvgp.info`.
 
-```bash
-npx wrangler deploy
-```
+## Das Sicherheitsnetz bleibt
 
-von diesem Rechner laufen. Wer das dauerhaft loswerden will, verbindet das Repo
-im Cloudflare-Dashboard unter *Workers & Pages → dvgp-website → Settings → Build*
-mit GitHub. Erst dann stimmt der Satz „der Push löst das Deployment aus".
-
-## Was jetzt eingebaut ist
-
-Damit nie wieder Arbeit verlorengeht, sendet die Routine **immer** — auch bei
-erfolgreichem Push — den fertigen Beitrag und einen `git format-patch` per
-SendUserFile. Anwenden lässt sich der Patch mit:
+Auch jetzt, wo der Push funktioniert, sendet die Routine bei **jedem** Lauf den fertigen
+Beitrag und einen `git format-patch` per SendUserFile. Das kostet nichts und heißt: selbst
+wenn Push oder Build einmal ausfallen, ist die Arbeit da. Anwenden mit:
 
 ```bash
 git am beitrag.patch
 ```
 
-Außerdem prüft sie am Ende die Live-URL und schreibt in den Bericht, ob der
-Beitrag im Repo liegt, veröffentlicht ist, oder beides nicht.
+Am Ende prüft sie die Live-URL und schreibt in den Bericht, ob der Beitrag im Repo liegt
+und ob er veröffentlicht ist. Der Bericht kommt als Tabelle mit Schritt, Ergebnis und
+exakter Fehlermeldung. Nichts beschönigen, keine neue Sitzung vorschlagen.
 
-Der Bericht kommt immer als Tabelle mit Schritt, Ergebnis und exakter
-Fehlermeldung. Sie soll nichts beschönigen und keine neue Sitzung vorschlagen.
-
-## Erledigt
+## Aufräumen
 
 Der Wegwerf-Trigger `trig_01XcD9c2ST8Xe7yVVVMVxMCg` („TEMP Push-Diagnose") hat die
-Befunde oben erzeugt und ist deaktiviert. Er kann gelöscht werden.
+Befunde oben erzeugt, ist deaktiviert und kann gelöscht werden.
