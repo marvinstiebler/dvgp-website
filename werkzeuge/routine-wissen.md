@@ -14,10 +14,16 @@
 Der Auftragstext steht in der Routine selbst und wird über die RemoteTrigger-API
 gepflegt. Diese Datei dokumentiert nur.
 
-## Stand: läuft (14.08.2026)
+## Stand: 14.08.2026 — Push ja, Deployment noch nicht
 
-Push und Deployment funktionieren. Nachgewiesen im Lauf
-`cse_01JuzPTuCJDwwGgEreu1YBkD`: Push auf einen Testzweig kam auf GitHub an.
+| | |
+|---|---|
+| Push aus der Cloud-Sitzung | **funktioniert**, nachgewiesen im Lauf `cse_01JuzPTuCJDwwGgEreu1YBkD` (Push auf einen Testzweig kam auf GitHub an) |
+| Deployment durch den Push | **noch nicht bestätigt** — Testpush `3abb84d` löste in elf Minuten keinen Build aus |
+
+Solange das zweite offen ist, landet der Beitrag der Routine im Repo, geht aber erst
+mit einem `npx wrangler deploy` von Marvins Rechner online. Details und was zu prüfen
+ist: [DEPLOYMENT.md](../DEPLOYMENT.md).
 
 ## Was zwei Tage lang kaputt war — und warum
 
@@ -59,12 +65,14 @@ Ein Push auf `main` hat die Seite **nie** deployt. `wrangler deployments list` z
 zum 13.08. ausschließlich manuelle Deployments; das letzte davor lag am 12.08. um 05:10
 und damit *vor* dem letzten Push.
 
-**Behoben am 14.08.** über *Workers & Pages → dvgp-website → Einstellungen → Erstellen →
-Git-Repository verbinden*. Einstellungen siehe [DEPLOYMENT.md](../DEPLOYMENT.md).
+**Am 14.08. angegangen** über *Workers & Pages → dvgp-website → Einstellungen → Erstellen
+→ Git-Repository verbinden*, aber noch nicht nachweislich wirksam — siehe oben und
+[DEPLOYMENT.md](../DEPLOYMENT.md).
 
-Beim Verbinden schlägt Cloudflare ein vorhandenes API-Token aus einem anderen Projekt
-vor. Das ist falsch und meldet fehlende Rechte — hier gehört ein eigenes Token hin,
-Vorlage *Cloudflare Workers bearbeiten*, Zonenressource `dvgp.info`.
+Achtung beim Verbinden: Cloudflare schlägt ein vorhandenes API-Token aus einem anderen
+Projekt vor und meldet dazu selbst fehlende Rechte. Das ist der wahrscheinlichste Grund,
+wenn ein Build nicht startet oder abbricht. Hier gehört ein eigenes Token hin, Vorlage
+*Cloudflare Workers bearbeiten*, Zonenressource `dvgp.info`.
 
 ## Das Sicherheitsnetz bleibt
 

@@ -13,17 +13,26 @@
 | Registrar | IONOS (nur noch Registrierung, DNS liegt bei Cloudflare) |
 | Mail | weiterhin IONOS: `mx00.ionos.de`, `mx01.ionos.de` |
 
-**Ein Push auf `main` deployt.** Cloudflare Workers Builds ist seit dem 14.08.2026 mit
-dem Repo verbunden: Produktions-Branch `main`, kein Build-Befehl (die fertigen Dateien
-liegen im Repo), Bereitstellungsbefehl `npx wrangler deploy`, Pfad `/`. Von Hand geht es
-weiterhin mit `npx wrangler deploy` von diesem Rechner.
-
+**Deployment läuft weiterhin von Hand:** `npx wrangler deploy` aus diesem Verzeichnis.
 Die Custom Domains stehen in `wrangler.toml` — Cloudflare legt die DNS-Einträge dafür
 selbst an.
 
-Bis zum 13.08.2026 war das nicht so: Workers Builds war nie verbunden, jedes Deployment
-kam von Hand. Wer wissen will, wie das auffiel, findet es in
-[werkzeuge/routine-wissen.md](werkzeuge/routine-wissen.md).
+> **Workers Builds ist noch nicht bestätigt.** Der Verbindungsdialog wurde am 14.08.2026
+> ausgefüllt (Branch `main`, kein Build-Befehl, Bereitstellungsbefehl `npx wrangler
+> deploy`, Pfad `/`). Der Testpush `3abb84d` um 08:21 hat aber nach elf Minuten **kein**
+> Deployment ausgelöst, und Cloudflare hat auf dem Commit auch keine Statusmeldung
+> hinterlassen. Bis das nachweislich funktioniert, gilt: nach jedem Push einmal
+> `npx wrangler deploy`.
+>
+> Zu prüfen ist zweierlei — beides im Dashboard beim Worker `dvgp-website`:
+> unter *Einstellungen → Erstellen*, ob dort das Repository steht statt eines
+> „Verbinden"-Knopfes; und unter *Bereitstellungen*, ob es zum Commit einen Build gibt
+> und woran der scheiterte. Verdacht: das API-Token. Der Dialog schlägt eines aus einem
+> fremden Projekt vor (`wll-tatortreinigung-gelsenkirchen build token`) und meldet dazu
+> selbst fehlende Rechte.
+
+Vor dem 13.08.2026 war Workers Builds nie verbunden — jedes Deployment kam von Hand.
+Wie das auffiel, steht in [werkzeuge/routine-wissen.md](werkzeuge/routine-wissen.md).
 
 ## Was beim Umzug schiefging — zum Nachlesen
 
