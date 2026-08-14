@@ -13,26 +13,28 @@
 | Registrar | IONOS (nur noch Registrierung, DNS liegt bei Cloudflare) |
 | Mail | weiterhin IONOS: `mx00.ionos.de`, `mx01.ionos.de` |
 
-**Deployment läuft weiterhin von Hand:** `npx wrangler deploy` aus diesem Verzeichnis.
-Die Custom Domains stehen in `wrangler.toml` — Cloudflare legt die DNS-Einträge dafür
-selbst an.
+**Ein Push auf `main` deployt.** Seit dem 14.08.2026 über GitHub Actions:
+[.github/workflows/deploy.yml](.github/workflows/deploy.yml). Der Ablauf baut die Seiten
+aus `content/` neu, deployt mit `wrangler deploy` und prüft danach, ob `/wissen/` mit 200
+antwortet. Schlägt einer der drei Schritte fehl, ist der Lauf rot.
 
-> **Workers Builds ist noch nicht bestätigt.** Der Verbindungsdialog wurde am 14.08.2026
-> ausgefüllt (Branch `main`, kein Build-Befehl, Bereitstellungsbefehl `npx wrangler
-> deploy`, Pfad `/`). Der Testpush `3abb84d` um 08:21 hat aber nach elf Minuten **kein**
-> Deployment ausgelöst, und Cloudflare hat auf dem Commit auch keine Statusmeldung
-> hinterlassen. Bis das nachweislich funktioniert, gilt: nach jedem Push einmal
-> `npx wrangler deploy`.
->
-> Zu prüfen ist zweierlei — beides im Dashboard beim Worker `dvgp-website`:
-> unter *Einstellungen → Erstellen*, ob dort das Repository steht statt eines
-> „Verbinden"-Knopfes; und unter *Bereitstellungen*, ob es zum Commit einen Build gibt
-> und woran der scheiterte. Verdacht: das API-Token. Der Dialog schlägt eines aus einem
-> fremden Projekt vor (`wll-tatortreinigung-gelsenkirchen build token`) und meldet dazu
-> selbst fehlende Rechte.
+Von Hand geht es weiterhin mit `npx wrangler deploy` aus diesem Verzeichnis. Die Custom
+Domains stehen in `wrangler.toml` — Cloudflare legt die DNS-Einträge dafür selbst an.
 
-Vor dem 13.08.2026 war Workers Builds nie verbunden — jedes Deployment kam von Hand.
-Wie das auffiel, steht in [werkzeuge/routine-wissen.md](werkzeuge/routine-wissen.md).
+Der Ablauf braucht genau ein Geheimnis: `CLOUDFLARE_API_TOKEN` als Repo-Secret,
+erstellt aus dem Cloudflare-Token `dvgp-website`. Neu setzen ginge mit:
+
+```bash
+gh secret set CLOUDFLARE_API_TOKEN --repo marvinstiebler/dvgp-website
+```
+
+> **Cloudflare Workers Builds bewusst nicht benutzen.** Es war bis zum 13.08.2026 nie
+> verbunden — jedes Deployment kam von Hand, ohne dass es jemandem auffiel. Der Versuch,
+> es am 14.08. zu verbinden, führte zu keinem einzigen Build; das dafür angelegte Token
+> stand danach auf „zuletzt verwendet: nie". Actions wurde stattdessen genommen, weil die
+> Logs von außen lesbar sind und ein Fehler damit in einer Minute sichtbar wird statt gar
+> nicht. Wer Workers Builds nachträglich doch verbindet, hat zwei Wege, die parallel
+> deployen — dann einen von beiden abschalten.
 
 ## Was beim Umzug schiefging — zum Nachlesen
 

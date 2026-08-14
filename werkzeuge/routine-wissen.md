@@ -14,16 +14,16 @@
 Der Auftragstext steht in der Routine selbst und wird über die RemoteTrigger-API
 gepflegt. Diese Datei dokumentiert nur.
 
-## Stand: 14.08.2026 — Push ja, Deployment noch nicht
+## Stand: 14.08.2026 — läuft ohne Handgriff
 
 | | |
 |---|---|
-| Push aus der Cloud-Sitzung | **funktioniert**, nachgewiesen im Lauf `cse_01JuzPTuCJDwwGgEreu1YBkD` (Push auf einen Testzweig kam auf GitHub an) |
-| Deployment durch den Push | **noch nicht bestätigt** — Testpush `3abb84d` löste in elf Minuten keinen Build aus |
+| Push aus der Cloud-Sitzung | **funktioniert** — nachgewiesen im Lauf `cse_01JuzPTuCJDwwGgEreu1YBkD` (Push auf einen Testzweig kam auf GitHub an) |
+| Deployment durch den Push | **funktioniert** — über GitHub Actions, siehe [DEPLOYMENT.md](../DEPLOYMENT.md) |
 
-Solange das zweite offen ist, landet der Beitrag der Routine im Repo, geht aber erst
-mit einem `npx wrangler deploy` von Marvins Rechner online. Details und was zu prüfen
-ist: [DEPLOYMENT.md](../DEPLOYMENT.md).
+Die Routine schreibt, baut, committet und pusht. Der Push löst den Actions-Ablauf aus,
+der die Seiten neu baut, deployt und die Live-URL prüft. Es ist kein Handgriff mehr
+nötig.
 
 ## Was zwei Tage lang kaputt war — und warum
 
@@ -65,14 +65,16 @@ Ein Push auf `main` hat die Seite **nie** deployt. `wrangler deployments list` z
 zum 13.08. ausschließlich manuelle Deployments; das letzte davor lag am 12.08. um 05:10
 und damit *vor* dem letzten Push.
 
-**Am 14.08. angegangen** über *Workers & Pages → dvgp-website → Einstellungen → Erstellen
-→ Git-Repository verbinden*, aber noch nicht nachweislich wirksam — siehe oben und
-[DEPLOYMENT.md](../DEPLOYMENT.md).
+**Behoben am 14.08.** — aber nicht über Workers Builds. Der Verbindungsdialog wurde
+ausgefüllt und löste trotzdem keinen einzigen Build aus; das dafür angelegte API-Token
+stand danach auf „zuletzt verwendet: nie". Möglicherweise hat eine Büro-Firewall den
+GitHub-Autorisierungsschritt geschluckt.
 
-Achtung beim Verbinden: Cloudflare schlägt ein vorhandenes API-Token aus einem anderen
-Projekt vor und meldet dazu selbst fehlende Rechte. Das ist der wahrscheinlichste Grund,
-wenn ein Build nicht startet oder abbricht. Hier gehört ein eigenes Token hin, Vorlage
-*Cloudflare Workers bearbeiten*, Zonenressource `dvgp.info`.
+Statt weiter im Dashboard zu raten, deployt jetzt **GitHub Actions** — siehe
+[DEPLOYMENT.md](../DEPLOYMENT.md). Entscheidend war nicht, dass Actions besser wäre,
+sondern dass seine Logs von außen lesbar sind: Der erste Lauf zeigte in einer Minute,
+dass alles außer dem fehlenden Token stimmte. Bei Workers Builds war elf Minuten lang
+nichts zu sehen — kein Build, keine Statusmeldung, kein Fehler.
 
 ## Das Sicherheitsnetz bleibt
 
