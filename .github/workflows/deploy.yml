@@ -1,0 +1,35 @@
+name: Deploy nach Cloudflare
+
+# Bei jedem Push auf main, und von Hand über den Actions-Tab.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # Seiten aus content/ neu bauen. Der Generator braucht nichts außer der
+      # Standardbibliothek. So kann site/ im Repo nie veralten.
+      - name: Seiten bauen
+        run: python3 werkzeuge/baue_wissen.py
+
+      - name: Deployen
+        run: npx --yes wrangler@4 deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 6494c9b4faa9a6ba67e19f2ebf39fca5
+
+      - name: Live prüfen
+        run: |
+          sleep 20
+          code=$(curl -s -o /dev/null -w "%{http_code}" https://dvgp.info/wissen/)
+          echo "https://dvgp.info/wissen/ -> $code"
+          test "$code" = "200"
