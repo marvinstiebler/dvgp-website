@@ -23,5 +23,20 @@
   },
   "sprache": {
     "regeln": "content/SCHREIBWEISE.md"
+  },
+  "tracking": {
+    "domain": "dvgp.info",
+    "koordinate": { "latitude": 52.1205, "longitude": 11.6276 },
+    "hinweis": "Bundesweiter Verband, kein lokales Geschaeft -- deshalb kein Geo-Grid und kein Local Pack. Die Koordinate ist nur ein konstanter Bezugspunkt (Vereinssitz Magdeburg), damit die Messungen ueber die Zeit vergleichbar bleiben.",
+    "intervall_tage": 7,
+    "ablage": "tracking/messungen",
+    "keywords": [
+      "DVGP Deutscher Verband für Gesundheitsförderung und Prävention",
+      "Rückenschmerzen schonen oder bewegen",
+      "was hilft gegen chronische Rückenschmerzen",
+      "darf man bei Osteoporose schwer heben",
+      "ist Sport bei Bluthochdruck gefährlich",
+      "was ist Sarkopenie"
+    ]
   }
 }

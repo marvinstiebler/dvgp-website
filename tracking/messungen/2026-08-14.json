@@ -1,0 +1,59 @@
+{
+  "datum": "2026-08-14",
+  "anlass": "Nulllinie",
+  "domain": "dvgp.info",
+  "quelle": "visibility_serp_snapshot (DataForSEO), Koordinate Magdeburg 52.1205/11.6276, Sprache de",
+  "domain_metriken": {
+    "quelle": "Ahrefs",
+    "domain_rating": 0,
+    "organic_keywords": 0,
+    "organic_traffic": 0,
+    "hinweis": "Ahrefs kennt die Domain noch nicht. Eine 0 heisst hier 'noch nicht im Index', nicht 'nicht vorhanden'."
+  },
+  "messungen": [
+    {
+      "keyword": "DVGP Deutscher Verband für Gesundheitsförderung und Prävention",
+      "gefunden": true,
+      "rang": 5,
+      "rang_auf_seite": 6,
+      "url": "https://dvgp.info/",
+      "ki_uebersicht": true,
+      "top5": ["bv-gesundheitsfoerderung.de", "www.bvpraevention.de", "www.dvgp.org", "www.service.bund.de", "dvgp.info"]
+    },
+    {
+      "keyword": "Rückenschmerzen schonen oder bewegen",
+      "gefunden": false,
+      "rang": null,
+      "ki_uebersicht": true,
+      "top5": ["www.barmer.de", "www.gesundheitsinformation.de", "www.tk.de", "hirnstiftung.org", "gelenk-klinik.de"]
+    },
+    {
+      "keyword": "was hilft gegen chronische Rückenschmerzen",
+      "gefunden": false,
+      "rang": null,
+      "ki_uebersicht": true,
+      "top5": ["www.gesundheitsinformation.de", "www.dkv.com", "www.schoen-klinik.de", "hirnstiftung.org", "www.schmerzgesellschaft.de"]
+    },
+    {
+      "keyword": "darf man bei Osteoporose schwer heben",
+      "gefunden": false,
+      "rang": null,
+      "ki_uebersicht": true,
+      "top5": ["www.gesundheitsinformation.de", "www.gesundheitsinformation.de", "myokraft.de", "www.bauerfeind.de", "mtc.ch"]
+    },
+    {
+      "keyword": "ist Sport bei Bluthochdruck gefährlich",
+      "gefunden": false,
+      "rang": null,
+      "ki_uebersicht": false,
+      "top5": ["herzstiftung.de", "herzmedizin.de", "www.aerztezeitung.de", "www.stiftung-gesundheitswissen.de", "doc-michel.de"]
+    },
+    {
+      "keyword": "was ist Sarkopenie",
+      "gefunden": false,
+      "rang": null,
+      "ki_uebersicht": true,
+      "top5": ["www.rheuma-liga.de", "www.usz.ch", "flexikon.doccheck.com", "www.fresubin.com", "www.malteser.de"]
+    }
+  ]
+}
