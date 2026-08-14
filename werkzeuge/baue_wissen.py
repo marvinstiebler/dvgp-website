@@ -110,7 +110,11 @@ def lies_beitraege() -> list[Beitrag]:
 
 def inline(text: str) -> str:
     text = html.escape(text, quote=False)
-    text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', text)
+    # Das Ziel darf eine Ebene runder Klammern enthalten -- sonst zerreißt jede
+    # DOI der Bauart 10.1016/S0140-6736(18)30489-6 an der ersten Klammer.
+    text = re.sub(
+        r"\[([^\]]+)\]\(((?:[^()\s]|\([^()\s]*\))+)\)", r'<a href="\2">\1</a>', text
+    )
     text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
     text = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<em>\1</em>", text)
     return text
