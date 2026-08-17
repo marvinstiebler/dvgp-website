@@ -19,6 +19,17 @@ Welche Suchbegriffe gemessen werden, steht im Block `tracking` in
 veröffentlicht, trägt den zugehörigen Suchbegriff dort nach** — sonst wächst die Rubrik,
 aber die Messung nicht.
 
+## Search-Console-Zahlen
+
+Der Block `search_console` in einer Messdatei ist optional und wird **von Hand**
+eingetragen: Search Console → Leistung → Suchanfragen. Google hat dafür keine
+Schnittstelle, die hier angebunden wäre.
+
+Er lohnt sich trotzdem, denn er beantwortet eine andere Frage als der Rest. Die
+Rangmessung sagt, wo die Seite bei *ausgewählten* Begriffen steht. Die Search Console
+sagt, bei welchen Suchen sie **tatsächlich erschienen ist** — auch bei solchen, an die
+niemand gedacht hat. Was dort auftaucht, gehört in die Keyword-Liste oben.
+
 ## Was diese Zahlen sind und was nicht
 
 Gemessen wird von neutraler Infrastruktur mit fester Koordinate (Vereinssitz Magdeburg),

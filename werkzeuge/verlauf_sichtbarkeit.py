@@ -105,6 +105,38 @@ def main() -> None:
             "„nicht vorhanden“. Ahrefs nimmt neue Domains mit Verzögerung auf.",
         ]
 
+    # Search Console -- was Google selbst meldet. Von Hand eingetragen, sofern vorhanden.
+    gsc_laeufe = [l for l in laeufe if l.get("search_console")]
+    if gsc_laeufe:
+        zeilen += [
+            "",
+            "## Was die Search Console meldet",
+            "",
+            "Googles eigene Zahlen — echte Einblendungen, nicht gemessene Positionen.",
+            "",
+            "| Stand | Zeitraum | Impressionen | Klicks | Ø Position |",
+            "|---|---|---|---|---|",
+        ]
+        for lauf in gsc_laeufe:
+            g = lauf["search_console"]
+            zeilen.append(
+                f"| {lauf['datum']} | {g.get('zeitraum', '–')} | {g.get('impressionen', '–')} | "
+                f"{g.get('klicks', '–')} | {g.get('durchschnittliche_position', '–')} |"
+            )
+        anfragen = gsc_laeufe[-1]["search_console"].get("suchanfragen", [])
+        if anfragen:
+            zeilen += [
+                "",
+                f"Suchanfragen im jüngsten Stand ({gsc_laeufe[-1]['datum']}):",
+                "",
+                "| Suchanfrage | Impressionen | Klicks |",
+                "|---|---|---|",
+            ]
+            for a in anfragen:
+                zeilen.append(
+                    f"| {a['anfrage']} | {a.get('impressionen', '–')} | {a.get('klicks', '–')} |"
+                )
+
     # Wer sonst oben steht -- nur der jüngste Lauf, sonst wird es unlesbar
     letzter = laeufe[-1]
     zeilen += [
