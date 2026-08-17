@@ -1,6 +1,6 @@
 {
   "datum": "2026-08-17",
-  "anlass": "Erste Wochenmessung. Zwei Suchbegriffe neu aufgenommen, weil die Search Console sie als echte Suchanfragen meldet.",
+  "anlass": "Wochenmessung. Zwei Suchbegriffe neu aufgenommen, weil die Search Console sie als echte Suchanfragen meldet. Die SERP-Werte stammen aus einem zweiten Abruf am selben Tag und ersetzen den ersten.",
   "domain": "dvgp.info",
   "quelle": "visibility_serp_snapshot (DataForSEO), Koordinate Magdeburg 52.1205/11.6276, Sprache de",
   "domain_metriken": {
@@ -36,7 +36,7 @@
       "gefunden": false,
       "rang": null,
       "ki_uebersicht": false,
-      "top5": ["de.wikipedia.org", "dvg-online.de", "www.youtube.com", "www.deutscher-verein.de", "www.instagram.com"]
+      "top5": ["dvg-online.de", "de.wikipedia.org", "www.youtube.com", "www.instagram.com", "www.deutscher-verein.de"]
     },
     {
       "keyword": "DVGP Deutscher Verband für Gesundheitsförderung und Prävention",
@@ -73,7 +73,7 @@
       "gefunden": false,
       "rang": null,
       "ki_uebersicht": true,
-      "top5": ["dzhk.de", "herzstiftung.de", "herzmedizin.de", "www.aerztezeitung.de", "www.stiftung-gesundheitswissen.de"]
+      "top5": ["dzhk.de", "herzstiftung.de", "www.aerztezeitung.de", "www.stiftung-gesundheitswissen.de", "herzmedizin.de"]
     },
     {
       "keyword": "was ist Sarkopenie",

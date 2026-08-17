@@ -52,10 +52,10 @@ Suchanfragen im jüngsten Stand (2026-08-17):
 | Suchbegriff | Platz 1 bis 3 |
 |---|---|
 | dvgp | www.dvgp.org, www.bildungsserver.de, www.lobbyregister.bundestag.de |
-| deutscher verein für gesundheitspflege | de.wikipedia.org, dvg-online.de, www.youtube.com |
+| deutscher verein für gesundheitspflege | dvg-online.de, de.wikipedia.org, www.youtube.com |
 | DVGP Deutscher Verband für Gesundheitsförderung und Prävention | bv-gesundheitsfoerderung.de, www.bvpraevention.de, www.dvgp.org |
 | Rückenschmerzen schonen oder bewegen | www.barmer.de, www.gesundheitsinformation.de, www.tk.de |
 | was hilft gegen chronische Rückenschmerzen | www.gesundheitsinformation.de, www.dkv.com, www.schoen-klinik.de |
 | darf man bei Osteoporose schwer heben | www.gesundheitsinformation.de, www.gesundheitsinformation.de, myokraft.de |
-| ist Sport bei Bluthochdruck gefährlich | dzhk.de, herzstiftung.de, herzmedizin.de |
+| ist Sport bei Bluthochdruck gefährlich | dzhk.de, herzstiftung.de, www.aerztezeitung.de |
 | was ist Sarkopenie | www.rheuma-liga.de, www.usz.ch, flexikon.doccheck.com |
