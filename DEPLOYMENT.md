@@ -19,8 +19,18 @@ Beitragsbilder, schreibt sie ins Repo zurück, baut die Seiten aus `content/` ne
 mit `wrangler deploy` und prüft danach, ob `/wissen/` mit 200 antwortet. Schlägt ein
 Schritt fehl, ist der Lauf rot.
 
-Der Rückschreib-Commit trägt `[skip ci]`, sonst löst er sich selbst wieder aus. Der Ablauf
-braucht dafür `permissions: contents: write` — deshalb steht das oben in der Datei.
+Der Rückschreib-Commit trägt das Sperr-Kürzel, sonst löst er sich selbst wieder aus. Der
+Ablauf braucht dafür `permissions: contents: write` — deshalb steht das oben in der Datei.
+
+> **Falle, einmal selbst hineingetappt:** GitHub sucht dieses Kürzel **überall** in der
+> Commit-Nachricht, auch mitten im Fließtext. Ein Commit, der es nur erwähnt — etwa in
+> einer Erklärung wie dieser —, wird nicht gebaut und nicht deployt. Der Push kommt an,
+> und es passiert schlicht nichts. Wer es in einer Nachricht beschreiben will, umschreibt
+> es. Nachträglich anstoßen lässt sich der Ablauf über den Actions-Tab oder mit:
+>
+> ```bash
+> gh workflow run "Deploy nach Cloudflare" --ref main
+> ```
 
 Von Hand geht es weiterhin mit `npx wrangler deploy` aus diesem Verzeichnis. Die Custom
 Domains stehen in `wrangler.toml` — Cloudflare legt die DNS-Einträge dafür selbst an.
