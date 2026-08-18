@@ -47,6 +47,21 @@ in ein betriebliches Gesundheitsprogramm gehört — man muss es ihm nicht sagen
 Die Kategorien stehen in [themenplan.md](themenplan.md), die Belege in
 [evidenz.md](evidenz.md).
 
+### Jeder Beitrag hat ein Bild
+
+Ein Aufmacher oben, dasselbe Bild als Vorschau in der Übersicht und als Vorschaubild
+beim Teilen. Die Bildsprache: **echte Menschen beim Training**, Hanteln, Gerätschaft aus
+der Versorgung. Keine Modelle in Arztkitteln, keine gestellten Schmerzgrimassen, kein
+Stockfoto-Kitsch. Geht es um ältere Menschen, gehören ältere Menschen ins Bild.
+
+Der Alternativtext steht als `bild_alt` im Frontmatter. Er beschreibt, was zu sehen ist,
+und knüpft es an die Kernaussage — er ist kein Schlagwortfeld. Blinde Menschen und
+Suchmaschinen lesen ihn.
+
+Die Beschaffung läuft über die Bild-Kette (Suche, Original, Umwandeln, Geotaggen,
+Prüfen); die geplante Aufgabe `dvgp-bilder` erledigt das für neue Beiträge zweimal die
+Woche. Fehlt ein Bild, baut der Beitrag trotzdem sauber — er sieht nur ärmer aus.
+
 ## Verständlichkeit
 
 Alles muss ein Zehntklässler verstehen. Das ist die harte Grenze, nicht ein Richtwert.
