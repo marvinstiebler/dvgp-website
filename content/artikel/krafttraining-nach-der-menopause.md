@@ -4,10 +4,11 @@ beschreibung: Weil Muskeln und Knochen in dieser Lebensphase schneller abgebaut 
 datum: 2026-08-17
 cluster: Frauengesundheit
 slug: krafttraining-nach-der-menopause
+bild_suche: woman fifties weight training gym trainer
 bild_alt: Frau hebt eine Langhantel, eine Trainerin schaut zu — nach den Wechseljahren zählt planvolles, angeleitetes Krafttraining
 ---
 
-Weil nach der Menopause Muskelmasse und Knochendichte schneller abnehmen als vorher — und Krafttraining der einzige Reiz ist, der beide gleichzeitig anspricht. Es ersetzt keine medizinische Behandlung. Es setzt an der Stelle an, an der sich in dieser Lebensphase am meisten verschiebt: an der Belastbarkeit.
+Weil nach der Menopause Muskelmasse und Knochendichte schneller abnehmen als vorher — und Krafttraining der einzige Reiz ist, der beide gleichzeitig anspricht. Für den Muskel gibt es dazu kein Mittel: Er wächst durch Gebrauch oder gar nicht. Krafttraining setzt damit genau dort an, wo sich in dieser Lebensphase am meisten verschiebt — an der Belastbarkeit.
 
 Die Größenordnung gehört dazu. Training dreht die hormonelle Umstellung nicht zurück. Es verändert, was der Körper mit ihr macht.
 

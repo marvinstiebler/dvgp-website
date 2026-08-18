@@ -4,6 +4,7 @@ beschreibung: In aller Regel nicht — regelmäßige Belastung senkt den Blutdru
 datum: 2026-08-10
 cluster: Belastung und Erholung
 slug: sport-bei-bluthochdruck-gefaehrlich
+bild_suche: blood pressure monitor measuring arm cuff
 bild_alt: Digitales Blutdruckmessgerät am Oberarm — vor dem Training gehört der Blutdruck abgeklärt
 ---
 

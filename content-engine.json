@@ -24,6 +24,13 @@
   "sprache": {
     "regeln": "content/SCHREIBWEISE.md"
   },
+  "bilder": {
+    "ort": "Magdeburg",
+    "bundesland": "Sachsen-Anhalt",
+    "koordinate": { "latitude": 52.1314783, "longitude": 11.6400789 },
+    "hinweis": "Fester Bezugspunkt fuer das Geotaggen der Beitragsbilder: der Vereinssitz. Der DVGP arbeitet bundesweit -- die Koordinate steht nicht fuer den Ort der Aufnahme, sondern fuer den Herausgeber.",
+    "beschafft_von": "werkzeuge/hole_bilder.py, laeuft in GitHub Actions bei jedem Push"
+  },
   "tracking": {
     "domain": "dvgp.info",
     "koordinate": { "latitude": 52.1205, "longitude": 11.6276 },

@@ -6,6 +6,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Der Ablauf schreibt fehlende Bilder ins Repo zurück.
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -16,10 +20,42 @@ jobs:
         with:
           node-version: "22"
 
+      # Bilder für neue Beiträge holen. Die Wissens-Routine läuft in der Cloud und
+      # kann keine Stockfotos ziehen -- sie schreibt nur 'bild_suche' und 'bild_alt'
+      # ins Frontmatter, besorgt wird das Bild hier. So bleibt alles an einem Strang,
+      # unabhängig davon, ob Marvins Rechner an ist.
+      - name: Werkzeuge für die Bildbeschaffung
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libimage-exiftool-perl
+          python3 -m pip install --quiet --upgrade pillow
+
+      - name: Fehlende Beitragsbilder holen
+        env:
+          UNSPLASH_API_KEY: ${{ secrets.UNSPLASH_API_KEY }}
+        run: python3 werkzeuge/hole_bilder.py
+
       # Seiten aus content/ neu bauen. Der Generator braucht nichts außer der
-      # Standardbibliothek. So kann site/ im Repo nie veralten.
+      # Standardbibliothek. Läuft NACH der Bildbeschaffung, damit ein frisch geholtes
+      # Bild sofort im Aufmacher landet.
       - name: Seiten bauen
         run: python3 werkzeuge/baue_wissen.py
+
+      # Bilder und die daraus gebauten Seiten gemeinsam zurückschreiben, damit das
+      # Repo nicht dem hinterherläuft, was ausgeliefert wird.
+      - name: Neue Bilder und Seiten zurückschreiben
+        run: |
+          if [ -z "$(git status --porcelain site content)" ]; then
+            echo "Nichts zurückzuschreiben."
+            exit 0
+          fi
+          git config user.name  "DVGP Bildbeschaffung"
+          git config user.email "kontakt@dvgp.info"
+          git add site content
+          git commit -m "Bilder für neue Beiträge beschafft [skip ci]"
+          # main kann sich seit dem Checkout bewegt haben.
+          git pull --rebase origin main
+          git push origin HEAD:main
 
       - name: Deployen
         run: npx --yes wrangler@4 deploy

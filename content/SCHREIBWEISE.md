@@ -101,6 +101,27 @@ draußen — nicht aus Höflichkeit, sondern weil sie sonst nichts trägt.
 Was nie vorkommt: Pauschalurteile über Berufsgruppen, unterstellte Absichten
 („aus wirtschaftlichem Interesse"), Empörungsvokabular.
 
+### Keine Absicherung im Fließtext
+
+Der Pflichthinweis steht **am Ende** des Beitrags, wo er hingehört. Im laufenden Text
+haben reflexhafte Absicherungen nichts verloren — Sätze wie „Das ersetzt keine
+medizinische Behandlung" mitten in der Einleitung.
+
+Sie schaden doppelt. Sie schwächen genau die Aussage, für die der Beitrag da ist. Und
+sie räumen oft etwas ein, das gar nicht stimmt: Wer beim Muskelaufbau schreibt „ersetzt
+keine Behandlung", behauptet nebenbei, es gäbe eine Behandlung, die dasselbe leistet.
+Es gibt keine.
+
+Wo eine Grenze gilt, wird sie **konkret** benannt — und dann trägt sie auch:
+
+- **Schwach:** „Krafttraining ersetzt keine medizinische Behandlung."
+- **Stark:** „Für den Muskel gibt es kein Mittel. Er wächst durch Gebrauch oder gar nicht."
+- **Ebenfalls stark, weil überprüfbar:** „Die Hormontherapie wirkt auf Hitzewallungen und
+  Knochendichte. Auf die Muskelkraft wirkt sie nicht — dafür braucht es Belastung."
+
+Die zweite Fassung ist schärfer als die erste *und* haltbarer als ein Pauschalangriff auf
+die Medizin. Das ist die Linie: nicht leiser, sondern genauer.
+
 ## Verboten
 
 - KI-Floskeln: „In der heutigen Zeit…", „Es ist wichtig zu beachten…",

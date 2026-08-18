@@ -4,6 +4,7 @@ beschreibung: Sarkopenie ist der fortschreitende Verlust von Muskelmasse und Mus
 datum: 2026-08-10
 cluster: Gesundes Altern
 slug: was-ist-sarkopenie
+bild_suche: older adults exercising together resistance bands
 bild_alt: Ältere Menschen trainieren gemeinsam in einer Halle — Muskelkraft lässt sich in jedem Alter aufbauen
 ---
 

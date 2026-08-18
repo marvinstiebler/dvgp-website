@@ -4,6 +4,7 @@ beschreibung: Ja — und zwar planvoll. Belastung ist der stärkste bekannte Rei
 datum: 2026-08-10
 cluster: Gesundes Altern
 slug: osteoporose-schwer-heben
+bild_suche: older woman barbell squat gym weights
 bild_alt: Frau hebt eine Langhantel — Zug und Druck auf den Knochen sind der stärkste bekannte Reiz für den Knochenaufbau
 ---
 

@@ -14,9 +14,13 @@
 | Mail | weiterhin IONOS: `mx00.ionos.de`, `mx01.ionos.de` |
 
 **Ein Push auf `main` deployt.** Seit dem 14.08.2026 über GitHub Actions:
-[.github/workflows/deploy.yml](.github/workflows/deploy.yml). Der Ablauf baut die Seiten
-aus `content/` neu, deployt mit `wrangler deploy` und prüft danach, ob `/wissen/` mit 200
-antwortet. Schlägt einer der drei Schritte fehl, ist der Lauf rot.
+[.github/workflows/deploy.yml](.github/workflows/deploy.yml). Der Ablauf holt fehlende
+Beitragsbilder, schreibt sie ins Repo zurück, baut die Seiten aus `content/` neu, deployt
+mit `wrangler deploy` und prüft danach, ob `/wissen/` mit 200 antwortet. Schlägt ein
+Schritt fehl, ist der Lauf rot.
+
+Der Rückschreib-Commit trägt `[skip ci]`, sonst löst er sich selbst wieder aus. Der Ablauf
+braucht dafür `permissions: contents: write` — deshalb steht das oben in der Datei.
 
 Von Hand geht es weiterhin mit `npx wrangler deploy` aus diesem Verzeichnis. Die Custom
 Domains stehen in `wrangler.toml` — Cloudflare legt die DNS-Einträge dafür selbst an.

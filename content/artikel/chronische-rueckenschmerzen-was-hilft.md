@@ -4,6 +4,7 @@ beschreibung: Am besten belegt ist regelmäßiges Training, verbunden mit einer 
 datum: 2026-08-14
 cluster: Rücken
 slug: chronische-rueckenschmerzen-was-hilft
+bild_suche: physiotherapy back exercise rehabilitation coach
 bild_alt: Zwei Menschen trainieren mit Kurzhanteln unter Anleitung — Training und Aufklärung wirken bei chronischen Rückenschmerzen zusammen
 ---
 

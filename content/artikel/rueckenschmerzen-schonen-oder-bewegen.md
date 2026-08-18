@@ -4,6 +4,7 @@ beschreibung: Bewegen. Schonung ist bei Rückenschmerzen höchstens eine Frage v
 datum: 2026-08-13
 cluster: Rücken
 slug: rueckenschmerzen-schonen-oder-bewegen
+bild_suche: woman lifting barbell gym strength
 bild_alt: Frau hebt eine Langhantel vom Boden — bei Rückenschmerzen ist dosierte Belastung der bessere Weg als Schonung
 ---
 
