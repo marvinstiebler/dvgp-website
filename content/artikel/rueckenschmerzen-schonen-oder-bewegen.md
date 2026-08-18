@@ -4,6 +4,7 @@ beschreibung: Bewegen. Schonung ist bei Rückenschmerzen höchstens eine Frage v
 datum: 2026-08-13
 cluster: Rücken
 slug: rueckenschmerzen-schonen-oder-bewegen
+bild_alt: Frau hebt eine Langhantel vom Boden — bei Rückenschmerzen ist dosierte Belastung der bessere Weg als Schonung
 ---
 
 Bewegen. Bei Rückenschmerzen ohne Warnzeichen ist Aktivität der bessere Weg, und das gilt ab dem ersten Tag. Schonung darf eine Frage von Stunden sein. Wird sie zur Strategie, arbeitet sie gegen den Rücken.

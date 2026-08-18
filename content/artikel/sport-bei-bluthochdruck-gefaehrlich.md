@@ -4,6 +4,7 @@ beschreibung: In aller Regel nicht — regelmäßige Belastung senkt den Blutdru
 datum: 2026-08-10
 cluster: Belastung und Erholung
 slug: sport-bei-bluthochdruck-gefaehrlich
+bild_alt: Digitales Blutdruckmessgerät am Oberarm — vor dem Training gehört der Blutdruck abgeklärt
 ---
 
 Für die allermeisten Menschen mit Bluthochdruck ist Bewegung nicht gefährlich, sondern eine der wirksamsten Maßnahmen überhaupt. Regelmäßiges Training senkt den Ruheblutdruck messbar. Gefährlich wird es nur in zwei Fällen: bei sehr stark erhöhten, unbehandelten Werten — und bei Belastung, die weit über dem liegt, was der Körper gewohnt ist.

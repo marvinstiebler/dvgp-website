@@ -46,6 +46,8 @@ class Beitrag:
     beschreibung: str
     datum: str
     cluster: str = "Allgemein"
+    bild: str = ""
+    bild_alt: str = ""
     quelle: Path | None = None
     koerper: str = ""
     abschnitte: list[tuple[str, str]] = field(default_factory=list)
@@ -53,6 +55,21 @@ class Beitrag:
     @property
     def url(self) -> str:
         return f"{BASIS_URL}/wissen/{self.slug}"
+
+    @property
+    def bild_basis(self) -> str:
+        """Dateiname ohne Endung. Ohne Angabe im Frontmatter gilt der Slug."""
+        return self.bild or self.slug
+
+    @property
+    def hat_bild(self) -> bool:
+        """Ein Bild zählt nur, wenn beide Fassungen wirklich unter site/bilder/ liegen."""
+        basis = SITE / "bilder" / self.bild_basis
+        return basis.with_suffix(".webp").exists() and basis.with_suffix(".jpg").exists()
+
+    @property
+    def bild_url(self) -> str:
+        return f"{BASIS_URL}/bilder/{self.bild_basis}.jpg"
 
     @property
     def datum_lesbar(self) -> str:
@@ -95,9 +112,14 @@ def lies_beitraege() -> list[Beitrag]:
             beschreibung=daten["beschreibung"],
             datum=daten["datum"],
             cluster=daten.get("cluster", "Allgemein"),
+            bild=daten.get("bild", ""),
+            bild_alt=daten.get("bild_alt", ""),
             quelle=pfad,
             koerper=koerper,
         )
+        if beitrag.hat_bild and not beitrag.bild_alt:
+            print(f"  HINWEIS     {pfad.name}: Bild vorhanden, aber 'bild_alt' fehlt im "
+                  f"Frontmatter -- als Alternativtext wird der Titel benutzt.")
         beitraege.append(beitrag)
     # neueste zuerst
     beitraege.sort(key=lambda b: b.datum, reverse=True)
@@ -224,7 +246,9 @@ def markdown_zu_html(text: str) -> tuple[str, list[tuple[str, str]]]:
 # Seitenrahmen
 # --------------------------------------------------------------------------
 
-def kopf_seite(titel: str, beschreibung: str, kanonisch: str, extra: str = "") -> str:
+def kopf_seite(titel: str, beschreibung: str, kanonisch: str, extra: str = "",
+               bild_url: str = "") -> str:
+    bild_url = bild_url or f"{BASIS_URL}/bilder/wissen.jpg"
     return f"""<!DOCTYPE html>
 <html lang="de">
 <head>
@@ -239,7 +263,7 @@ def kopf_seite(titel: str, beschreibung: str, kanonisch: str, extra: str = "") -
 <meta property="og:url" content="{kanonisch}">
 <meta property="og:title" content="{html.escape(titel)}">
 <meta property="og:description" content="{html.escape(beschreibung)}">
-<meta property="og:image" content="{BASIS_URL}/bilder/wissen.jpg">
+<meta property="og:image" content="{bild_url}">
 <meta property="og:site_name" content="DVGP">
 <meta name="theme-color" content="#0f1419">
 <link rel="icon" type="image/png" href="/bilder/logo-dvgp.png">
@@ -344,6 +368,7 @@ def json_ld_artikel(b: Beitrag, abschnitte: list[tuple[str, str]]) -> str:
             "mainEntityOfPage": b.url,
             "author": {"@id": f"{BASIS_URL}/#organisation"},
             "publisher": {"@id": f"{BASIS_URL}/#organisation"},
+            **({"image": b.bild_url} if b.hat_bild else {}),
         },
         {
             "@type": "NGO",
@@ -388,17 +413,32 @@ def json_ld_artikel(b: Beitrag, abschnitte: list[tuple[str, str]]) -> str:
     )
 
 
+def beitragsbild(b: Beitrag) -> str:
+    """Das Aufmacherbild. Fehlt eine der beiden Fassungen, bleibt der Block leer."""
+    if not b.hat_bild:
+        return ""
+    alt = html.escape(b.bild_alt or b.titel, quote=True)
+    return f"""
+ <picture class="beitrag-bild">
+  <source srcset="/bilder/{b.bild_basis}.webp" type="image/webp">
+  <img src="/bilder/{b.bild_basis}.jpg" alt="{alt}" width="1200" height="720"
+       fetchpriority="high" decoding="async">
+ </picture>
+"""
+
+
 def baue_beitrag(b: Beitrag) -> str:
     inhalt, abschnitte = markdown_zu_html(b.koerper)
     b.abschnitte = abschnitte
-    seite = kopf_seite(f"{b.titel} — DVGP", b.beschreibung, b.url)
+    seite = kopf_seite(f"{b.titel} — DVGP", b.beschreibung, b.url,
+                       bild_url=b.bild_url if b.hat_bild else "")
     seite += f"""
 <main class="content-page">
  <a class="back-link" href="/wissen/">Zurück zur Übersicht</a>
  <span class="section-kicker">{html.escape(b.cluster)}</span>
  <h1>{inline(b.titel)}</h1>
  <p class="meta">{b.datum_lesbar} · {b.lesezeit} Min. Lesezeit · Deutscher Verband für Gesundheitsförderung und Prävention</p>
-
+{beitragsbild(b)}
  <div class="beitrag">
 {inhalt}
  </div>
@@ -424,15 +464,23 @@ def baue_uebersicht(beitraege: list[Beitrag]) -> str:
         url,
     )
     if beitraege:
-        karten = "\n".join(
-            f"""  <a class="wissen-karte" href="/wissen/{b.slug}">
+        def karte(b: Beitrag) -> str:
+            bild = ""
+            if b.hat_bild:
+                alt = html.escape(b.bild_alt or b.titel, quote=True)
+                bild = (f'\n   <picture>\n'
+                        f'    <source srcset="/bilder/{b.bild_basis}.webp" type="image/webp">\n'
+                        f'    <img src="/bilder/{b.bild_basis}.jpg" alt="{alt}" '
+                        f'width="900" height="540" loading="lazy" decoding="async">\n'
+                        f'   </picture>')
+            return f"""  <a class="wissen-karte" href="/wissen/{b.slug}">{bild}
    <span class="wissen-cluster">{html.escape(b.cluster)}</span>
    <h2>{inline(b.titel)}</h2>
    <p>{inline(b.beschreibung)}</p>
    <span class="wissen-meta">{b.datum_lesbar} · {b.lesezeit} Min.</span>
   </a>"""
-            for b in beitraege
-        )
+
+        karten = "\n".join(karte(b) for b in beitraege)
         liste = f'<div class="wissen-liste">\n{karten}\n </div>'
     else:
         liste = '<p class="lead">Die ersten Beiträge erscheinen in Kürze.</p>'

@@ -4,6 +4,7 @@ beschreibung: Ja — und zwar planvoll. Belastung ist der stärkste bekannte Rei
 datum: 2026-08-10
 cluster: Gesundes Altern
 slug: osteoporose-schwer-heben
+bild_alt: Frau hebt eine Langhantel — Zug und Druck auf den Knochen sind der stärkste bekannte Reiz für den Knochenaufbau
 ---
 
 Ja. Kontrolliert und planvoll aufgebautes Krafttraining ist bei Osteoporose nicht nur erlaubt, es ist der wirksamste Reiz, den der Knochen kennt. Gefährlich ist nicht das Gewicht, sondern die ruckartige, ungeübte Bewegung — und noch gefährlicher ist gar keine Belastung.

@@ -4,6 +4,7 @@ beschreibung: Am besten belegt ist regelmäßiges Training, verbunden mit einer 
 datum: 2026-08-14
 cluster: Rücken
 slug: chronische-rueckenschmerzen-was-hilft
+bild_alt: Zwei Menschen trainieren mit Kurzhanteln unter Anleitung — Training und Aufklärung wirken bei chronischen Rückenschmerzen zusammen
 ---
 
 Am besten belegt ist regelmäßiges Training, verbunden mit einer verständlichen Erklärung dessen, was im Rücken vorgeht — und bei sehr langem Verlauf mit einer Betreuung, die Körper, Umgang mit dem Schmerz und Arbeitssituation gemeinsam angeht. Alles andere hat entweder eine schwächere Beleglage oder wirkt nur für Stunden.
