@@ -7,9 +7,15 @@
   </url>
   <url>
     <loc>https://dvgp.info/wissen/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dvgp.info/wissen/senkt-krafttraining-den-blutdruck</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://dvgp.info/wissen/hexenschuss-wie-lange-dauert-er</loc>
@@ -73,7 +79,7 @@
   </url>
   <url>
     <loc>https://dvgp.info/publikationen/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
