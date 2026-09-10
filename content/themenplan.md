@@ -75,6 +75,7 @@ mit niedriger Evidenzsicherheit trägt kein „ist erwiesen", sondern ein „deu
 | 31.08.2026 | Wie lange dauert ein Hexenschuss — und was hilft? | Rücken |
 | 03.09.2026 | Senkt Krafttraining den Blutdruck? | Stoffwechsel/Herz-Kreislauf |
 | 07.09.2026 | Was ist Insulinresistenz — und was hat Muskel damit zu tun? | Stoffwechsel |
+| 10.09.2026 | Wie hält man während einer Krebstherapie Muskelmasse? | Krebstherapie |
 
 ## Als Nächstes
 
@@ -87,21 +88,20 @@ Themen. Belege in [evidenz.md](evidenz.md).
 
 | # | Beitrag | Vol | KD | Kategorie | Belegt durch |
 |---|---|---|---|---|---|
-| 1 | Wie hält man während einer Krebstherapie Muskelmasse? | – | – | Krebstherapie | McGovern |
-| 2 | Schulterschmerzen: was hinter dem Dauerzustand steckt | 1.000 | 6 | Gelenke | These 2, 3 |
-| 3 | Wie oft Krafttraining pro Woche ab 50? | 70 | – | Gesundes Altern | These 1, 5 |
-| 4 | Welches Training hält die Knochen nach den Wechseljahren stark? | – | – | Frauengesundheit | Kemmler, Sundh |
-| 5 | Ist Langhanteltraining im Alter gefährlich? | – | – | Gesundes Altern | These 4, 5 |
-| 6 | Was ist Sturzprophylaxe — und was hilft wirklich? | 150 | 1 | Gesundes Altern | These 1 |
-| 7 | Werden Frauen durch Krafttraining muskulös? | 150 | 3 | Frauengesundheit | Sá, González-Gálvez |
-| 8 | Darf man mit Bluthochdruck schwere Gewichte heben? | – | – | Stoffwechsel | These 5 |
-| 9 | Wie kann man Arthrose vorbeugen? | 300 | 0 | Gelenke | These 4 |
-| 10 | Was hilft gegen Nervenschmerzen nach der Chemo? | – | – | Krebstherapie | Wang |
-| 11 | Womit fängt man mit 60 an, wenn man nie trainiert hat? | – | – | Gesundes Altern | These 1, 5 |
-| 12 | Wie viele Kniebeugen sollte man mit 60 schaffen? | 80 | – | Gesundes Altern | These 5 |
-| 13 | Was hilft in den Wechseljahren gegen Hitzewallungen? | 200 | 0 | Frauengesundheit | Sá |
-| 14 | Warum macht Schonung auf Dauer schwächer? | – | – | Prävention | These 1 (Bortz) |
-| 15 | Was bedeutet Prävention? | **1.000** | 13 | Prävention | These 1, 9 |
+| 1 | Schulterschmerzen: was hinter dem Dauerzustand steckt | 1.000 | 6 | Gelenke | These 2, 3 |
+| 2 | Wie oft Krafttraining pro Woche ab 50? | 70 | – | Gesundes Altern | These 1, 5 |
+| 3 | Welches Training hält die Knochen nach den Wechseljahren stark? | – | – | Frauengesundheit | Kemmler, Sundh |
+| 4 | Ist Langhanteltraining im Alter gefährlich? | – | – | Gesundes Altern | These 4, 5 |
+| 5 | Was ist Sturzprophylaxe — und was hilft wirklich? | 150 | 1 | Gesundes Altern | These 1 |
+| 6 | Werden Frauen durch Krafttraining muskulös? | 150 | 3 | Frauengesundheit | Sá, González-Gálvez |
+| 7 | Darf man mit Bluthochdruck schwere Gewichte heben? | – | – | Stoffwechsel | These 5 |
+| 8 | Wie kann man Arthrose vorbeugen? | 300 | 0 | Gelenke | These 4 |
+| 9 | Was hilft gegen Nervenschmerzen nach der Chemo? | – | – | Krebstherapie | Wang |
+| 10 | Womit fängt man mit 60 an, wenn man nie trainiert hat? | – | – | Gesundes Altern | These 1, 5 |
+| 11 | Wie viele Kniebeugen sollte man mit 60 schaffen? | 80 | – | Gesundes Altern | These 5 |
+| 12 | Was hilft in den Wechseljahren gegen Hitzewallungen? | 200 | 0 | Frauengesundheit | Sá |
+| 13 | Warum macht Schonung auf Dauer schwächer? | – | – | Prävention | These 1 (Bortz) |
+| 14 | Was bedeutet Prävention? | **1.000** | 13 | Prävention | These 1, 9 |
 
 ### Muskelkater, Protein und Co. — eingebaut statt eigenständig
 
