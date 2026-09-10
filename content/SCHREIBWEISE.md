@@ -126,9 +126,30 @@ die Medizin. Das ist die Linie: nicht leiser, sondern genauer.
 
 - KI-Floskeln: „In der heutigen Zeit…", „Es ist wichtig zu beachten…",
   „Nicht zuletzt…", „Zusammenfassend lässt sich sagen…".
-- Diagnosen, Behandlungsempfehlungen, Dosierungsangaben.
+- Diagnosen und eigene Behandlungsempfehlungen.
 - Versprechen zu Heilung, Zeitspannen oder Ergebnissen.
 - Der Begriff *Ratgeber* für die Beitragsstrecke.
+
+### Zahlen aus Leitlinien — erlaubt, mit Quelle
+
+Eine Zahl, die in einer Leitlinie oder Studie steht, darf genannt werden. Sie wird
+**zitiert, nicht verordnet**: Es steht dabei, wer sie empfiehlt, und die Arbeit steht
+unter „## Quellen". So gelesen ist die Zahl eine Tatsache über die Beleglage — und
+genau die soll der Beitrag ja transportieren.
+
+- **Richtig:** „Bei einer Krebserkrankung empfehlen die Leitlinien 1,2 bis 1,5 Gramm
+  Eiweiß je Kilogramm Körpergewicht am Tag."
+- **Falsch:** „Nehmen Sie 1,5 Gramm Eiweiß je Kilogramm." — das ist eine Anweisung an
+  den Leser, keine Wiedergabe.
+- **Ebenfalls falsch:** eine Zahl ohne Quelle, auch wenn sie stimmt.
+
+Eine Zahl wegzulassen, die belegt ist, macht den Beitrag nicht sicherer. Sie macht ihn
+nur unbrauchbarer als die Leitlinie, aus der er schöpft.
+
+**Weiterhin draußen bleiben:** Dosierungen von Medikamenten, Empfehlungen zu einzelnen
+Präparaten, und jede Zahl, die der Verband selbst festlegt statt sie zu belegen. Wo eine
+Einschränkung den Wert wirklich verändert — etwa die Nierenfunktion beim Eiweiß —, wird
+sie konkret benannt und die Festlegung dem behandelnden Team überlassen.
 
 ## Fachwortschatz — wann er erlaubt ist
 
